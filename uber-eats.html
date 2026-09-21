@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="case.css?v=15" />
-    <link rel="stylesheet" href="uber.css?v=1" />
+    <link rel="stylesheet" href="uber.css?v=2" />
   </head>
   <body class="uber-case">
     <a class="skip-link" href="#case-main">Skip to case study</a>
@@ -195,6 +195,27 @@
             </div>
           </div>
 
+          <div class="prototype-stage">
+            <div class="prototype-stage__copy">
+              <h3>Try the working<br />Hackathon demo.</h3>
+              <p>Food Miner turns a recommendation into a small act of discovery. Tap the green entry point, drag the catcher, and keep control of the final choice.</p>
+              <ol class="prototype-steps" aria-label="Food Miner prototype states">
+                <li><span>01</span><strong>Entry</strong><p>A visible shortcut appears inside the familiar home flow.</p></li>
+                <li><span>02</span><strong>Dig</strong><p>The user actively searches within an AI-curated pool.</p></li>
+                <li><span>03</span><strong>Catch</strong><p>One recommendation becomes the focus.</p></li>
+                <li><span>04</span><strong>Deal</strong><p>A reward confirms the choice and moves it toward checkout.</p></li>
+              </ol>
+              <p class="prototype-stage__note">Interactive prototype &middot; Drag and tap inside the phone</p>
+            </div>
+
+            <div class="prototype-device">
+              <div class="prototype-device__bar"><span>Food Miner</span><strong>Live prototype</strong></div>
+              <div class="prototype-device__viewport">
+                <iframe src="assets/uber-eats/prototype/index.html" title="Interactive Food Miner prototype" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+
           <div class="screen-comparison" aria-label="Before and after Uber Eats home screens">
             <figure>
               <div class="screen-comparison__device"><img src="assets/uber-eats/uber-eats-before.png" alt="Uber Eats home screen before Food Miner" /></div>
@@ -210,7 +231,14 @@
           <div class="recommendation-logic">
             <div class="recommendation-logic__heading">
               <h3>Recommendation logic</h3>
-              <p>Concept inputs used to build the six-option pool</p>
+              <p>Concept weighting used in the Hackathon build</p>
+            </div>
+            <div class="recommendation-weights" aria-label="Recommendation signal weights">
+              <div><span>Order history</span><i style="--weight: 45%"></i><strong>45%</strong></div>
+              <div><span>Campaign fit</span><i style="--weight: 20%"></i><strong>20%</strong></div>
+              <div><span>Restaurant need</span><i style="--weight: 15%"></i><strong>15%</strong></div>
+              <div><span>Price fit</span><i style="--weight: 10%"></i><strong>10%</strong></div>
+              <div><span>Delivery fit</span><i style="--weight: 10%"></i><strong>10%</strong></div>
             </div>
             <div class="recommendation-logic__grid">
               <div><span>Personal signal</span><strong>Order history</strong><p>Repeated cuisines, dishes, and price ranges.</p></div>

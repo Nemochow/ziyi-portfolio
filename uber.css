@@ -503,6 +503,118 @@
   background: var(--graphite);
 }
 
+.prototype-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 104px);
+  margin-top: 82px;
+  padding: clamp(38px, 5vw, 72px);
+  color: var(--uber-white);
+  background: var(--uber-black);
+  overflow: hidden;
+}
+
+.prototype-stage__copy h3 {
+  max-width: 10ch;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.96;
+  font-weight: 500;
+}
+
+.prototype-stage__copy > p:not(.prototype-stage__note) {
+  max-width: 48ch;
+  margin-top: 28px;
+  color: #c9cec9;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.prototype-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 50px 0 0;
+  padding: 0;
+  border-top: 1px solid #4f544f;
+  list-style: none;
+}
+
+.prototype-steps li {
+  min-width: 0;
+  padding: 18px 20px 28px 0;
+  border-bottom: 1px solid #4f544f;
+}
+
+.prototype-steps li:nth-child(even) {
+  padding-left: 20px;
+  border-left: 1px solid #4f544f;
+}
+
+.prototype-steps span {
+  display: block;
+  margin-bottom: 25px;
+  color: var(--uber-green);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prototype-steps strong {
+  font-size: 1.02rem;
+}
+
+.prototype-steps p {
+  max-width: 28ch;
+  margin-top: 8px;
+  color: #aeb4ae;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.prototype-stage__note {
+  margin-top: 24px;
+  color: var(--uber-green);
+  font-size: 0.76rem;
+}
+
+.prototype-device {
+  width: min(100%, 394px);
+  justify-self: end;
+}
+
+.prototype-device__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 46px;
+  padding: 0 17px;
+  color: var(--uber-black);
+  background: var(--uber-green);
+  font-size: 0.72rem;
+}
+
+.prototype-device__bar strong {
+  font-weight: 500;
+}
+
+.prototype-device__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 360 / 780;
+  background: #ffffff;
+  box-shadow: 0 28px 58px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+}
+
+.prototype-device iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+}
+
 .recommendation-logic {
   margin-top: 92px;
   border-top: 1px solid var(--graphite);
@@ -528,6 +640,48 @@
 .recommendation-logic__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.recommendation-weights {
+  display: grid;
+  gap: 13px;
+  padding: 30px 0 38px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.recommendation-weights > div {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.42fr) minmax(160px, 1fr) 48px;
+  align-items: center;
+  gap: 18px;
+}
+
+.recommendation-weights span,
+.recommendation-weights strong {
+  font-size: 0.8rem;
+}
+
+.recommendation-weights strong {
+  text-align: right;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.recommendation-weights i {
+  position: relative;
+  display: block;
+  height: 8px;
+  background: #e0e2dc;
+  overflow: hidden;
+}
+
+.recommendation-weights i::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--weight);
+  background: var(--uber-green);
 }
 
 .recommendation-logic__grid > div {
@@ -681,6 +835,12 @@
   .screen-comparison__device {
     min-height: 600px;
   }
+
+  .prototype-stage {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.72fr);
+    gap: 44px;
+    padding: 48px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -732,6 +892,15 @@
   .screen-comparison__device {
     min-height: 520px;
     padding: 22px;
+  }
+
+  .prototype-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .prototype-device {
+    width: min(100%, 360px);
+    justify-self: center;
   }
 }
 
@@ -886,6 +1055,30 @@
   .screen-comparison__shift {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+  }
+
+  .prototype-stage {
+    margin-top: 54px;
+    padding: 34px 24px 42px;
+  }
+
+  .prototype-stage__copy h3 {
+    font-size: clamp(2.5rem, 13vw, 3.6rem);
+  }
+
+  .prototype-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .prototype-steps li,
+  .prototype-steps li:nth-child(even) {
+    padding: 18px 0 24px;
+    border-left: 0;
+  }
+
+  .recommendation-weights > div {
+    grid-template-columns: 108px minmax(60px, 1fr) 38px;
+    gap: 9px;
   }
 
   .build-strip {
