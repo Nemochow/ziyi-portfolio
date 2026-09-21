@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="case.css?v=15" />
-    <link rel="stylesheet" href="uber.css?v=2" />
+    <link rel="stylesheet" href="uber.css?v=3" />
   </head>
   <body class="uber-case">
     <a class="skip-link" href="#case-main">Skip to case study</a>
@@ -53,7 +53,9 @@
 
           <div class="uber-cover__visual" aria-label="Food Miner integrated into the Uber Eats home screen">
             <span class="uber-cover__signal">6 options<br />1 choice</span>
-            <img src="assets/uber-eats/food-miner-home.png" alt="Food Miner recommendation game integrated at the top of the Uber Eats app" />
+            <div class="uber-cover__device">
+              <iframe src="assets/uber-eats/prototype/index.html#stage=home" title="Animated Food Miner home screen" tabindex="-1"></iframe>
+            </div>
           </div>
         </section>
 
@@ -78,34 +80,50 @@
             <div class="reading-copy">
               <p>I mapped the journey from opening the app to completing an order. The greatest friction appeared before checkout: repeated scrolling in Explore and repeated comparison between restaurants, dishes, prices, and delivery conditions.</p>
               <p>More information did not create more confidence. It increased the number of decisions a hungry person had to make before reaching the decision that actually mattered.</p>
+              <p>For the platform, that same hesitation appears as stalled sessions and abandoned carts. A shorter path from intent to order can improve conversion without turning the final choice into a black box.</p>
             </div>
           </div>
 
-          <div class="decision-journey" aria-label="Decision journey in the original Uber Eats flow">
-            <div class="decision-journey__header">
-              <strong>Where intent breaks down</strong>
-              <span>Observed decision pattern</span>
+          <div class="journey-map" aria-label="Emotional journey through the original Uber Eats decision flow">
+            <div class="journey-map__header">
+              <div>
+                <h3>The decision journey</h3>
+                <p>Confidence falls as browsing turns into repeated comparison.</p>
+              </div>
+              <span>Original Uber Eats flow</span>
             </div>
-            <ol>
-              <li><span>Open</span><strong>Vague hunger</strong><p>High intent, low specificity</p><i style="--load: 18%"></i></li>
-              <li><span>Explore</span><strong>Scroll broadly</strong><p>Restaurants, cuisines, offers</p><i style="--load: 56%"></i></li>
-              <li class="is-friction"><span>Compare</span><strong>Revisit options</strong><p>Price, distance, taste, value</p><i style="--load: 92%"></i></li>
-              <li><span>Decide</span><strong>Order or leave</strong><p>Confidence has already dropped</p><i style="--load: 74%"></i></li>
-            </ol>
+            <div class="journey-map__viewport">
+              <div class="journey-map__canvas">
+                <div class="journey-map__axis" aria-hidden="true"><span>High confidence</span><span>Low confidence</span></div>
+                <svg class="journey-map__curve" viewBox="0 0 1000 190" role="img" aria-label="Confidence declines from opening the app through repeated comparison">
+                  <path d="M95 44 C180 42 215 65 295 70 S430 94 500 108 S640 150 705 148 S850 157 905 164" />
+                  <circle cx="95" cy="44" r="7" /><circle cx="295" cy="70" r="7" /><circle cx="500" cy="108" r="7" /><circle cx="705" cy="148" r="7" /><circle cx="905" cy="164" r="7" />
+                </svg>
+                <ol>
+                  <li><span>01 &middot; Open</span><strong>Ready</strong><p>High intent, no specific meal</p></li>
+                  <li><span>02 &middot; Explore</span><strong>Interested</strong><p>Restaurants, dishes, offers</p></li>
+                  <li><span>03 &middot; Compare</span><strong>Overloaded</strong><p>Price, taste, delivery, value</p></li>
+                  <li><span>04 &middot; Recheck</span><strong>Uncertain</strong><p>Return to options already seen</p></li>
+                  <li><span>05 &middot; Act</span><strong>Order or leave</strong><p>Commitment or abandonment</p></li>
+                </ol>
+              </div>
+            </div>
           </div>
 
-          <div class="friction-visuals">
-            <figure class="friction-visuals__context">
+          <div class="friction-context">
+            <figure>
               <img src="assets/uber-eats/decision-context.png" alt="A person repeatedly browsing food options on a phone" />
               <figcaption>Browsing is easy. Converging is difficult.</figcaption>
             </figure>
-            <figure class="friction-visuals__screen">
-              <img src="assets/uber-eats/uber-eats-before.png" alt="Uber Eats home screen before the Food Miner concept" />
-              <figcaption>Original flow / many parallel entry points</figcaption>
-            </figure>
           </div>
 
-          <p class="goal-line"><span>Product opportunity</span>Let AI absorb low-value screening so the user can focus on the final choice.</p>
+          <div class="opportunity-statement">
+            <span>Product opportunity</span>
+            <div>
+              <h3>Move people from “I’m hungry” to “I’m ordering” with less decision debt.</h3>
+              <p>Let AI absorb repetitive browsing and comparison, then hand a small, relevant shortlist back to the user. The user keeps agency; Uber Eats reduces stalled sessions and has a clearer path from intent to conversion.</p>
+            </div>
+          </div>
         </section>
 
         <section class="case-section case-section--fog" id="reframe" aria-labelledby="reframe-title">
@@ -122,19 +140,16 @@
             <p>I separated the decision process into three jobs: exploring the option space, comparing viable candidates, and making the final judgment. AI could take on the first two; the user should always own the third.</p>
           </div>
 
-          <div class="decision-allocation" aria-label="Allocation of work between AI and the user">
-            <div class="decision-allocation__ai">
-              <span>AI</span>
-              <strong>Explore + compare</strong>
-              <p>Filter the catalogue, weigh preferences, and reduce the field to six distinct candidates.</p>
+          <div class="decision-handoff" aria-label="Allocation of work between AI and the user">
+            <div class="decision-handoff__header">
+              <h3>One clear handoff</h3>
+              <p>AI does the breadth work. The user owns the commitment.</p>
             </div>
-            <div class="decision-allocation__handoff" aria-hidden="true">
-              <i></i><b>6</b><i></i>
-            </div>
-            <div class="decision-allocation__human">
-              <span>User</span>
-              <strong>Judge + choose</strong>
-              <p>Review a small set, follow appetite and intuition, then deliberately choose one.</p>
+            <div class="decision-handoff__track">
+              <div class="decision-handoff__step is-ai"><span>01 &middot; AI</span><strong>Explore</strong><p>Scan the available option space.</p></div>
+              <div class="decision-handoff__step is-ai"><span>02 &middot; AI</span><strong>Compare</strong><p>Weigh preference, price, offer, and delivery fit.</p></div>
+              <div class="decision-handoff__gate"><span>Shortlist</span><strong>6</strong><p>relevant picks</p></div>
+              <div class="decision-handoff__step is-human"><span>03 &middot; User</span><strong>Decide</strong><p>Follow appetite and deliberately choose one.</p></div>
             </div>
           </div>
 
@@ -195,24 +210,25 @@
             </div>
           </div>
 
-          <div class="prototype-stage">
-            <div class="prototype-stage__copy">
-              <h3>Try the working<br />Hackathon demo.</h3>
-              <p>Food Miner turns a recommendation into a small act of discovery. Tap the green entry point, drag the catcher, and keep control of the final choice.</p>
-              <ol class="prototype-steps" aria-label="Food Miner prototype states">
-                <li><span>01</span><strong>Entry</strong><p>A visible shortcut appears inside the familiar home flow.</p></li>
-                <li><span>02</span><strong>Dig</strong><p>The user actively searches within an AI-curated pool.</p></li>
-                <li><span>03</span><strong>Catch</strong><p>One recommendation becomes the focus.</p></li>
-                <li><span>04</span><strong>Deal</strong><p>A reward confirms the choice and moves it toward checkout.</p></li>
-              </ol>
-              <p class="prototype-stage__note">Interactive prototype &middot; Drag and tap inside the phone</p>
+          <div class="motion-showcase" data-motion-showcase>
+            <div class="motion-showcase__intro">
+              <h3>From prompt<br />to payoff.</h3>
+              <p>Four product states turn recommendation into a visible, user-led decision. Select a stage to inspect the motion, or switch into the working prototype.</p>
+              <button class="motion-showcase__play" type="button" data-prototype-toggle>Open interactive mode</button>
             </div>
 
-            <div class="prototype-device">
-              <div class="prototype-device__bar"><span>Food Miner</span><strong>Live prototype</strong></div>
-              <div class="prototype-device__viewport">
-                <iframe src="assets/uber-eats/prototype/index.html" title="Interactive Food Miner prototype" loading="lazy"></iframe>
+            <div class="motion-showcase__device">
+              <div class="motion-showcase__bar"><span data-motion-status>Autoplay &middot; Entry</span><strong>Food Miner</strong></div>
+              <div class="motion-showcase__viewport">
+                <iframe data-motion-frame src="assets/uber-eats/prototype/index.html#stage=home" title="Food Miner entry animation" loading="lazy"></iframe>
               </div>
+            </div>
+
+            <div class="motion-showcase__stages" role="tablist" aria-label="Food Miner motion stages">
+              <button class="is-active" type="button" role="tab" aria-selected="true" data-motion-stage="home" data-motion-title="Entry"><span>01</span><strong>Entry</strong><p>A visible shortcut enters the familiar home flow.</p></button>
+              <button type="button" role="tab" aria-selected="false" data-motion-stage="loading" data-motion-title="Digging"><span>02</span><strong>Digging</strong><p>AI screening becomes a short, playful wait.</p></button>
+              <button type="button" role="tab" aria-selected="false" data-motion-stage="catching" data-motion-title="Catch"><span>03</span><strong>Catch</strong><p>The user turns a shortlist into one active choice.</p></button>
+              <button type="button" role="tab" aria-selected="false" data-motion-stage="reveal" data-motion-title="Order now"><span>04</span><strong>Order now</strong><p>A deal confirms the result and continues to checkout.</p></button>
             </div>
           </div>
 
@@ -323,5 +339,6 @@
     </div>
 
     <script src="case.js"></script>
+    <script src="uber.js"></script>
   </body>
 </html>
