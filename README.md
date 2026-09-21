@@ -6,8 +6,9 @@ Portfolio website for Ziyi (Nemo) Zhou, AI Product User Experience Designer.
 
 - `index.html` presents the selected-project overview.
 - `whispering-garden.html` contains the full Whispering Garden case study.
-- Project media is stored in `assets/whispering-garden/`.
-- General Sans is used for body copy and Instrument Serif for display titles.
+- `uber-eats.html` contains the Food Miner for Uber Eats case study.
+- Project media is stored by case study under `assets/`.
+- Ubuntu is used throughout the portfolio.
 
 ## Run locally
 

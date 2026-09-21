@@ -639,6 +639,99 @@ h1 span {
   }
 }
 
+.specimen--uber-product {
+  display: block;
+  color: white;
+  background:
+    linear-gradient(90deg, #090909 0 44%, #06c167 44% 100%);
+  text-decoration: none;
+}
+
+.specimen--uber-product::before {
+  display: none;
+}
+
+.specimen--uber-product img {
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  z-index: 2;
+  display: block;
+  width: min(47%, 350px);
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.28));
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.specimen--uber-product:hover img {
+  transform: translateY(-7px);
+}
+
+.uber-preview__copy {
+  position: absolute;
+  top: 14%;
+  left: 7%;
+  z-index: 3;
+  display: grid;
+  gap: 10px;
+}
+
+.uber-preview__copy span {
+  color: #acacac;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.uber-preview__copy strong {
+  max-width: 5ch;
+  font-size: clamp(2.5rem, 4.2vw, 4.8rem);
+  line-height: 0.88;
+  font-weight: 500;
+}
+
+.uber-preview__count {
+  position: absolute;
+  bottom: 9%;
+  left: 7%;
+  z-index: 3;
+  padding-top: 10px;
+  border-top: 1px solid #696969;
+  color: #06c167;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+@media (max-width: 540px) {
+  .specimen--uber-product {
+    min-height: 510px;
+    background: linear-gradient(180deg, #090909 0 42%, #06c167 42% 100%);
+  }
+
+  .specimen--uber-product img {
+    top: 20%;
+    right: 6%;
+    width: min(54%, 260px);
+    height: 76%;
+  }
+
+  .uber-preview__copy {
+    top: 8%;
+    left: 8%;
+  }
+
+  .uber-preview__copy strong {
+    font-size: 2.8rem;
+  }
+
+  .uber-preview__count {
+    bottom: 7%;
+    left: 8%;
+    color: #090909;
+    border-top-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
 @media (min-width: 961px) and (max-width: 1250px) {
   .project-card {
     grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
@@ -775,5 +868,18 @@ h1 span {
 @media (max-width: 360px) {
   .project-card h2 {
     font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .specimen--uber-product {
+    min-height: 510px;
+  }
+
+  .specimen--uber-product img {
+    top: 31%;
+    right: 5%;
+    width: min(58%, 270px);
+    height: 64%;
   }
 }
