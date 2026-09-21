@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Whispering Garden: a patient-led physical interaction concept for recurring infusion care, developed into a working prototype." />
+    <title>Whispering Garden | Ziyi (Nemo) Zhou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="case.css?v=14" />
+  </head>
+  <body>
+    <a class="skip-link" href="#case-main">Skip to case study</a>
+    <div class="case-shell">
+      <aside class="case-rail" aria-label="Case study navigation">
+        <div class="case-rail__top">
+          <a class="back-link" href="index.html#garden">Back to portfolio</a>
+          <div class="rail-identity">
+            <strong>Ziyi (Nemo) Zhou</strong>
+            <span>AI Product User Experience Designer</span>
+          </div>
+        </div>
+        <nav class="chapter-nav" aria-label="Case study chapters">
+          <a href="#cover" class="is-current"><span>01</span>Overview</a>
+          <a href="#context"><span>02</span>Context</a>
+          <a href="#research"><span>03</span>Research</a>
+          <a href="#concept"><span>04</span>Concept</a>
+          <a href="#prototype"><span>05</span>Prototype</a>
+          <a href="#validation"><span>06</span>Validation</a>
+          <a href="#reflection"><span>07</span>Reflection</a>
+        </nav>
+        <div class="case-rail__foot">Physical interaction · Emotional design · Hardware prototype</div>
+      </aside>
+
+      <main class="case-main" id="case-main">
+        <section class="case-cover" id="cover" aria-labelledby="case-title">
+          <img class="case-cover__image" src="assets/whispering-garden/garden-concept-visualization-v2.webp" alt="Whispering Garden listening point and IV-pole prototype placed within the planted hospital atrium" />
+          <div class="case-cover__content">
+            <h1 id="case-title">Whispering<br />Garden</h1>
+            <p class="case-cover__statement">Turning passive waiting into an active response.</p>
+          </div>
+        </section>
+
+        <div class="case-facts" aria-label="Project facts">
+          <div><span>Role</span><strong>Product &amp; Design Lead</strong></div>
+          <div><span>Period</span><strong>Mar–Jun 2026</strong></div>
+          <div><span>Place</span><strong>Erasmus MC, Rotterdam</strong></div>
+          <div><span>Focus</span><strong>Research · Interaction · Hardware</strong></div>
+        </div>
+
+        <section class="case-section" id="context" aria-labelledby="context-title">
+          <header class="section-heading">
+            <span class="section-heading__number">02 / 07</span>
+            <div><h2 id="context-title">Waiting is not<br />an empty moment.</h2><p>Context &amp; opportunity</p></div>
+          </header>
+          <div class="reading-grid">
+            <p class="section-lede">During an infusion, a person is tethered to a chair, a line, and a schedule they cannot control. The physical constraint amplifies uncertainty and makes time feel strangely passive.</p>
+            <div class="reading-copy">
+              <p>First-hand observation and patient conversations revealed familiar coping behaviors: looking at a phone, resting, or talking to someone nearby. Yet the needle, tubing, and IV pole continually pull attention back to treatment.</p>
+              <p>The hospital's planted atrium already offered light, greenery, and space to move. The opportunity was to make that environment respond gently to the person within it, without asking them to stare at another screen.</p>
+            </div>
+          </div>
+          <p class="audience-line"><span>Target users</span>People living with recurring or long-duration IV treatment, especially those who attend alone.</p>
+          <p class="goal-line"><span>Experience goal</span>Make waiting time something a person can actively explore.</p>
+        </section>
+
+        <section class="case-section case-section--fog" id="research" aria-labelledby="research-title">
+          <header class="section-heading">
+            <span class="section-heading__number">03 / 07</span>
+            <div><h2 id="research-title">The need beneath<br />the waiting.</h2><p>User research</p></div>
+          </header>
+          <div class="research-intro">
+            <p class="section-lede">Five in-depth interviews with long-term infusion patients shaped a four-stage emotional journey: before treatment, settling in, the long wait, and leaving.</p>
+            <p>The strongest signal was not simply boredom. Patients described three overlapping forms of loneliness: physical isolation, missing social feedback, and a deeper loss of agency. A small sense of choice could change how the wait was experienced.</p>
+          </div>
+          <div class="journey" aria-label="Qualitative emotional journey from interviews">
+            <div class="journey__head"><strong>Emotional journey</strong><span>Interview synthesis</span></div>
+            <div class="journey__track">
+              <div><span>01</span><strong>Pre-infusion</strong><p>Anticipation and uncertainty</p><blockquote>"I was nervous before the needle went in."</blockquote><i aria-hidden="true"></i></div>
+              <div><span>02</span><strong>Settling in</strong><p>Body and equipment take focus</p><blockquote>"I felt a bit more in control when I adjusted my sitting position."</blockquote><i aria-hidden="true"></i></div>
+              <div class="journey__peak"><span>03</span><strong>The long wait</strong><p>Loneliness and low agency peak</p><blockquote>"Nobody explained what was next and the remaining time, so I felt a bit lost and anxious."</blockquote><i aria-hidden="true"></i></div>
+              <div><span>04</span><strong>The end</strong><p>Relief mixed with uncertainty</p><blockquote>"I feel like a burden asking the doctor if I'm done."</blockquote><i aria-hidden="true"></i></div>
+            </div>
+          </div>
+          <div class="research-lenses" aria-label="Four dimensions of the waiting experience">
+            <div><span>01 / Mental</span><p>Anxious, lonely, unsettled</p></div>
+            <div><span>02 / Bodily</span><p>Cold and physically restricted</p></div>
+            <div><span>03 / Temporal</span><p>Unclear process and remaining time</p></div>
+            <div><span>04 / Behavioral</span><p>Movement and one-handed activities constrained</p></div>
+          </div>
+          <div class="model-block">
+            <div class="model-block__heading"><h3>Three layers of loneliness</h3><p>Research synthesis → design dimensions</p></div>
+            <div class="model-row"><span>Physical</span><p>Cold, constrained, unable to move freely</p><strong>Warmth</strong></div>
+            <div class="model-row"><span>Social</span><p>Little companionship or immediate response</p><strong>Voice</strong></div>
+            <div class="model-row"><span>Existential</span><p>Few meaningful choices during the wait</p><strong>Choice</strong></div>
+            <p class="model-block__note">Warmth was explored in early concepts. The working prototype focused on Voice and Choice; temperature was not implemented.</p>
+          </div>
+        </section>
+
+        <section class="case-section" id="concept" aria-labelledby="concept-title">
+          <header class="section-heading">
+            <span class="section-heading__number">04 / 07</span>
+            <div><h2 id="concept-title">A garden that<br />answers back.</h2><p>Interaction concept</p></div>
+          </header>
+          <div class="reading-grid">
+            <p class="section-lede">Choose a voice theme, follow gentle cues into the garden, discover a listening point, and decide whether to listen or leave a message of your own.</p>
+            <div class="reading-copy">
+              <p>Light and pixel expressions communicate a state from a distance. Voice makes the presence of another person tangible. Together, they give feedback without demanding continuous screen use or complex movement.</p>
+              <p>The concept evolved from a handheld device to a wearable cue and, finally, an IV-pole interface paired with a garden listening point. The final arrangement brought discovery and conversation into one place.</p>
+            </div>
+          </div>
+          <div class="concept-evolution" aria-label="Three stages of concept development">
+            <div class="concept-evolution__heading"><h3>From object to place</h3><p>Three iterations, one clearer interaction</p></div>
+            <div class="concept-evolution__grid">
+              <figure><div class="concept-evolution__image"><img src="assets/whispering-garden/handheld-concept-sketch.png" alt="Early sketch of a removable handheld device attached to an IV pole" loading="lazy" /></div><figcaption><span>01 / Handheld</span><strong>Warmth close to the body</strong><p>Useful as comfort, but not strongly connected to the garden experience.</p></figcaption></figure>
+              <figure><div class="concept-evolution__image"><img src="assets/whispering-garden/wearable-exploration.png" alt="Prototype exploration of a wrist-worn directional indicator held near an IV pole" loading="lazy" /></div><figcaption><span>02 / Wearable</span><strong>A directional cue</strong><p>Checking the wrist added effort; separating audio from the garden confused participants.</p></figcaption></figure>
+              <figure><div class="concept-evolution__image"><img src="assets/whispering-garden/prototype-cutout.png" alt="Final working IV pole with pixel interface and separate garden listening point" loading="lazy" /></div><figcaption><span>03 / Final prototype</span><strong>Interface on the pole</strong><p>The pole guides discovery; a single garden point holds the voice exchange.</p></figcaption></figure>
+            </div>
+          </div>
+          <ol class="experience-steps" aria-label="Interaction sequence">
+            <li><span>01 / IV pole</span><strong>Choose</strong><p>Select Comfort, Humor, Advice, or Daily.</p></li>
+            <li><span>02 / IV pole</span><strong>Seek</strong><p>Emoji size and haptic intensity shift with distance.</p></li>
+            <li><span>03 / IV pole</span><strong>Arrive</strong><p>Color and a short pulse confirm the listening point.</p></li>
+            <li><span>04 / Garden</span><strong>Listen</strong><p>Lift the handset and hear a thread of voices.</p></li>
+            <li><span>05 / Garden</span><strong>Respond</strong><p>Record a new message or reply to one you heard.</p></li>
+          </ol>
+          <div class="concept-visuals">
+            <figure class="concept-visuals__scene"><img src="assets/whispering-garden/prototype-in-use.webp" alt="A participant using the IV-pole interface" loading="lazy" /><figcaption>Prototype interaction</figcaption></figure>
+            <figure class="concept-visuals__object"><img src="assets/whispering-garden/garden-handset-lit.png" alt="Garden listening device with a white handset, wooden housing, and an illuminated orange pixel expression" loading="lazy" /><figcaption>Garden listening point / LED expression visualization</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="case-section case-section--dark" id="prototype" aria-labelledby="prototype-title">
+          <header class="section-heading">
+            <span class="section-heading__number">05 / 07</span>
+            <div><h2 id="prototype-title">Built to respond<br />in the real world.</h2><p>Hardware &amp; interaction</p></div>
+          </header>
+          <p class="section-lede">The core proof is a working interaction loop: proximity sensing, pixel feedback, and voice playback responding within the same physical experience.</p>
+          <figure class="video-figure">
+            <video controls playsinline preload="metadata" poster="assets/whispering-garden/prototype-in-use.webp" aria-label="Thirty-second demonstration of the working Whispering Garden prototype">
+              <source src="assets/whispering-garden/prototype-demo.mp4" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+            <figcaption><strong>30-second working prototype demo</strong><span>Proximity · pixel feedback · voice interaction</span></figcaption>
+          </figure>
+          <figure class="demo-photo">
+            <img src="assets/whispering-garden/prototype-demonstration.jpg" alt="Visitors trying the voice device at a hands-on prototype demonstration" loading="lazy" />
+            <figcaption>Hands-on demonstration of the voice interaction</figcaption>
+          </figure>
+          <div class="architecture">
+            <h3>System architecture</h3>
+            <div class="architecture__flow">
+              <div><span>01 / Sense</span><strong>HC-SR04</strong><p>Ultrasonic proximity sensing and physical input</p></div>
+              <div><span>02 / Coordinate</span><strong>ESP32 × 2</strong><p>State control and button-signal synchronization</p></div>
+              <div><span>03 / Express</span><strong>WS2812B + DFPlayer Mini</strong><p>Pixel-matrix expression and audio playback</p></div>
+            </div>
+          </div>
+          <div class="pixel-themes">
+            <div class="pixel-themes__heading"><h3>Four voice themes</h3><p>8 × 8 expressions from the original LED artwork</p></div>
+            <div class="pixel-themes__grid">
+              <div><div class="pixel-matrix pixel-matrix--comfort" role="img" data-pixels="00000000/01100110/10000001/00000000/00000000/01000010/00111100/00000000" aria-label="Pink pixel face for Comfort"></div><strong>Comfort</strong></div>
+              <div><div class="pixel-matrix pixel-matrix--humor" role="img" data-pixels="00000000/11100111/00100001/00000000/00000000/00000100/00011000/00000000" data-next="00000000/11100111/00100001/00000000/00011000/00100100/00011000/00000000" aria-label="Animated orange pixel face for Humor"></div><strong>Humor</strong></div>
+              <div><div class="pixel-matrix pixel-matrix--advice" role="img" data-pixels="00000000/00100100/00100100/00000000/00000000/00100100/00011000/00000000" aria-label="Blue pixel face for Advice"></div><strong>Advice</strong></div>
+              <div><div class="pixel-matrix pixel-matrix--daily" role="img" data-pixels="00000000/01000010/10100101/00000000/00000000/01000010/00111100/00000000" aria-label="White pixel face for Daily"></div><strong>Daily</strong></div>
+            </div>
+          </div>
+          <div class="prototype-details">
+            <div class="state-panel">
+              <h3>Interaction states</h3>
+              <ol>
+                <li><span>01</span><strong>Theme selected</strong><p>Comfort · Humor · Advice · Daily</p></li>
+                <li><span>02</span><strong>Searching</strong><p>Expression changes with distance</p></li>
+                <li><span>03</span><strong>Point found</strong><p>Color confirms arrival</p></li>
+                <li><span>04</span><strong>Listening / recording</strong><p>Garden-side expression reflects audio state</p></li>
+              </ol>
+            </div>
+            <div class="prototype-details__copy">
+              <h3>What it took to make it run</h3>
+              <p>Two ESP32 boards split the load and synchronize through a button signal. LED power, DFPlayer communication, power-bank auto-shutdown, and wiring inside the wooden housing were all real integration constraints.</p>
+              <p>The pixel display made discovery feel playful, but its cues had to stay glanceable. The device should direct attention toward the garden, not hold it on a screen.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <div><h3>Inside the pixel display</h3><p>The Arduino sketch maps an 8 × 8 LED matrix and two physical buttons to expression and listening states.</p></div>
+            <pre><code>#include &lt;Adafruit_NeoPixel.h&gt;
+
+#define LED_PIN      15
+#define BUTTON_1     14
+#define BUTTON_2     27
+#define LED_COUNT    64
+#define MATRIX_W      8
+#define MATRIX_H      8
+#define BRIGHTNESS   35
+
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);</code></pre>
+          </div>
+        </section>
+
+        <section class="case-section" id="validation" aria-labelledby="validation-title">
+          <header class="section-heading">
+            <span class="section-heading__number">06 / 07</span>
+            <div><h2 id="validation-title">What worked.<br />What resisted.</h2><p>Validation &amp; iteration</p></div>
+          </header>
+          <p class="section-lede">Five participants with infusion experience completed the full interaction journey in a planted environment. The sessions focused on clarity, emotional resonance, and willingness to engage.</p>
+          <div class="result-list" aria-label="Observations from prototype evaluation">
+            <div><strong>5 / 5</strong><p>Selected a theme and found the listening point.</p></div>
+            <div><strong>5 / 5</strong><p>Listened to the full voice message.</p></div>
+            <div><strong>2 / 5</strong><p>Repeatedly adjusted the IV tubing while interacting.</p></div>
+            <div><strong>3 / 5</strong><p>Were hesitant to record their own message.</p></div>
+          </div>
+          <div class="feedback-notes" aria-label="Participant feedback">
+            <blockquote>"The experience sparked curiosity. Humor was the most attractive theme."</blockquote>
+            <blockquote>"Haptic and visual feedback complemented each other: one was explicit, the other intuitive."</blockquote>
+            <blockquote>"Comfort and daily icons looked too similar; the white icon was too bright."</blockquote>
+          </div>
+          <div class="iteration-grid">
+            <div><h3>Keep</h3><p>Choice generated more agency than passive content. The humor theme sparked curiosity, and visual and tactile cues complemented each other during discovery.</p></div>
+            <div><h3>Change</h3><p>Reduce the need to walk, hold the handset, or record. Test a seated, hands-free version; calibrate proximity feedback; make the theme symbols easier to distinguish.</p></div>
+          </div>
+        </section>
+
+        <section class="case-section case-section--fog" id="reflection" aria-labelledby="reflection-title">
+          <header class="section-heading">
+            <span class="section-heading__number">07 / 07</span>
+            <div><h2 id="reflection-title">A working device<br />is only the beginning.</h2><p>Contribution &amp; reflection</p></div>
+          </header>
+          <div class="reflection-grid">
+            <div><h3>My contribution</h3><ul><li>Led five patient interviews and translated the findings into the Warmth, Voice, and Choice framework.</li><li>Defined the product direction, interaction sequence, and emotional feedback language.</li><li>Led hardware selection, integration, and physical prototyping.</li></ul></div>
+            <div><h3>What I would change</h3><ol><li>Validate the need for strict light–audio synchronization before committing to a two-controller architecture.</li><li>Prototype a seated, hands-free listening point and evaluate it in a real infusion setting over a longer period.</li></ol></div>
+          </div>
+          <div class="team-perspectives" aria-labelledby="team-perspectives-title">
+            <div class="team-perspectives__heading"><h3 id="team-perspectives-title">Perspectives from the team</h3><p>Different lenses on the next iteration</p></div>
+            <div class="team-perspectives__row"><span>Mingxuan Xu</span><p>Sensory cues should work toward one experience, not compete for attention. The garden itself can become part of the interaction.</p></div>
+            <div class="team-perspectives__row"><span>Tiancheng Xi</span><p>A precise interface is not necessarily a better experience. Ambient cues should return attention to the physical surroundings.</p></div>
+            <div class="team-perspectives__row"><span>Yuxin Li</span><p>The concept became practical quickly; more playfulness and surprise could make it emotionally engaging without adding effort for patients.</p></div>
+          </div>
+          <p class="takeaway">Engineering made it work. Experience design still has to answer why someone would choose to engage.</p>
+          <a class="end-link" href="index.html#garden">Back to all projects</a>
+        </section>
+      </main>
+    </div>
+    <script src="case.js?v=2"></script>
+  </body>
+</html>

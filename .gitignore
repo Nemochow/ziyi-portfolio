@@ -1,0 +1,17 @@
+.impeccable/
+DESIGN.md
+PRODUCT.md
+*.zip
+Bolt Upload Files/
+
+# Unused source and reference media kept locally
+assets/whispering-garden/garden-atmosphere.png
+assets/whispering-garden/garden-concept-visualization.png
+assets/whispering-garden/garden-handset.png
+assets/whispering-garden/garden-wide.jpg
+assets/whispering-garden/garden-wide.png
+assets/whispering-garden/home-project-cover.png
+assets/whispering-garden/simulated-evaluation-anonymized.png
+assets/whispering-garden/garden-cover-photocomposite.png
+assets/whispering-garden/garden-concept-visualization-v2.png
+assets/whispering-garden/prototype-in-use.png
