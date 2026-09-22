@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="case.css?v=15" />
-    <link rel="stylesheet" href="uber.css?v=5" />
+    <link rel="stylesheet" href="uber.css?v=6" />
   </head>
   <body class="uber-case">
     <a class="skip-link" href="#case-main">Skip to case study</a>
@@ -150,20 +150,34 @@
 
           <div class="decision-handoff" aria-label="Allocation of work between AI and the user">
             <div class="decision-handoff__rail">
-              <div class="decision-handoff__node">
-                <span>Starting field</span><strong>Many</strong><p>available choices</p>
+              <div class="decision-handoff__stage is-field">
+                <div class="decision-handoff__label"><strong>Many</strong><span>available choices</span></div>
+                <div class="decision-handoff__field" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
               </div>
               <div class="decision-handoff__bridge is-ai">
-                <span>AI</span><strong>Explore + compare</strong><i aria-hidden="true"></i>
+                <span>AI filters</span>
+                <strong>Explore + compare</strong>
+                <small>Preference &middot; price &middot; delivery fit</small>
+                <i aria-hidden="true"></i>
               </div>
-              <div class="decision-handoff__node is-focus">
-                <span>Handoff</span><strong>6</strong><p>relevant options</p>
+              <div class="decision-handoff__stage is-shortlist">
+                <div class="decision-handoff__six" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="decision-handoff__label"><strong>6</strong><span>relevant options</span></div>
               </div>
               <div class="decision-handoff__bridge is-human">
-                <span>User</span><strong>Judge + choose</strong><i aria-hidden="true"></i>
+                <span>User judges</span>
+                <strong>Judge + choose</strong>
+                <small>Appetite &middot; intuition &middot; intent</small>
+                <i aria-hidden="true"></i>
               </div>
-              <div class="decision-handoff__node">
-                <span>Final choice</span><strong>1</strong><p>deliberate order</p>
+              <div class="decision-handoff__stage is-final">
+                <div class="decision-handoff__one" aria-hidden="true"></div>
+                <div class="decision-handoff__label"><strong>1</strong><span>deliberate order</span></div>
               </div>
             </div>
             <div class="decision-handoff__ownership">
