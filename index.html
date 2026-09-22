@@ -3,134 +3,160 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Ziyi (Nemo) Zhou, AI Product User Experience Designer." />
+    <meta
+      name="description"
+      content="Portfolio of Ziyi (Nemo) Zhou, AI Product User Experience Designer."
+    />
     <title>Ziyi (Nemo) Zhou | AI Product UX Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,100..900&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=24" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=25" />
   </head>
   <body>
-    <a class="skip-link" href="#projects">Skip to selected work</a>
+    <a class="skip-link" href="#projects">Skip to projects</a>
 
-    <main>
-      <header class="hero" id="top">
-        <nav class="hero__nav" aria-label="Primary navigation">
-          <a class="wordmark" href="#top">Portfolio / 2026</a>
-          <div class="hero__nav-links">
-            <a href="#profile">Profile</a>
-            <a href="#projects">Selected work</a>
-          </div>
+    <main class="portfolio-shell">
+      <aside class="identity-panel" aria-label="Portfolio identity">
+        <div class="identity-panel__top">
+          <p class="availability">Selected work</p>
+          <h1>Ziyi <span>(Nemo)</span> Zhou</h1>
+          <p class="role">AI Product User Experience Designer</p>
+        </div>
+
+        <nav class="project-nav" aria-label="Project navigation">
+          <button class="project-nav__item is-active" type="button" data-project="garden">
+            <span class="project-nav__index">01</span>
+            <span>
+              <strong>Whispering Garden</strong>
+              <small>Physical interaction · Patient experience</small>
+            </span>
+          </button>
+          <button class="project-nav__item" type="button" data-project="sync">
+            <span class="project-nav__index">02</span>
+            <span>
+              <strong>sync&amp;sweat</strong>
+              <small>Human-centered fitness system</small>
+            </span>
+          </button>
+          <button class="project-nav__item" type="button" data-project="uber">
+            <span class="project-nav__index">03</span>
+            <span>
+              <strong>Uber Eats</strong>
+              <small>AI recommendation &middot; Decision design</small>
+            </span>
+          </button>
         </nav>
 
-        <div class="hero__layout">
-          <div class="hero__identity">
-            <p class="hero__role">AI Product User Experience Designer</p>
-            <h1><span>Nemo</span><span>Zhou.</span></h1>
-            <p class="hero__statement">I design the space between people and intelligent systems.</p>
-            <a class="hero__cta" href="#projects">Enter selected work</a>
+        <div class="identity-panel__bottom">
+          <p>
+            Futuristic product thinking shaped with quiet systems, precise interaction,
+            and humane AI experiences.
+          </p>
+          <a class="contact-link" href="#projects" aria-label="Jump to selected work">
+            View work
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17L17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+      </aside>
 
-            <dl class="hero__meta">
-              <div><dt>Approach</dt><dd>Research-led</dd></div>
-              <div><dt>Build</dt><dd>Interface + physical</dd></div>
-              <div><dt>Intent</dt><dd>Calm, legible, human</dd></div>
-            </dl>
+      <section class="work-panel" id="projects" aria-label="Project previews">
+        <div class="work-panel__header">
+          <p>Selected Projects</p>
+          <div aria-hidden="true">AI Product UX</div>
+        </div>
+
+        <article class="project-card project-card--featured is-active" id="garden" data-project-card="garden">
+          <div class="project-card__content">
+            <div class="project-card__meta">
+              <span>01</span>
+              <span>Featured case / 2026</span>
+            </div>
+            <h2>Whispering Garden</h2>
+            <p>
+              Turning passive waiting into an active response. A garden-based interaction
+              shaped by recurring infusion care and brought to life as working hardware.
+            </p>
+            <ul class="project-card__tags" aria-label="Whispering Garden focus areas">
+              <li>User Research</li>
+              <li>Interaction Design</li>
+              <li>Hardware Prototyping</li>
+            </ul>
+            <a class="case-link" href="whispering-garden.html">Read case study <span aria-hidden="true">↗</span></a>
           </div>
+          <a class="specimen specimen--garden specimen--garden-photo" href="whispering-garden.html" aria-label="Open the Whispering Garden case study">
+            <img src="assets/whispering-garden/garden-cover-photocomposite.webp" alt="Whispering Garden listening point and full IV-pole prototype in a planted hospital atrium" loading="eager" />
+          </a>
+        </article>
 
-          <figure class="hero__media">
-            <img src="assets/home/chromatic-signal.png" alt="A luminous woven signal made from colored filaments" width="1120" height="1400" fetchpriority="high" />
-            <figcaption><span>Signal study / 001</span><span>Human × System</span></figcaption>
-          </figure>
-        </div>
-      </header>
-
-      <section class="profile" id="profile" aria-labelledby="profile-title">
-        <div class="profile__heading">
-          <p class="section-label">Profile / Practice</p>
-          <h2 id="profile-title">Make the complex feel human.</h2>
-        </div>
-
-        <div class="profile__body">
-          <p class="profile__intro">My practice moves between field research, interface systems, and physical prototyping. I look for the moment when unfamiliar technology becomes understandable, useful, and quietly natural.</p>
-          <dl class="profile__facts">
-            <div><dt>Focus</dt><dd>AI product experience</dd></div>
-            <div><dt>Method</dt><dd>Research to prototype</dd></div>
-            <div><dt>Practice</dt><dd>Interface + physical</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="projects" id="projects" aria-labelledby="projects-title">
-        <header class="projects__header">
-          <div>
-            <p class="section-label">Selected work / Four projects</p>
-            <h2 id="projects-title">Systems with a human pulse.</h2>
+        <article class="project-card" id="sync" data-project-card="sync">
+          <div class="project-card__content">
+            <div class="project-card__meta">
+              <span>02</span>
+              <span>Rhythm system</span>
+            </div>
+            <h2>sync&amp;sweat</h2>
+            <p>
+              A coordinated fitness experience concept where individual effort, group rhythm,
+              and recovery cues become one readable product system.
+            </p>
+            <ul class="project-card__tags" aria-label="sync and sweat focus areas">
+              <li>Social motion</li>
+              <li>Wearable states</li>
+              <li>Progress language</li>
+            </ul>
+            <a class="case-link" href="sync-sweat.html">Read case study <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <p>From patient experience and social fitness to AI decision support and generative motion, each project turns an abstract system into something people can read, feel, or act on.</p>
-        </header>
-
-        <div class="project-list">
-          <article class="project-row" id="garden">
-            <div class="project-row__content">
-              <div class="project-row__meta"><span>01</span><span>Featured case / 2026</span></div>
-              <h3>Whispering Garden</h3>
-              <p>Turning passive waiting into an active response through a garden-based interaction shaped with recurring infusion patients and built as working hardware.</p>
-              <ul class="project-row__disciplines" aria-label="Whispering Garden focus areas"><li>User research</li><li>Interaction design</li><li>Hardware prototyping</li></ul>
-              <a class="project-row__link" href="whispering-garden.html">Read case study</a>
+          <a class="specimen specimen--sync" href="sync-sweat.html" aria-label="Open the sync and sweat case study">
+            <div class="sync-ring">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <a class="project-row__media project-row__media--garden" href="whispering-garden.html" aria-label="Open the Whispering Garden case study">
-              <img src="assets/whispering-garden/garden-cover-photocomposite.webp" alt="Whispering Garden listening point and IV-pole prototype in a planted hospital atrium" loading="lazy" />
-            </a>
-          </article>
-
-          <article class="project-row" id="sync">
-            <div class="project-row__content">
-              <div class="project-row__meta"><span>02</span><span>Human-centered fitness system</span></div>
-              <h3>sync&amp;sweat</h3>
-              <p>A coordinated fitness concept that connects listening history with workout data, turning individual effort, group rhythm, and recovery cues into one readable system.</p>
-              <ul class="project-row__disciplines" aria-label="sync and sweat focus areas"><li>Data experience</li><li>Social motion</li><li>System prototyping</li></ul>
-              <a class="project-row__link" href="sync-sweat.html">Read case study</a>
+            <div class="sync-timeline">
+              <i style="--height: 42%"></i>
+              <i style="--height: 68%"></i>
+              <i style="--height: 51%"></i>
+              <i style="--height: 86%"></i>
+              <i style="--height: 62%"></i>
+              <i style="--height: 74%"></i>
+              <i style="--height: 47%"></i>
             </div>
-            <a class="project-row__media project-row__media--sync" href="sync-sweat.html" aria-label="Open the sync and sweat case study">
-              <img src="assets/sync-sweat/data-donation-platform.png" alt="sync and sweat data donation interface for Spotify and Strava uploads" loading="lazy" />
-            </a>
-          </article>
-
-          <article class="project-row" id="uber">
-            <div class="project-row__content">
-              <div class="project-row__meta"><span>03</span><span>Top 3 Hackathon / 2026</span></div>
-              <h3>Food Miner<br />for Uber Eats</h3>
-              <p>An AI decision shortcut that turns endless scrolling into six personalized picks, helping people reach a confident order faster.</p>
-              <ul class="project-row__disciplines" aria-label="Food Miner focus areas"><li>AI product strategy</li><li>User journey</li><li>MVP prototyping</li></ul>
-              <a class="project-row__link" href="uber-eats.html">Read case study</a>
+            <div class="sync-readout">
+              <strong>SYNC</strong>
+              <span>group pulse aligned</span>
             </div>
-            <a class="project-row__media project-row__media--uber" href="uber-eats.html" aria-label="Open the Food Miner for Uber Eats case study">
-              <img src="assets/uber-eats/food-miner-project-cover.png" alt="Food Miner for Uber Eats project cover with the app interface and delivery mascot" loading="lazy" />
-            </a>
-          </article>
+          </a>
+        </article>
 
-          <article class="project-row" id="ascii">
-            <div class="project-row__content">
-              <div class="project-row__meta"><span>04</span><span>Realtime canvas / 2026</span></div>
-              <h3>ASCII Motion Renderer</h3>
-              <p>A live video pipeline that isolates a moving subject and rebuilds every frame as an eight-tone field of characters.</p>
-              <ul class="project-row__disciplines" aria-label="ASCII Motion focus areas"><li>Frame analysis</li><li>Subject isolation</li><li>Canvas rendering</li></ul>
-              <a class="project-row__link" href="ascii-motion.html">Open live renderer</a>
+        <article class="project-card" id="uber" data-project-card="uber">
+          <div class="project-card__content">
+            <div class="project-card__meta">
+              <span>03</span>
+              <span>Top 3 Hackathon / 2026</span>
             </div>
-            <a class="project-row__media project-row__media--ascii" href="ascii-motion.html" aria-label="Open the live ASCII Motion Renderer">
-              <video muted loop playsinline preload="metadata" aria-label="Vinyl and stylus source footage used by the ASCII Motion Renderer"><source src="assets/ascii-motion/source.mp4" type="video/mp4" /></video>
-            </a>
-          </article>
-        </div>
+            <h2>Food Miner<br />for Uber Eats</h2>
+            <p>
+              An AI recommendation concept that filters the catalogue into six relevant
+              options, reducing decision effort without taking away the final choice.
+            </p>
+            <ul class="project-card__tags" aria-label="Uber Eats focus areas">
+              <li>AI Product Strategy</li>
+              <li>User Journey</li>
+              <li>MVP Prototyping</li>
+            </ul>
+            <a class="case-link" href="uber-eats.html">Read case study <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <a class="specimen specimen--uber-product" href="uber-eats.html" aria-label="Open the Food Miner for Uber Eats case study">
+            <img src="assets/uber-eats/food-miner-project-cover.png" alt="Food Miner for Uber Eats presentation cover" style="position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: contain; transform: none; border-radius: 0;" />
+          </a>
+        </article>
       </section>
-
-      <footer class="site-footer">
-        <p>Ziyi (Nemo) Zhou</p>
-        <p>AI Product User Experience Designer</p>
-        <a href="#top">Back to top</a>
-      </footer>
     </main>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>
