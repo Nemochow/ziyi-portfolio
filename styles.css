@@ -641,6 +641,25 @@ h1 span {
   }
 }
 
+.specimen.specimen--project-cover {
+  display: block;
+  align-self: center;
+  min-height: 0;
+  height: auto;
+  background: #fff;
+}
+
+.specimen--project-cover::before {
+  display: none;
+}
+
+.specimen--project-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .specimen--uber-product {
   display: block;
   color: white;
