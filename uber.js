@@ -1,47 +1,77 @@
 (() => {
-  const showcase = document.querySelector("[data-motion-showcase]");
-  if (!showcase) return;
+  const prototype = document.querySelector("[data-foodminer-prototype]");
+  const frame = document.querySelector("[data-prototype-frame]");
+  const status = document.querySelector("[data-prototype-status]");
+  const liveButton = document.querySelector("[data-prototype-live]");
+  const stageButtons = [...document.querySelectorAll("[data-prototype-stage]")];
 
-  const frame = showcase.querySelector("[data-motion-frame]");
-  const status = showcase.querySelector("[data-motion-status]");
-  const toggle = showcase.querySelector("[data-prototype-toggle]");
-  const stages = [...showcase.querySelectorAll("[data-motion-stage]")];
+  if (!prototype || !frame || !status || !liveButton || !stageButtons.length) return;
+
   const base = "assets/uber-eats/prototype/index.html";
-  let activeStage = "home";
-  let activeTitle = "Entry";
-  let interactive = false;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeIndex = 0;
+  let timer = null;
+  let isLive = false;
 
-  const showStage = (button) => {
-    activeStage = button.dataset.motionStage;
-    activeTitle = button.dataset.motionTitle;
-    interactive = false;
-    showcase.classList.remove("is-interactive");
-    frame.src = `${base}?stage=${activeStage}#stage=${activeStage}`;
-    frame.title = `Food Miner ${activeTitle} animation`;
-    status.textContent = `Autoplay · ${activeTitle}`;
-    toggle.textContent = "Open interactive mode";
+  const stopAutoplay = () => {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  };
 
-    stages.forEach((stage) => {
-      const selected = stage === button;
-      stage.classList.toggle("is-active", selected);
-      stage.setAttribute("aria-selected", String(selected));
+  const showStage = (index, mode = "Autoplay") => {
+    const button = stageButtons[index];
+    if (!button) return;
+
+    activeIndex = index;
+    isLive = false;
+    prototype.classList.remove("is-live");
+    const stage = button.dataset.prototypeStage;
+    frame.src = stage === "home" ? base : `${base}#stage=${stage}`;
+    frame.title = `Food Miner ${button.dataset.prototypeLabel} animation`;
+    status.textContent = `${mode} / ${button.dataset.prototypeLabel}`;
+    liveButton.textContent = "Try live prototype";
+
+    stageButtons.forEach((item, itemIndex) => {
+      const selected = itemIndex === index;
+      item.classList.toggle("is-active", selected);
+      item.setAttribute("aria-selected", String(selected));
     });
   };
 
-  stages.forEach((stage) => stage.addEventListener("click", () => showStage(stage)));
+  const startAutoplay = () => {
+    if (reducedMotion || timer || isLive) return;
+    timer = window.setInterval(() => showStage((activeIndex + 1) % stageButtons.length), 3600);
+  };
 
-  toggle.addEventListener("click", () => {
-    if (interactive) {
-      const selected = stages.find((stage) => stage.dataset.motionStage === activeStage) || stages[0];
-      showStage(selected);
+  stageButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      stopAutoplay();
+      showStage(index, "Preview");
+    });
+  });
+
+  liveButton.addEventListener("click", () => {
+    stopAutoplay();
+    if (isLive) {
+      showStage(activeIndex, "Preview");
       return;
     }
 
-    interactive = true;
-    showcase.classList.add("is-interactive");
+    isLive = true;
+    prototype.classList.add("is-live");
     frame.src = base;
     frame.title = "Interactive Food Miner prototype";
-    status.textContent = "Interactive · Drag and tap";
-    toggle.textContent = "Return to motion stages";
+    status.textContent = "Interactive / Drag and tap";
+    liveButton.textContent = "Return to stages";
   });
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) startAutoplay();
+      else stopAutoplay();
+    },
+    { threshold: 0.35 },
+  );
+
+  observer.observe(prototype);
 })();
