@@ -1,3 +1,45 @@
+# Design QA — Portfolio Home
+
+- Sources: `C:/Users/DELL/AppData/Local/Temp/codex-clipboard-ad88cd7c-3d6c-490e-b7a7-8b66efe4efd3.png`, `C:/Users/DELL/AppData/Local/Temp/codex-clipboard-689a4b8f-be78-4aa7-865f-c889d5a8099f.png`
+- Implementation screenshot: `.impeccable/review/desktop-904x682.png`
+- Full-page evidence: `.impeccable/review/desktop-full.png`
+- Responsive evidence: `.impeccable/review/mobile-390x844.png`
+- Comparison evidence: `.impeccable/review/comparison.png`
+- Viewports: matched desktop comparison at 904 × 682; mobile at 390 × 844
+- Dimensions / density normalization: the first source and implementation are compared at the same 904 × 682 viewport; the second source is treated as a material cue only because its aspect ratio and section purpose differ
+- State: home at scroll position 0, fonts loaded, hero image fully decoded
+
+## Full-view comparison evidence
+
+The implementation retains only the requested atmosphere: tactile grain, concentrated chroma, strong type-scale contrast, sparse instrument-like labels, and an editorial sense of space. It deliberately departs from the sources in composition and meaning: warm/cool paper replaces the full-screen gradient field, Nemo's identity replaces the product slogan, a 46/54 split replaces the single-image cover, and an original braided filament specimen replaces both the color cloud and the stacked abstract form.
+
+## Focused regions
+
+- Identity column: name, role, point of view, CTA, and three practice signals remain legible in one desktop viewport and preserve hierarchy on mobile.
+- Signal plate: the image is a generated raster asset with prompt provenance embedded; it crops cleanly at desktop and appears immediately after the identity block on mobile.
+- Selected work: all four existing projects retain real project media, semantic headings, and working destinations; lazy-loaded imagery resolves after entering the viewport.
+- Motion and accessibility: pointer drift is bounded and decorative, focus styles remain visible, the skip link is present, and reduced-motion disables transition movement.
+
+## Findings
+
+- P0: none.
+- P1: none.
+- P2: none after correction. The signal accent was darkened for AA contrast, instrument captions were raised above the 11px functional-text floor, and the page ground was shifted from generic cream to a cool mineral paper.
+
+## Iteration history
+
+1. Rejected the first reference-literal full-bleed direction after the user clarified that only the feeling should transfer.
+2. Rebuilt the cover as an original split editorial self-portrait centered on Nemo's name and working method.
+3. Generated a new braided-filament signal plate without reference-image input, gradient clouds, stacked forms, typography, or UI.
+4. Constrained the desktop cover to one viewport so the practice signals and full image plate remain visible together.
+5. Verified desktop, mobile, media loading, video playback, document width, and comparison evidence.
+
+## Final result
+
+passed
+
+---
+
 # Design QA — ASCII Motion Renderer
 
 - Source: `.impeccable/reference/ascii-motion-gallery-reference.jpg`
