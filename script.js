@@ -1,40 +1,62 @@
-const navItems = [...document.querySelectorAll("[data-project]")];
-const cards = [...document.querySelectorAll("[data-project-card]")];
+const hero = document.querySelector(".hero");
+const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const projectVideo = document.querySelector(".project-row__media--ascii video");
 
-function setActiveProject(projectId, shouldScroll = true) {
-  navItems.forEach((item) => {
-    item.classList.toggle("is-active", item.dataset.project === projectId);
-  });
+let pointerFrame = null;
+let videoIsVisible = false;
 
-  cards.forEach((card) => {
-    const isActive = card.dataset.projectCard === projectId;
-    card.classList.toggle("is-active", isActive);
+function resetHeroDrift() {
+  if (!hero) return;
+  hero.classList.remove("is-tracking");
+  hero.style.setProperty("--drift-x", "0px");
+  hero.style.setProperty("--drift-y", "0px");
+}
 
-    if (isActive && shouldScroll && window.matchMedia("(min-width: 961px)").matches) {
-      card.scrollIntoView({ block: "center", behavior: "smooth" });
-    }
+function updateHeroDrift(event) {
+  if (!hero || motionQuery.matches) return;
+
+  const bounds = hero.getBoundingClientRect();
+  const normalizedX = (event.clientX - bounds.left) / bounds.width - 0.5;
+  const normalizedY = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+  if (pointerFrame) cancelAnimationFrame(pointerFrame);
+
+  pointerFrame = requestAnimationFrame(() => {
+    hero.classList.add("is-tracking");
+    hero.style.setProperty("--drift-x", `${normalizedX * -18}px`);
+    hero.style.setProperty("--drift-y", `${normalizedY * -12}px`);
+    pointerFrame = null;
   });
 }
 
-navItems.forEach((item) => {
-  item.addEventListener("click", () => setActiveProject(item.dataset.project));
-});
+function syncProjectVideo() {
+  if (!projectVideo) return;
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (videoIsVisible && !document.hidden && !motionQuery.matches) {
+    projectVideo.play().catch(() => {});
+  } else {
+    projectVideo.pause();
+  }
+}
 
-    if (visible) {
-      setActiveProject(visible.target.dataset.projectCard, false);
-    }
-  },
-  {
-    root: null,
-    threshold: [0.35, 0.6, 0.85],
-  },
-);
+if (hero && window.matchMedia("(pointer: fine)").matches) {
+  hero.addEventListener("pointermove", updateHeroDrift, { passive: true });
+  hero.addEventListener("pointerleave", resetHeroDrift);
+}
 
-cards.forEach((card) => observer.observe(card));
+if (projectVideo) {
+  const videoObserver = new IntersectionObserver(
+    ([entry]) => {
+      videoIsVisible = entry.isIntersecting;
+      syncProjectVideo();
+    },
+    { threshold: 0.35 },
+  );
 
+  videoObserver.observe(projectVideo);
+  document.addEventListener("visibilitychange", syncProjectVideo);
+  motionQuery.addEventListener("change", () => {
+    resetHeroDrift();
+    syncProjectVideo();
+  });
+}

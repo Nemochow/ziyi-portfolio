@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sync & Sweat: a data-centric music suggestion system that uses personal workout history and real-time heart rate without overstating what tempo can control."
+    />
+    <title>Sync &amp; Sweat | Ziyi (Nemo) Zhou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="case.css?v=15" />
+    <link rel="stylesheet" href="sync.css?v=1" />
+  </head>
+  <body class="sync-case">
+    <a class="skip-link" href="#case-main">Skip to case study</a>
+
+    <div class="case-shell">
+      <aside class="case-rail" aria-label="Case study navigation">
+        <div class="case-rail__top">
+          <a class="back-link" href="index.html#sync">Back to portfolio</a>
+          <div class="rail-identity">
+            <strong>Ziyi (Nemo) Zhou</strong>
+            <span>AI Product User Experience Designer</span>
+          </div>
+        </div>
+
+        <nav class="chapter-nav" aria-label="Case study chapters">
+          <a href="#cover" class="is-current"><span>01</span>Overview</a>
+          <a href="#question"><span>02</span>Question</a>
+          <a href="#evidence"><span>03</span>Evidence</a>
+          <a href="#reframe"><span>04</span>Reframe</a>
+          <a href="#system"><span>05</span>System</a>
+          <a href="#prototype"><span>06</span>Prototype</a>
+          <a href="#evaluation"><span>07</span>Evaluation</a>
+        </nav>
+
+        <div class="case-rail__foot">Data-centric design &middot; Connected product &middot; Responsible inference</div>
+      </aside>
+
+      <main class="case-main" id="case-main">
+        <section class="sync-cover" id="cover" aria-labelledby="case-title">
+          <div class="sync-cover__copy">
+            <p class="sync-cover__type">Spotify + Strava connected product</p>
+            <h1 id="case-title">sync&amp;<br />sweat</h1>
+            <p class="sync-cover__statement">A music suggestion system shaped by the data that disproved its first assumption.</p>
+            <a href="https://github.com/stvschulte/Data-Centric-Design-Group-10-" target="_blank" rel="noreferrer">View project source <span aria-hidden="true">&nearr;</span></a>
+          </div>
+
+          <div class="sync-cover__visual" aria-label="Follow the Beat mobile product flow">
+            <div class="sync-cover__plot" aria-hidden="true">
+              <span style="--x: 7%; --y: 62%"></span>
+              <span style="--x: 18%; --y: 49%"></span>
+              <span style="--x: 30%; --y: 55%"></span>
+              <span style="--x: 44%; --y: 31%"></span>
+              <span style="--x: 57%; --y: 43%"></span>
+              <span style="--x: 71%; --y: 22%"></span>
+              <span style="--x: 86%; --y: 34%"></span>
+            </div>
+            <img src="assets/sync-sweat/app-flow.png" alt="Seven Follow the Beat app screens, from data connection to live workout recommendation and post-session feedback" />
+          </div>
+        </section>
+
+        <div class="case-facts" aria-label="Project facts">
+          <div><span>Role</span><strong>Data-centric product design</strong></div>
+          <div><span>Period</span><strong>2026</strong></div>
+          <div><span>Team</span><strong>3 designers</strong></div>
+          <div><span>Methods</span><strong>Data donation &middot; RTA &middot; Prototyping</strong></div>
+        </div>
+
+        <section class="case-section sync-question" id="question" aria-labelledby="question-title">
+          <header class="sync-section__head">
+            <p>Starting hypothesis</p>
+            <h2 id="question-title">Can a beat guide a body into the right heart-rate zone?</h2>
+          </header>
+
+          <div class="sync-question__opening">
+            <p class="section-lede">The obvious product story was simple: faster music raises heart rate, so the system should prescribe tempo. We treated that as a question, not a promise.</p>
+            <div class="reading-copy">
+              <p>We explored whether Spotify listening behavior and Strava workout data could support a personalized music suggestion system for training and recovery.</p>
+              <p>The design challenge was not only to find a pattern. It was to decide which patterns were strong enough to become product behavior, and which claims the interface should refuse to make.</p>
+            </div>
+          </div>
+
+          <div class="sync-research-question">
+            <span>Research question</span>
+            <strong>How can a connected product suggest music that supports movement between heart-rate zones without confusing correlation with control?</strong>
+          </div>
+
+          <ol class="sync-assumptions" aria-label="Initial assumptions">
+            <li><span>Signal</span><strong>Track BPM</strong><p>Tempo might relate to workout intensity.</p></li>
+            <li><span>Response</span><strong>Heart rate</strong><p>Strava data makes effort visible over time.</p></li>
+            <li><span>Context</span><strong>Activity</strong><p>Running, riding, and social sessions may behave differently.</p></li>
+          </ol>
+        </section>
+
+        <section class="case-section case-section--fog sync-evidence" id="evidence" aria-labelledby="evidence-title">
+          <header class="sync-section__head">
+            <p>Build the evidence</p>
+            <h2 id="evidence-title">Align two personal histories before drawing a conclusion.</h2>
+          </header>
+
+          <div class="sync-pipeline" aria-label="Data processing pipeline">
+            <div><span>01</span><strong>Spotify</strong><p>Listening history and track timestamps</p></div>
+            <i aria-hidden="true"></i>
+            <div><span>02</span><strong>Strava</strong><p>Workout windows, activity type, and heart rate</p></div>
+            <i aria-hidden="true"></i>
+            <div><span>03</span><strong>Enrich</strong><p>BPM, energy, valence, and danceability</p></div>
+            <i aria-hidden="true"></i>
+            <div><span>04</span><strong>Match</strong><p>Tracks aligned to workouts by timestamp</p></div>
+          </div>
+
+          <div class="sync-evidence__grid">
+            <figure>
+              <img src="assets/sync-sweat/data-donation-platform.png" alt="Data donation platform for uploading Spotify and Strava exports and reviewing matched workout data" loading="lazy" />
+              <figcaption><strong>Participant-controlled donation</strong><span>People could inspect their data before submitting it.</span></figcaption>
+            </figure>
+            <div class="sync-evidence__notes">
+              <div><strong>112</strong><span>matched workout-track pairs for the first participant</span></div>
+              <div><strong>49</strong><span>pairs with usable BPM metadata</span></div>
+              <p>That drop mattered. The interface had to make missing and uneven data visible instead of smoothing it into false certainty.</p>
+            </div>
+          </div>
+
+          <figure class="sync-process-figure">
+            <img src="assets/sync-sweat/data-pipeline.png" alt="Diagram showing Spotify and Strava data matched by workout time, then enriched and analyzed" loading="lazy" />
+            <figcaption>Custom processing connected tracks to the workouts in which they were actually heard.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section sync-reframe" id="reframe" aria-labelledby="reframe-title">
+          <header class="sync-section__head">
+            <p>The useful failure</p>
+            <h2 id="reframe-title">Tempo was not the lever we expected.</h2>
+          </header>
+
+          <div class="sync-finding">
+            <div class="sync-finding__metric">
+              <span>Initial participant</span>
+              <strong>r = +0.23</strong>
+              <p>A weak positive relationship between BPM and average heart rate.</p>
+            </div>
+            <figure>
+              <img src="assets/sync-sweat/initial-correlation.png" alt="Scatter plot of song BPM against average workout heart rate with a weak positive correlation of 0.23" loading="lazy" />
+              <figcaption>Initial BPM-to-heart-rate analysis</figcaption>
+            </figure>
+          </div>
+
+          <div class="sync-turn">
+            <p>Once activity type was separated, the relationship nearly disappeared.</p>
+            <strong>r = +0.05</strong>
+            <span>Tempo did not explain heart rate across running, riding, walking, and other sessions.</span>
+          </div>
+
+          <div class="sync-cluster-layout">
+            <figure>
+              <img src="assets/sync-sweat/activity-clusters.png" alt="Scatter plot annotated to show different activity types forming distinct heart-rate clusters" loading="lazy" />
+              <figcaption>Activity type organized the data more clearly than music tempo.</figcaption>
+            </figure>
+            <div class="sync-cluster-layout__copy">
+              <span>Reframed question</span>
+              <h3>Can music support sustained engagement instead of directly controlling physiology?</h3>
+              <p>We shifted from a causal product claim to a contextual one. Workout duration became a proxy for continued engagement, and activity type became a required session input.</p>
+            </div>
+          </div>
+
+          <figure class="sync-duration-figure">
+            <img src="assets/sync-sweat/duration-bpm.png" alt="Scatter plot comparing workout duration and average track BPM, with a visible cluster among rides" loading="lazy" />
+            <figcaption><strong>New lens: duration</strong><span>The data suggested a modest engagement pattern, not a universal tempo prescription.</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section case-section--fog sync-boundary" id="system" aria-labelledby="system-title">
+          <header class="sync-section__head">
+            <p>Product boundary</p>
+            <h2 id="system-title">Design for solo training, where music has a job to do.</h2>
+          </header>
+
+          <div class="sync-boundary__layout">
+            <div>
+              <p class="section-lede">The activity timeline revealed a factor no acoustic feature could explain: social context.</p>
+              <div class="reading-copy">
+                <p>Interviews showed that music was often absent during group sessions because conversation and shared pace replaced it. A universal workout companion would ignore the moment when the product was least useful.</p>
+                <p>We narrowed the product to solo sessions and defined activity type as a dynamic input, selected by the user or inferred from connected activity data.</p>
+              </div>
+            </div>
+            <figure>
+              <img src="assets/sync-sweat/activity-timeline.png" alt="Participant activity timeline showing heart-rate zones across different workout types and social contexts" loading="lazy" />
+              <figcaption>Context changed across the year, so the product boundary had to change with it.</figcaption>
+            </figure>
+          </div>
+
+          <div class="sync-boundary-rule">
+            <span>Use boundary</span>
+            <div><strong>Solo session</strong><p>Music can support focus, pacing, and motivation.</p></div>
+            <div><strong>Group session</strong><p>Social interaction already carries the experience. The system steps back.</p></div>
+          </div>
+
+          <div class="sync-mechanism" aria-label="Minimum viable data and recommendation logic">
+            <div class="sync-mechanism__inputs">
+              <span>Minimum viable data</span>
+              <ul>
+                <li>Real-time heart rate</li>
+                <li>Activity type</li>
+                <li>Track BPM, energy, and valence</li>
+                <li>Personal Spotify workout history</li>
+              </ul>
+            </div>
+            <div class="sync-mechanism__operation">
+              <span>Recommendation operation</span>
+              <strong>Current zone + personal evidence</strong>
+              <i aria-hidden="true"></i>
+              <strong>One explainable track suggestion</strong>
+            </div>
+          </div>
+
+          <figure class="sync-playlist-figure">
+            <img src="assets/sync-sweat/zone-playlists.png" alt="Prototype data product that organizes a participant's Spotify tracks into five heart-rate zone playlists" loading="lazy" />
+            <figcaption><strong>Abstract data product</strong><span>Five zone playlists built from the user's own workout listening history.</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section sync-prototype" id="prototype" aria-labelledby="prototype-title">
+          <header class="sync-section__head">
+            <p>Follow the Beat</p>
+            <h2 id="prototype-title">Turn analysis into a decision someone can understand mid-workout.</h2>
+          </header>
+
+          <ol class="sync-product-flow" aria-label="Product experience flow">
+            <li><span>Connect</span><strong>Bring personal history in</strong><p>Spotify and Strava create a participant-specific baseline.</p></li>
+            <li><span>Sense</span><strong>Read the live zone</strong><p>Heart rate and activity type locate the current session context.</p></li>
+            <li><span>Suggest</span><strong>Offer one track</strong><p>The interface explains why the recommendation fits now.</p></li>
+            <li><span>Reflect</span><strong>Capture feedback</strong><p>Post-session response helps the system learn what BPM cannot show.</p></li>
+          </ol>
+
+          <figure class="sync-app-figure">
+            <div class="sync-app-figure__viewport" tabindex="0" aria-label="Horizontally scrollable Follow the Beat mobile screen sequence">
+              <img src="assets/sync-sweat/app-flow.png" alt="Full Follow the Beat product sequence including onboarding, live tracking, track explanation, and workout completion" loading="lazy" />
+            </div>
+            <figcaption><strong>One loop, seven screens</strong><span>The prototype moves from consent to suggestion to reflection without hiding the recommendation logic.</span></figcaption>
+          </figure>
+
+          <div class="sync-explanation-pattern">
+            <span>Explanation pattern</span>
+            <blockquote>Suggested because this track appears often in your solo rides and matches your current zone.</blockquote>
+            <p>The language states the evidence the system has. It does not claim the song will control the body.</p>
+          </div>
+        </section>
+
+        <section class="case-section case-section--fog sync-evaluation" id="evaluation" aria-labelledby="evaluation-title">
+          <header class="sync-section__head">
+            <p>Evaluation and limits</p>
+            <h2 id="evaluation-title">A credible next step is more valuable than a dramatic claim.</h2>
+          </header>
+
+          <div class="sync-evaluation__summary">
+            <div><strong>3</strong><span>participants</span></div>
+            <div><strong>13</strong><span>workout sessions</span></div>
+            <div><strong>232</strong><span>matched workout-track pairs</span></div>
+          </div>
+
+          <div class="sync-evaluation__evidence">
+            <figure>
+              <img src="assets/sync-sweat/cohort-analysis.jpg" alt="Cohort charts comparing song BPM with heart rate and workout duration across participants" loading="lazy" />
+              <figcaption>Cohort-level analysis remained exploratory.</figcaption>
+            </figure>
+            <div class="sync-evaluation__metrics">
+              <div><span>BPM to heart rate</span><strong>r = +0.05</strong><p>No useful direct relationship in the small cohort.</p></div>
+              <div><span>BPM to duration</span><strong>r = +0.24</strong><p>A modest signal worth testing as engagement, not causation.</p></div>
+            </div>
+          </div>
+
+          <div class="sync-lessons">
+            <div>
+              <h3>What the study changed</h3>
+              <ol>
+                <li>Music was described as a mental and motivational aid more often than a direct physiological control.</li>
+                <li>Track choice was habitual and mood-driven, not a conscious effort to match heart-rate zones.</li>
+                <li>BPM, energy, and valence missed lyrics, memory, and personal hype, so future calibration needs self-reported mood.</li>
+              </ol>
+            </div>
+            <div>
+              <h3>What the study cannot claim</h3>
+              <ul>
+                <li>The sample is too small for generalization.</li>
+                <li>Photo and reflection inputs had low natural engagement.</li>
+                <li>Interviews arrived late and real-time algorithm testing remained partial.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="sync-takeaway">The product became stronger when it stopped promising that tempo controls heart rate and started explaining how personal data could support a better choice.</p>
+          <a class="end-link" href="index.html#sync">Return to selected work</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="case.js"></script>
+  </body>
+</html>

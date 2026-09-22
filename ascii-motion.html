@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A live ASCII study of a stylus playing a spinning vinyl record, rendered across eight blue tonal layers."
+    />
+    <title>Needle / Groove — ASCII Motion Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500&amp;family=Ubuntu:wght@300;400;500;700&amp;family=Ubuntu+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ascii-motion.css?v=2" />
+  </head>
+  <body>
+    <a class="skip-link" href="#artwork">Skip to artwork</a>
+
+    <main class="exhibition-shell" id="renderer">
+      <header class="exhibition-header">
+        <a class="artist-link" href="index.html">ZIYI (NEMO) ZHOU</a>
+        <p>ASCII MOTION STUDY</p>
+        <nav aria-label="Page navigation">
+          <a href="index.html">SELECTED WORK</a>
+          <label class="header-source" for="sourceInput">CHANGE FILM</label>
+        </nav>
+      </header>
+
+      <section class="gallery" aria-label="Needle and groove motion artwork">
+        <div class="artwork-column">
+          <article class="artwork-frame" id="artwork">
+            <span class="crop-mark crop-mark--tl" aria-hidden="true"></span>
+            <span class="crop-mark crop-mark--tr" aria-hidden="true"></span>
+            <span class="crop-mark crop-mark--bl" aria-hidden="true"></span>
+            <span class="crop-mark crop-mark--br" aria-hidden="true"></span>
+
+            <div class="motion-stage" id="motionStage">
+              <canvas
+                id="asciiCanvas"
+                role="img"
+                aria-label="Animated ASCII rendering of a stylus playing a spinning vinyl record"
+              ></canvas>
+              <video
+                id="sourceVideo"
+                class="source-video"
+                src="assets/ascii-motion/source.mp4"
+                muted
+                loop
+                playsinline
+                preload="auto"
+                aria-label="Original video of a stylus playing a vinyl record"
+              ></video>
+              <div class="calibration" id="calibration" aria-hidden="true">
+                <span>separating needle / groove</span>
+                <i><b id="calibrationProgress"></b></i>
+              </div>
+            </div>
+
+            <div class="artwork-caption">
+              <div class="caption-copy">
+                <h1>Needle in the groove</h1>
+                <p>
+                  A rotating record becomes rhythm; the stationary stylus becomes structure.
+                  Each frame is rebuilt from eight weights of blue type.
+                </p>
+              </div>
+
+              <div class="caption-controls" aria-label="Artwork controls">
+                <button id="playToggle" type="button" aria-label="Pause video">PAUSE</button>
+                <div class="density-options" aria-label="Character density">
+                  <button type="button" data-density-value="108">108</button>
+                  <button type="button" data-density-value="132">132</button>
+                  <button class="is-active" type="button" data-density-value="156">156</button>
+                </div>
+                <button id="monitorToggle" type="button" aria-pressed="false">SOURCE</button>
+                <label class="source-button" for="sourceInput">NEW FILM</label>
+              </div>
+            </div>
+
+            <div class="stage-readout" aria-hidden="true">
+              <span id="frameReadout">FRAME 00000</span>
+              <span id="runtimeStatus">ANALYZING</span>
+            </div>
+          </article>
+
+          <label class="timeline-ruler">
+            <span class="sr-only">Video position</span>
+            <input id="timeline" type="range" min="0" max="1000" value="0" />
+            <i aria-hidden="true"></i>
+            <output id="timecode" for="timeline">00:00 / 00:00</output>
+          </label>
+        </div>
+
+        <aside class="material-index" aria-label="ASCII material index">
+          <div class="material-index__active">
+            <strong>all</strong>
+            <span id="bufferLabel">0</span>
+          </div>
+          <ol>
+            <li>groove</li>
+            <li>needle</li>
+            <li>rotation</li>
+            <li>highlight</li>
+            <li>midtone</li>
+            <li>shadow</li>
+            <li>structure</li>
+            <li>rhythm</li>
+            <li>vinyl</li>
+            <li>2026</li>
+          </ol>
+        </aside>
+      </section>
+
+      <footer class="exhibition-footer">
+        <span>( INTERACTION STUDY )</span>
+        <i aria-hidden="true"></i>
+        <span>( VIDEO → TYPE )</span>
+        <i aria-hidden="true"></i>
+        <a href="index.html">INDEX</a>
+      </footer>
+
+      <input id="sourceInput" type="file" accept="video/*" />
+      <input id="density" type="range" min="84" max="180" step="12" value="156" tabindex="-1" aria-hidden="true" />
+      <input id="maskThreshold" type="range" min="8" max="30" step="1" value="17" tabindex="-1" aria-hidden="true" />
+      <output id="densityValue" for="density" class="sr-only">156</output>
+      <output id="maskValue" for="maskThreshold" class="sr-only">17</output>
+      <span id="sourceLabel" class="sr-only">3116503 · HD</span>
+      <span id="samplingLabel" class="sr-only">156 × 52</span>
+      <span id="boundsLabel" class="sr-only">Calibrating</span>
+    </main>
+
+    <noscript>This moving artwork requires JavaScript to process video frames.</noscript>
+    <script src="ascii-motion.js"></script>
+  </body>
+</html>
