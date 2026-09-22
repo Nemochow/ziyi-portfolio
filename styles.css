@@ -641,8 +641,11 @@ h1 span {
 
 .specimen--uber-product {
   display: block;
+  align-self: center;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
   color: white;
-  background: linear-gradient(90deg, #090909 0 44%, #06c167 44% 100%);
+  background: linear-gradient(90deg, #090909 0 46%, #06c167 46% 100%);
   text-decoration: none;
 }
 
@@ -652,47 +655,49 @@ h1 span {
 
 .specimen--uber-product img {
   position: absolute;
-  top: 5%;
-  right: 7%;
+  top: 2%;
+  right: 1.5%;
   z-index: 2;
   display: block;
-  width: min(47%, 350px);
-  height: 90%;
+  width: min(56%, 370px);
+  height: 96%;
   object-fit: contain;
-  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.28));
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  object-position: center 40%;
+  filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.26));
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .specimen--uber-product:hover img {
-  transform: translateY(-7px);
+  transform: translateY(-6px) scale(1.015);
 }
 
 .uber-preview__copy {
   position: absolute;
-  top: 14%;
-  left: 7%;
+  top: 13%;
+  left: 6%;
   z-index: 3;
   display: grid;
-  gap: 10px;
+  width: 33%;
+  gap: 14px;
 }
 
 .uber-preview__copy span {
-  color: #acacac;
-  font-size: 0.75rem;
+  color: #aeb3ae;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .uber-preview__copy strong {
-  max-width: 5ch;
-  font-size: clamp(2.5rem, 4.2vw, 4.8rem);
-  line-height: 0.88;
+  font-size: clamp(2.05rem, 2.75vw, 2.55rem);
+  line-height: 0.92;
   font-weight: 500;
 }
 
 .uber-preview__count {
   position: absolute;
-  bottom: 9%;
-  left: 7%;
+  bottom: 10%;
+  left: 6%;
   z-index: 3;
   padding-top: 10px;
   border-top: 1px solid #696969;
@@ -703,24 +708,27 @@ h1 span {
 
 @media (max-width: 540px) {
   .specimen--uber-product {
+    align-self: stretch;
     min-height: 510px;
-    background: linear-gradient(180deg, #090909 0 42%, #06c167 42% 100%);
+    aspect-ratio: auto;
+    background: linear-gradient(180deg, #090909 0 39%, #06c167 39% 100%);
   }
 
   .specimen--uber-product img {
-    top: 20%;
-    right: 6%;
-    width: min(54%, 260px);
-    height: 76%;
+    top: 27%;
+    right: 5%;
+    width: min(68%, 270px);
+    height: 68%;
   }
 
   .uber-preview__copy {
-    top: 8%;
+    top: 7%;
     left: 8%;
+    width: 76%;
   }
 
   .uber-preview__copy strong {
-    font-size: 2.8rem;
+    font-size: 2.65rem;
   }
 
   .uber-preview__count {
@@ -876,9 +884,9 @@ h1 span {
   }
 
   .specimen--uber-product img {
-    top: 31%;
+    top: 29%;
     right: 5%;
-    width: min(58%, 270px);
-    height: 64%;
+    width: min(68%, 270px);
+    height: 66%;
   }
 }

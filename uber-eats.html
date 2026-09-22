@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="case.css?v=15" />
-    <link rel="stylesheet" href="uber.css?v=4" />
+    <link rel="stylesheet" href="uber.css?v=5" />
   </head>
   <body class="uber-case">
     <a class="skip-link" href="#case-main">Skip to case study</a>
@@ -229,25 +229,39 @@
             </div>
           </div>
 
-          <div class="prototype-stage">
-            <div class="prototype-stage__copy">
-              <h3>Try the working<br />Hackathon demo.</h3>
-              <p>Food Miner turns a recommendation into a small act of discovery. Tap the green entry point, drag the catcher, and keep control of the final choice.</p>
-              <ol class="prototype-steps" aria-label="Food Miner prototype states" role="tablist">
-                <li><button class="is-active" type="button" role="tab" aria-selected="true" data-prototype-stage="home" data-prototype-label="Entry"><span>01</span><strong>Entry</strong><p>A visible shortcut appears inside the familiar home flow.</p></button></li>
-                <li><button type="button" role="tab" aria-selected="false" data-prototype-stage="loading" data-prototype-label="Dig"><span>02</span><strong>Dig</strong><p>The user actively searches within an AI-curated pool.</p></button></li>
-                <li><button type="button" role="tab" aria-selected="false" data-prototype-stage="catching" data-prototype-label="Catch"><span>03</span><strong>Catch</strong><p>One recommendation becomes the focus.</p></button></li>
-                <li><button type="button" role="tab" aria-selected="false" data-prototype-stage="reveal" data-prototype-label="Deal"><span>04</span><strong>Deal</strong><p>A reward confirms the choice and moves it toward checkout.</p></button></li>
-              </ol>
-              <p class="prototype-stage__note">Select a state to replay it, or open the live prototype.</p>
-            </div>
-
-            <div class="prototype-device" data-foodminer-prototype>
-              <div class="prototype-device__bar"><span data-prototype-status>Autoplay / Entry</span><button type="button" data-prototype-live>Try live prototype</button></div>
-              <div class="prototype-device__viewport">
-                <iframe data-prototype-frame src="assets/uber-eats/prototype/index.html" title="Food Miner entry screen" loading="lazy"></iframe>
+          <div class="motion-gallery" data-motion-gallery>
+            <div class="motion-gallery__header">
+              <div>
+                <span>Motion</span>
+                <h3>Every screen moves.</h3>
+                <p>The four key states run live and loop in sequence: entry, AI screening, the catch, and the final deal. Together they make recommendation feel like an active decision rather than another results page.</p>
+              </div>
+              <div class="motion-gallery__controls" aria-label="Scroll through prototype screens">
+                <button type="button" data-motion-previous aria-label="Show previous prototype screen" title="Previous screen">&larr;</button>
+                <button type="button" data-motion-next aria-label="Show next prototype screen" title="Next screen">&rarr;</button>
               </div>
             </div>
+
+            <div class="motion-gallery__rail" data-motion-rail>
+              <article class="motion-card">
+                <div class="motion-card__screen"><iframe src="assets/uber-eats/prototype/index.html" title="Animated Food Miner entry screen" tabindex="-1" loading="lazy"></iframe></div>
+                <div class="motion-card__caption"><span>01</span><div><strong>Entry</strong><p>A visible shortcut begins inside the familiar home flow.</p></div></div>
+              </article>
+              <article class="motion-card">
+                <div class="motion-card__screen"><iframe src="assets/uber-eats/prototype/index.html#stage=loading" title="Animated Food Miner digging screen" tabindex="-1" loading="lazy"></iframe></div>
+                <div class="motion-card__caption"><span>02</span><div><strong>Digging</strong><p>AI screening becomes a short, legible moment of anticipation.</p></div></div>
+              </article>
+              <article class="motion-card">
+                <div class="motion-card__screen"><iframe src="assets/uber-eats/prototype/index.html#stage=catching" title="Animated Food Miner catch screen" tabindex="-1" loading="lazy"></iframe></div>
+                <div class="motion-card__caption"><span>03</span><div><strong>The catch</strong><p>The user turns a six-option shortlist into one active choice.</p></div></div>
+              </article>
+              <article class="motion-card">
+                <div class="motion-card__screen"><iframe src="assets/uber-eats/prototype/index.html#stage=reveal" title="Animated Food Miner deal screen" tabindex="-1" loading="lazy"></iframe></div>
+                <div class="motion-card__caption"><span>04</span><div><strong>The deal</strong><p>A clear reward closes the loop and continues toward checkout.</p></div></div>
+              </article>
+            </div>
+
+            <a class="motion-gallery__live" href="assets/uber-eats/prototype/index.html" target="_blank" rel="noreferrer">Open the live Hackathon prototype <span aria-hidden="true">&nearr;</span></a>
           </div>
 
           <div class="screen-comparison" aria-label="Before and after Uber Eats home screens">
@@ -357,6 +371,6 @@
     </div>
 
     <script src="case.js"></script>
-    <script src="uber.js?v=4"></script>
+    <script src="uber.js?v=5"></script>
   </body>
 </html>
