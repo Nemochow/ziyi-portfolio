@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Food Miner case study: extends sync-case.css.
+   Same room, type and panel voice; the accent shifts from sage to a soft
+   mint that sits next to the prototype's Uber green without fighting it.
+   ========================================================================== */
+
+body.food { --sage: #9fd8b0; --sage-deep: #4f9468; }
+body.food .shift .to { background: #1b261f; }
+
+/* ---------- journey map ---------- */
+.journey { margin-top: 64px; overflow-x: auto; padding-bottom: 6px; }
+.journey svg { min-width: 920px; width: 100%; height: auto; }
+.journey .hot { fill: rgba(159, 216, 176, 0.05); stroke: rgba(159, 216, 176, 0.28); stroke-dasharray: 3 5; }
+.journey .hot-t { font: 400 14px var(--panel); letter-spacing: 0.06em; text-transform: uppercase; fill: var(--sage); }
+.journey .k { font: 400 12.5px var(--panel); letter-spacing: 0.08em; fill: var(--mute); }
+.journey .t { font: 500 25px var(--display); fill: var(--text); }
+.journey .m { font: 600 16px var(--read); fill: var(--sage); }
+.journey .d { font: 400 16px var(--read); fill: var(--body); }
+.journey .axis { font: 400 12.5px var(--panel); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--mute); }
+.journey .grid { stroke: var(--rule); stroke-dasharray: 2 6; fill: none; }
+.journey .curve { fill: none; stroke: var(--text); stroke-width: 1.8; }
+.journey .curve.up { stroke: var(--sage); }
+.journey .curve.down { stroke: #6b7066; stroke-dasharray: 4 5; }
+.journey .pt { fill: var(--room); stroke: var(--text); stroke-width: 1.6; }
+.journey .pt.end { stroke: var(--sage); fill: var(--sage); }
+.journey .pt.lost { stroke: #6b7066; }
+.journey .lab { font: 600 16px var(--read); fill: var(--sage); }
+.journey .lab.lost { fill: var(--mute); }
+
+/* ---------- N → 6 → 1 ---------- */
+.funnel { margin-top: 64px; overflow-x: auto; padding-bottom: 6px; }
+.funnel svg { min-width: 760px; width: 100%; max-width: 1000px; height: auto; }
+.funnel .many circle { fill: var(--mute); }
+.funnel .six circle { fill: var(--sage); }
+.funnel .one { fill: none; stroke: var(--sage); stroke-width: 2; }
+.funnel .wire { fill: none; stroke: #5d6258; stroke-width: 1.4; }
+.funnel .who { font: 400 12.5px var(--panel); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--sage); }
+.funnel .why { font: 400 14px var(--read); fill: var(--body); }
+.funnel .big { font: 500 26px var(--display); fill: var(--text); }
+.funnel .sm { font: 400 14px var(--read); fill: var(--mute); }
+
+/* ---------- three-step loop ---------- */
+.steps.three { grid-template-columns: 1fr 44px 1fr 44px 1fr; }
+.loopback { display: flex; align-items: center; gap: 10px; margin-top: 28px; }
+.loopback .icon { color: var(--sage); font-size: 18px; }
+
+/* ---------- weighting ---------- */
+.weights { display: flex; gap: 3px; height: 14px; margin-top: 24px; }
+.weights i { flex: var(--w) 1 0; border-radius: 3px; background: var(--sage); opacity: var(--o); }
+.weight-list { display: grid; grid-template-columns: 45fr 20fr 15fr 10fr 10fr; gap: 3px; margin-top: 16px; }
+.weight-list li { padding-right: 14px; min-width: 0; }
+.weight-list .n { display: block; font: 400 30px/1 var(--panel); color: var(--text); font-variant-numeric: tabular-nums; }
+.weight-list strong { display: block; margin-top: 10px; color: var(--text); font-weight: 600; font-size: 15px; }
+.weight-list p { margin-top: 4px; font-size: 14px; line-height: 1.5; color: var(--body); }
+
+/* ---------- rules ---------- */
+.rules { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.rules li { padding: 26px 28px; border-radius: 10px; background: var(--well); }
+.rules strong { display: block; margin-top: 10px; font: 500 21px/1.3 var(--display); color: var(--text); }
+.rules p { margin-top: 8px; font-size: 15px; }
+
+/* ---------- prototype ---------- */
+.pair.phones { grid-template-columns: repeat(2, minmax(0, 260px)); gap: clamp(24px, 5vw, 72px); }
+.pair.phones img { width: 100%; height: auto; border-radius: 26px; box-shadow: 0 0 0 1px var(--rule-strong), 0 24px 40px -24px rgba(0, 0, 0, 0.8); }
+.pair.phones figcaption { margin-top: 18px; }
+
+.demo.live .handset { width: clamp(250px, 24vw, 300px); aspect-ratio: 360 / 780; height: auto; padding: 9px; box-sizing: content-box; }
+.demo.live .fit { position: relative; width: 100%; height: 100%; border-radius: 30px; overflow: hidden; background: #fff; }
+.demo.live iframe { position: absolute; left: 0; top: 0; width: 360px; height: 780px; border: 0; transform: scale(var(--k, 0.8)); transform-origin: 0 0; }
+.demo .open { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--sage); font-size: 14.5px; font-weight: 600; text-decoration: none; }
+.demo .open:hover { text-decoration: underline; }
+
+/* ---------- hypotheses ---------- */
+.hyp { margin-top: 12px; }
+.hyp-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; padding: 20px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.hyp-row.head { padding: 8px 0 12px; }
+.hyp-row strong { font: 500 19px/1.3 var(--display); color: var(--text); }
+.hyp-row p { font-size: 15px; }
+.hyp-row .m { color: var(--sage); }
+
+@media (max-width: 1180px) and (min-width: 641px) {
+  .steps.three { grid-template-columns: 1fr 44px 1fr 44px 1fr; }
+  .steps.three .join:nth-of-type(4) { display: block; }
+}
+@media (max-width: 960px) {
+  .rules { grid-template-columns: 1fr; }
+  .weight-list { grid-template-columns: 1fr; gap: 0; }
+  .weight-list li { display: grid; grid-template-columns: 64px 1fr; column-gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .weight-list .n { grid-row: span 2; font-size: 24px; }
+  .weight-list strong { margin-top: 0; }
+  .hyp-row { grid-template-columns: 1fr; gap: 6px; }
+  .hyp-row.head { display: none; }
+}
+@media (max-width: 640px) {
+  .steps.three { grid-template-columns: 1fr; }
+  .pair.phones { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pair.phones img { border-radius: 16px; }
+}
