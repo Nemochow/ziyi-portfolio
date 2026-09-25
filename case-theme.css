@@ -1,0 +1,13 @@
+:root{--graphite:#eeeae3;--ink:#d7dad2;--fog:#111211;--paper:#1a1c19;--line:#454940;--muted:#b5bab0;--accent:#b9caaa;color-scheme:dark}
+body.sync-case{--pulse:#b9caaa;--pulse-deep:#c6d8b8;--pulse-soft:#394334;--pulse-faint:#252c23;--accent:#b9caaa}
+body.uber-case{--uber-green:#b9caaa}
+::selection{background:#b9caaa;color:#111211}
+.skip-link{background:#eeeae3;color:#111211}
+.case-cover{color:#111311}
+.case-section--dark{background:#111511;color:#eeeae3}
+.case-section--dark .reading-copy{color:#b5bab0}
+.sync-case .decision .d-no{background:#283025;color:#eeeae3}
+.sync-evidence__grid figure{background:#252923}
+.uber-case .decision-allocation__handoff,.uber-case .decision-handoff__ownership span,.uber-case .decision-journey .decision-journey__business li:nth-child(n+3),.uber-case .prototype-device__bar button{color:#eeeae3}
+.uber-case .back-link:hover,.uber-case .end-link:hover,.uber-case .decision-journey li.is-friction strong,.uber-case .screen-comparison figcaption span,.uber-case .recommendation-logic__grid span,.uber-case .validation-rank strong,.uber-case .decision-journey__business>span,.uber-case .opportunity-panel>span,.uber-case .decision-handoff__stage.is-shortlist .decision-handoff__label strong,.uber-case .decision-handoff__bridge.is-ai span,.uber-case .decision-handoff__bridge.is-ai>i{color:#b9caaa}
+.state-panel li span{color:#b9caaa}

@@ -1,35 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
- <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
- <title>Nemo's workspace | Selected projects</title>
- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="workspace.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ziyi (Nemo) Zhou | Record collection</title>
+<link rel="stylesheet" href="vinyl-demo.css">
+<link rel="stylesheet" href="vinyl-retro.css">
 </head>
 <body>
- <a class="skip" href="#projects">Skip to projects</a>
- <header><a class="name" href="index.html">Ziyi <span>(Nemo)</span> Zhou</a><p>AI Product Experience Designer</p><a href="portfolio-index.html">Portfolio index <span aria-hidden="true">↗</span></a></header>
- <main>
-  <section class="introduction"><h1>A few things<br>I've put my <em>mind</em> into.</h1><div><p>Research, product thinking, and interaction.<br>Selected work from my creative workspace.</p><a href="#projects">Explore the projects <span aria-hidden="true">↓</span></a></div></section>
-  <section class="workspace" aria-label="Project workspace">
-   <div class="collection" id="projects"><h2>Selected projects <span>01—03</span></h2>
-    <article class="project"><button class="record-source" data-project="garden" aria-label="Place Whispering Garden on the turntable"><span class="mini-record"><span class="record-label garden-label">WG<span>01</span></span></span></button><div><h3>Whispering Garden</h3><p>Agency during the wait.</p><span class="discipline">Research · Physical interaction</span><a href="whispering-garden.html">View case study <span aria-hidden="true">↗</span></a></div></article>
-    <article class="project"><button class="record-source" data-project="sync" aria-label="Place Sync and Sweat on the turntable"><span class="mini-record"><span class="record-label sync-label">S&amp;S<span>02</span></span></span></button><div><h3>sync&amp;sweat</h3><p>When the data changes the idea.</p><span class="discipline">Data research · Connected products</span><a href="sync-sweat.html">View case study <span aria-hidden="true">↗</span></a></div></article>
-    <article class="project"><button class="record-source" data-project="uber" aria-label="Place Food Miner on the turntable"><span class="mini-record"><span class="record-label uber-label">FM<span>03</span></span></span></button><div><h3>Food Miner</h3><p>AI screens. You choose.</p><span class="discipline">AI product design · Top 3 Hackathon</span><a href="uber-eats.html">View case study <span aria-hidden="true">↗</span></a></div></article>
-   </div>
-   <div class="station"><div class="station-heading"><span>Nemo's working collection</span><span>2026</span></div>
-    <div class="turntable" id="turntable" aria-label="Turntable, drop a project record here">
-     <div class="platter" id="platter"><div class="mat"><span class="mat-type">N / Z</span><span class="spindle"></span></div><div class="mounted-record" id="mounted" hidden><div class="record-label" id="mounted-label">WG<span>01</span></div></div></div>
-     <div class="arm-base" aria-hidden="true"><div class="tonearm"><span class="arm-weight"></span><span class="arm-shaft"></span><span class="cartridge"></span></div></div>
-     <div class="device-bottom" aria-hidden="true"><span class="device-mark">NEMO<br><small>SELECTED WORK</small></span><span class="device-light"></span><span class="device-speed">33⅓</span></div>
-    </div>
-    <div class="station-caption"><span class="status" id="status" role="status" aria-live="polite">Three projects. Different ways of thinking.</span><button id="cancel" type="button" hidden>Cancel</button><span class="catalogue">N / Z — 001</span></div>
-    <div class="selected-preview" id="selected-preview" hidden><img id="selected-image" alt=""><div><span id="selected-category"></span><p id="selected-name"></p></div></div>
-   </div>
-  </section>
- </main>
- <footer><p>Working with complexity.<br>Designing for people.</p><a href="ascii-motion.html">An experiment in motion <span aria-hidden="true">↗</span></a><span>Research → judgment → experience</span></footer>
- <script src="workspace.js"></script>
-</body>
-</html>
+<header><a href="index.html">Ziyi <span>(Nemo)</span> Zhou</a><p>AI Product Experience Designer</p><a href="portfolio-index.html">Project index &#8599;</a></header>
+<main>
+<section class="studio">
+<h1>A few things I've<br>put my <em>mind</em> into.</h1>
+<p class="intro">Research, product thinking, and interaction.<br>Selected work from my creative workspace.</p>
+<div class="deck" id="deck" aria-label="Turntable: drop a project here">
+<div class="retro-name">NEMO <span>Selected work / Record player</span></div>
+<div class="platter"><div class="disc playing-disc"><span class="label" aria-hidden="true"></span></div><i class="spindle"></i></div>
+<div class="arm-pivot"><div class="arm"><i></i></div></div>
+<div class="deck-bottom"><span class="maker">NEMO <small>DESIGN COLLECTION</small></span><span class="light"></span><span>33 / 45</span></div>
+<div class="retro-controls"><div class="transport"><button id="retro-prev" title="Select previous project">Prev</button><button id="retro-play" title="Open selected project">Play</button><button id="retro-stop" title="Stop opening project">Stop</button><button id="retro-next" title="Select next project">Next</button></div><div class="retro-display" aria-live="polite"><span id="retro-track">CASE 01 / 03</span><strong id="retro-title">WHISPERING GARDEN</strong><small id="retro-state">READY</small></div></div>
+</div>
+<div class="playback"><p id="status" role="status">Three projects. Different ways of thinking.</p><button id="cancel" hidden>Cancel</button></div>
+<p class="signature">Working with complexity.<br>Designing for people.</p>
+</section>
+<section class="collection" aria-label="Selected projects">
+<article class="album garden">
+<button class="sleeve" data-href="whispering-garden.html" data-name="Whispering Garden" aria-label="Play Whispering Garden">
+<span class="disc peek"><span class="label">WG<small>01 / SIDE A</small></span></span>
+<span class="jacket"><img src="assets/whispering-garden/garden-cover-photocomposite.webp" alt="Whispering Garden listening objects in a hospital garden"><span class="cover-type">Whispering<br>Garden</span><span class="cover-foot">A moment of agency.</span></span>
+</button>
+<div class="album-caption"><div><h2>Whispering Garden</h2><p>Research / Physical interaction</p></div><a href="whispering-garden.html" aria-label="View Whispering Garden case study">View case &#8599;</a></div>
+</article>
+<article class="album sync">
+<button class="sleeve" data-href="sync-sweat.html" data-name="sync&sweat" aria-label="Play sync and sweat">
+<span class="disc peek"><span class="label">S&amp;S<small>02 / SIDE A</small></span></span>
+<span class="jacket"><span class="cover-type">sync<span>&amp;sweat</span></span><img src="assets/sync-sweat/app-flow.png" alt="Sync and Sweat mobile product screens"><span class="cover-foot">Your data. Your rhythm.</span></span>
+</button>
+<div class="album-caption"><div><h2>sync&amp;sweat</h2><p>Data research / Connected products</p></div><a href="sync-sweat.html" aria-label="View Sync and Sweat case study">View case &#8599;</a></div>
+</article>
+<article class="album food">
+<button class="sleeve" data-href="uber-eats.html" data-name="Food Miner" aria-label="Play Food Miner">
+<span class="disc peek"><span class="label">FM<small>03 / SIDE A</small></span></span>
+<span class="jacket"><span class="cover-type">Food Miner<span>for Uber Eats</span></span><img src="assets/uber-eats/food-miner-project-cover.png" alt="Food Miner Uber Eats concept with mobile interface"><span class="cover-foot">AI screens. You choose.</span></span>
+</button>
+<div class="album-caption"><div><h2>Food Miner</h2><p>AI product design / Top 3 Hackathon</p></div><a href="uber-eats.html" aria-label="View Food Miner case study">View case &#8599;</a></div>
+</article>
+</section>
+</main>
+<footer><span>Ziyi (Nemo) Zhou</span><span>Selected work / 2026</span><a href="portfolio-index.html">Portfolio index &#8599;</a></footer>
+<script src="vinyl-demo.js"></script>
+</body></html>
