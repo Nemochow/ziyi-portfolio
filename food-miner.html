@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Food Miner: an AI shortcut inside Uber Eats for the moment you are hungry but can't decide. AI narrows the choice to six picks, you catch one, and a deal carries you to checkout. Top 3 at Hack4Her 2026.">
+  <meta name="description" content="Food Miner: an AI shortcut inside Uber Eats for the moment you are hungry but can't decide. AI narrows the choice to five picks, you catch one, and a deal carries you to checkout. Top 3 at Hack4Her 2026.">
   <meta name="theme-color" content="#111211">
   <title>Food Miner | Ziyi (Nemo) Zhou</title>
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
@@ -42,7 +42,7 @@
         <div class="wrap">
           <div>
             <h1 id="title"><span>Food</span><span>Miner<i>.</i></span></h1>
-            <p class="statement">An AI shortcut inside Uber Eats for the moment you're hungry but can't decide. AI narrows the choice to six picks, you catch one, and a deal takes you straight to checkout.</p>
+            <p class="statement">An AI shortcut inside Uber Eats for the moment you're hungry but can't decide. AI narrows the choice to five picks, you catch one, and a deal takes you straight to checkout.</p>
             <dl class="facts">
               <div><dt class="panel">My role</dt><dd>Journey analysis, AI product mechanism, information architecture &amp; high-fidelity prototype</dd></div>
               <div><dt class="panel">Context</dt><dd>Hack4Her 2026, Uber Eats challenge</dd></div>
@@ -65,7 +65,7 @@
           <div class="summary">
             <div><span class="panel">Problem</span><p>People open Uber Eats ready to order, then lose momentum scrolling and comparing. Too many good options become <b>decision fatigue</b>.</p></div>
             <div><span class="panel">Reframe</span><p>Let AI take on the low-value filtering, so people <b>only make the final choice</b>.</p></div>
-            <div><span class="panel">Product</span><p>AI builds a pool of <b>six personal picks</b>. You catch one, a deal unlocks, and you go to the order.</p></div>
+            <div><span class="panel">Product</span><p>AI builds a pool of <b>five personal picks</b>. You catch one, a deal unlocks, and you go to the order.</p></div>
             <div><span class="panel">Result</span><p><b>Top 3</b> at Hack4Her. Built around two targets: less time to decide, more intent to order.</p></div>
           </div>
 
@@ -73,7 +73,7 @@
             <div class="block-head"><h2 class="h3">What I did</h2><span class="panel">3 contributions</span></div>
             <ul class="credits">
               <li><h3>User journey &amp; AI opportunity</h3><p>Mapped the whole path from opening Uber Eats to placing an order, found where people loop in Explore and Compare, and redefined the opportunity as letting AI do the filtering.</p><a href="#problem">Problem <svg class="icon"><use href="#i-down"/></svg></a></li>
-              <li><h3>Recommendation mechanism &amp; loop</h3><p>Designed how AI enters the decision: order history, preferences and restaurant data produce six personal picks, inside a compute, choose, reward loop that keeps the user in control.</p><a href="#mechanism">Mechanism <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>Recommendation mechanism &amp; loop</h3><p>Designed how AI enters the decision: order history, preferences and restaurant data produce five personal picks, inside a compute, choose, reward loop that keeps the user in control.</p><a href="#mechanism">Mechanism <svg class="icon"><use href="#i-down"/></svg></a></li>
               <li><h3>MVP prototype &amp; validation</h3><p>Owned the information architecture, interaction flow and high-fidelity prototype, framed the value hypotheses, and tested them in the Hackathon demo.</p><a href="#product">Prototype <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Lottie</span><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>SQLite</span><span>AWS Amplify</span><span>ECS Fargate</span></p>
@@ -159,7 +159,7 @@
           </div>
 
           <figure class="funnel" aria-labelledby="funnel-cap">
-            <svg viewBox="0 0 1160 300" role="img" aria-label="Many options nearby are filtered by AI into six picks; the person chooses one, which becomes one order.">
+            <svg viewBox="0 0 1160 300" role="img" aria-label="Many options nearby are filtered by AI into five picks; the person chooses one, which becomes one order.">
               <defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1.5 9 5 1 8.5" fill="none" stroke="#8a9083" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
               <g class="many" id="many"></g>
               <text class="big" x="40" y="262">Hundreds</text><text class="sm" x="40" y="284">of dishes nearby</text>
@@ -170,9 +170,9 @@
 
               <g class="six">
                 <circle cx="500" cy="100" r="15"/><circle cx="548" cy="100" r="15"/><circle cx="596" cy="100" r="15"/>
-                <circle cx="500" cy="152" r="15"/><circle cx="548" cy="152" r="15"/><circle cx="596" cy="152" r="15"/>
+                <circle cx="524" cy="152" r="15"/><circle cx="572" cy="152" r="15"/>
               </g>
-              <text class="big" x="484" y="262">6 picks</text><text class="sm" x="484" y="284">made for you</text>
+              <text class="big" x="484" y="262">5 picks</text><text class="sm" x="484" y="284">made for you</text>
 
               <path class="wire" d="M650 130H808" marker-end="url(#head)"/>
               <text class="who" x="662" y="102">You choose</text>
@@ -188,8 +188,8 @@
             <div class="block-head"><h3>Who does what</h3><span class="panel">Design principle</span></div>
             <div class="compare">
               <span class="panel">Split of work</span>
-              <div class="on"><h4>AI owns the breadth</h4><p>Reading order history and preferences, checking restaurants, price and delivery, and cutting hundreds of options down to six.</p></div>
-              <div><h4>You own the commitment</h4><p>Choosing between six options that all fit, on appetite and mood. The final tap is always yours.</p></div>
+              <div class="on"><h4>AI owns the breadth</h4><p>Reading order history and preferences, checking restaurants, price and delivery, and cutting hundreds of options down to five.</p></div>
+              <div><h4>You own the commitment</h4><p>Choosing between five options that all fit, on appetite and mood. The final tap is always yours.</p></div>
             </div>
           </div>
 
@@ -207,7 +207,7 @@
       <!-- ================= MECHANISM ================= -->
       <section class="section" id="mechanism" aria-labelledby="mechanism-title">
         <div class="wrap">
-          <h2 id="mechanism-title">Six picks, one catch, one reward.</h2>
+          <h2 id="mechanism-title">Five picks, one catch, one reward.</h2>
           <div class="two">
             <p class="lede">Food Miner turns a recommendation into a short loop: the system computes, the person chooses, and a reward confirms the choice.</p>
             <div class="prose">
@@ -216,7 +216,7 @@
           </div>
 
           <ol class="steps three" aria-label="Product loop">
-            <li class="step"><span class="dot">1</span><h3>AI computes</h3><p>Order history, preferences and restaurant data are scored into a pool of six picks for this person.</p></li>
+            <li class="step"><span class="dot">1</span><h3>AI computes</h3><p>Order history, preferences and restaurant data are scored into a pool of five picks for this person.</p></li>
             <li class="join" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></li>
             <li class="step"><span class="dot">2</span><h3>You choose</h3><p>One tap catches one card. The system never makes the final pick for you.</p></li>
             <li class="join" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></li>
@@ -225,7 +225,7 @@
           <p class="loopback plain-panel"><svg class="icon"><use href="#i-loop"/></svg>Each catch and order feeds back into the next pool.</p>
 
           <div class="block">
-            <div class="block-head"><h3>How the six are scored</h3><span class="panel">Weighting in the Hackathon build</span></div>
+            <div class="block-head"><h3>How the five are scored</h3><span class="panel">Weighting in the Hackathon build</span></div>
             <div class="weights" role="img" aria-label="Order history 45 percent, campaign fit 20 percent, restaurant need 15 percent, price fit 10 percent, delivery fit 10 percent">
               <i style="--w:45;--o:1"></i><i style="--w:20;--o:.72"></i><i style="--w:15;--o:.52"></i><i style="--w:10;--o:.36"></i><i style="--w:10;--o:.24"></i>
             </div>
@@ -241,7 +241,7 @@
           <div class="block">
             <div class="block-head"><h3>Two rules that keep it useful</h3><span class="panel">Pool and pacing</span></div>
             <ul class="rules">
-              <li><span class="panel">Pool</span><strong>Familiar plus discovery</strong><p>Half the pool is food you already like and half is close to it but new. Relevant without repeating last week's order.</p></li>
+              <li><span class="panel">Pool</span><strong>Familiar plus discovery</strong><p>Most of the pool is food you already like; the rest is close to it but new. Relevant without repeating last week's order.</p></li>
               <li><span class="panel">Pacing</span><strong>One catch a day</strong><p>After a catch the game closes until tomorrow. It stays a shortcut to dinner, not a slot machine to keep pulling.</p></li>
             </ul>
           </div>
@@ -307,7 +307,7 @@
             <div class="block-head"><h3>How it was built</h3><span class="panel">Working MVP</span></div>
             <ul class="tools">
               <li><h4>Front end</h4><p>React 19, TypeScript and Vite, with Lottie for the dig and catch animations. Deployed on AWS Amplify.</p></li>
-              <li><h4>Back end</h4><p>Python and FastAPI with Pydantic models and SQLite, running on ECS Fargate. It scores the options and returns the six-pick pool.</p></li>
+              <li><h4>Back end</h4><p>Python and FastAPI with Pydantic models and SQLite, running on ECS Fargate. It scores the options and returns the five-pick pool.</p></li>
             </ul>
           </div>
         </div>
@@ -333,7 +333,7 @@
             <div class="block-head"><h3>Value hypotheses</h3><span class="panel">Core metrics</span></div>
             <div class="hyp" role="table" aria-label="Value hypotheses">
               <div class="hyp-row head" role="row"><span role="columnheader" class="panel">Hypothesis</span><span role="columnheader" class="panel">What the MVP shows</span><span role="columnheader" class="panel">Metric to track</span></div>
-              <div class="hyp-row" role="row"><strong role="cell">Deciding takes less time</strong><p role="cell">Explore and Compare fold into one pool of six.</p><p role="cell" class="m">Time from app open to first committed choice</p></div>
+              <div class="hyp-row" role="row"><strong role="cell">Deciding takes less time</strong><p role="cell">Explore and Compare fold into one pool of five.</p><p role="cell" class="m">Time from app open to first committed choice</p></div>
               <div class="hyp-row" role="row"><strong role="cell">More people complete an order</strong><p role="cell">A deal turns the pick into a clear next step.</p><p role="cell" class="m">Entry to checkout conversion</p></div>
               <div class="hyp-row" role="row"><strong role="cell">Control stays with the user</strong><p role="cell">AI proposes; the person still makes the catch.</p><p role="cell" class="m">Perceived control after choosing</p></div>
             </div>
@@ -342,7 +342,7 @@
           <div class="block">
             <div class="block-head"><h3>What I'd test next</h3><span class="panel">Next iteration</span></div>
             <ul class="themes">
-              <li><strong>Is six the right number?</strong><p>Compare pools of four, six and eight across different levels of hunger and dietary needs.</p></li>
+              <li><strong>Is five the right number?</strong><p>Compare pools of three, five and seven across different levels of hunger and dietary needs.</p></li>
               <li><strong>Show why a pick appeared</strong><p>A short reason on each card, so people can understand and adjust the recommendation.</p></li>
               <li><strong>Against the normal flow</strong><p>An A/B test of Food Miner against browsing, on decision time and order completion.</p></li>
             </ul>
