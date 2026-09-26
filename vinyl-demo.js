@@ -1,9 +1,9 @@
 (() => {
  const deck=document.querySelector('#deck'),status=document.querySelector('#status'),cancel=document.querySelector('#cancel'),label=deck.querySelector('.label');
  const sources=[...document.querySelectorAll('.sleeve')];let selected=0;
- function select(i){selected=(i+sources.length)%sources.length;document.querySelector('#retro-track').textContent='CASE 0'+(selected+1)+' / 03';document.querySelector('#retro-title').textContent=sources[selected].dataset.name.toUpperCase();sources.forEach((s,n)=>s.closest('.album').classList.toggle('is-selected',n===selected));}
+ function select(i){selected=(i+sources.length)%sources.length;document.querySelector('#retro-track').textContent='CASE 0'+(selected+1)+' / 0'+sources.length;document.querySelector('#retro-title').textContent=sources[selected].dataset.name.toUpperCase();sources.forEach((s,n)=>s.closest('.album').classList.toggle('is-selected',n===selected));}
  let timer,drag,busy=false;
- const reset=()=>{clearTimeout(timer);busy=false;deck.classList.remove('playing','target');cancel.hidden=true;status.textContent='Three projects. Different ways of thinking.';document.querySelector('#retro-state').textContent='READY';};
+ const reset=()=>{clearTimeout(timer);busy=false;deck.classList.remove('playing','target');cancel.hidden=true;status.textContent='Four projects. Different ways of thinking.';document.querySelector('#retro-state').textContent='READY';};
  function play(source){if(busy)return;select(sources.indexOf(source));busy=true;if(matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=source.dataset.href;return;}deck.classList.add('playing');status.textContent='Opening '+source.dataset.name;document.querySelector('#retro-state').textContent='OPENING';cancel.hidden=false;timer=setTimeout(()=>location.href=source.dataset.href,1300);}
  function clean(){drag?.ghost?.remove();drag=null;deck.classList.remove('target');}
  const inside=e=>{const r=deck.getBoundingClientRect();return e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;};

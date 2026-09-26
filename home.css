@@ -102,3 +102,13 @@
   .hd .cover-no { display: none; }
   .hd .cover-foot { left: 20px; bottom: 16px; font-size: 9px; }
 }
+
+/* De'Longhi: ice-blue field, dark type, the Pinguino standing in */
+.hd .dlg .peek { background-image: url("assets/home/vinyl/ice.webp"); }
+.hd .dlg .jacket { background: linear-gradient(160deg, #d7e8f3, #a9cbe2); color: #0f1a22; }
+.hd .dlg .cover-type { font-size: 44px; line-height: 0.95; color: #0f1a22; }
+.hd .dlg .cover-sub { position: absolute; z-index: 2; left: 28px; top: 130px; font: 600 12px/1 Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #0f1a22; }
+.hd .dlg .cover-no, .hd .dlg .cover-foot { color: #0f1a22; }
+.hd .dlg .cover-product { position: absolute; z-index: 1; right: 8%; bottom: -4%; width: 36%; height: auto; filter: drop-shadow(-14px 20px 22px rgba(15, 26, 34, 0.35)); }
+@media (max-width: 1050px) { .hd .dlg .cover-type { font-size: 34px; } .hd .dlg .cover-sub { top: 104px; left: 20px; } }
+@media (max-width: 700px) { .hd .dlg .cover-type { font-size: 30px; } .hd .dlg .cover-sub { top: 90px; left: 20px; font-size: 10px; } }

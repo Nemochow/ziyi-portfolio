@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Usability research for De'Longhi on the Pinguino Care4Me PAC EX130 and its Comfort app, focused on weekly scheduling. Seven participants, six tasks, UEQ, thematic analysis and friction mapping.">
+  <meta name="theme-color" content="#111211">
+  <title>De'Longhi Comfort | Ziyi Zhou</title>
+  <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="sync-case.css?v=1">
+  <link rel="stylesheet" href="delonghi-case.css?v=2">
+</head>
+<body class="is-entering dl">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M3.5 10h13M11.5 5l5 5-5 5"/></symbol>
+    <symbol id="i-back" viewBox="0 0 20 20"><path d="M16.5 10h-13M8.5 5l-5 5 5 5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 20 20"><path d="M6 14 14 6M7.5 6H14v6.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 20 20"><path d="M10 3.5v13M5 11.5l5 5 5-5"/></symbol>
+  </svg>
+  <a class="skip" href="#main">Skip to case study</a>
+
+  <div class="shell">
+    <aside class="rail" aria-label="Case study navigation">
+      <a class="back" href="index.html"><svg class="icon"><use href="#i-back"/></svg>All records</a>
+      <div class="who"><strong>Ziyi Zhou</strong><span>AI Product &amp; UX Designer</span></div>
+      <nav class="chapters chapter-nav" aria-label="Chapters">
+        <a href="#cover" class="is-current"><span>00</span>Overview</a>
+        <a href="#brief"><span>01</span>Brief</a>
+        <a href="#study"><span>02</span>Study</a>
+        <a href="#tasks"><span>03</span>Task results</a>
+        <a href="#friction"><span>04</span>Friction points</a>
+        <a href="#ueq"><span>05</span>UEQ</a>
+        <a href="#findings"><span>06</span>Findings</a>
+        <a href="#recs"><span>07</span>Recommendations</a>
+        <a href="#reflection"><span>08</span>Reflection</a>
+      </nav>
+      <p class="source plain-panel">Client: De'Longhi</p>
+    </aside>
+
+    <main class="main" id="main">
+      <!-- ================= OVERVIEW ================= -->
+      <section class="cover" id="cover" aria-labelledby="title">
+        <div class="wrap">
+          <div>
+            <h1 id="title"><span>Cool,</span><span>not clear<i>.</i></span></h1>
+            <p class="statement">Usability research for De'Longhi on the Pinguino Care4Me portable air conditioner and its Comfort app, focused on weekly scheduling. People could cool a room easily. Changing a schedule was where the app lost them.</p>
+            <dl class="facts">
+              <div><dt class="panel">My role</dt><dd>UX researcher: recruitment, facilitation, UEQ analysis, coding</dd></div>
+              <div><dt class="panel">Client</dt><dd>De'Longhi, via TU Delft</dd></div>
+              <div><dt class="panel">Team</dt><dd>With Daan Robben, Emma van Heek, Paweł Wykowski and Arda Yener</dd></div>
+              <div><dt class="panel">Product</dt><dd>Pinguino Care4Me PAC EX130 + De'Longhi Comfort app</dd></div>
+            </dl>
+          </div>
+          <figure class="dl-stage" aria-label="The Pinguino Care4Me and a weekly schedule">
+            <img class="pinguino" src="assets/delonghi/pinguino.webp" width="191" height="362" alt="De'Longhi Pinguino Care4Me portable air conditioner">
+            <div class="week-card">
+              <div class="week-top"><span class="panel">Weekly schedule</span><span class="temp">22<small>°C</small></span></div>
+              <div class="week-grid" id="week-grid" aria-hidden="true"></div>
+              <div class="week-axis panel" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="summary-title">
+        <h2 class="sr" id="summary-title">Summary</h2>
+        <div class="wrap">
+          <div class="summary">
+            <div><span class="panel">Brief</span><p>Assess the usability of the Comfort app, especially <b>weekly scheduling</b>.</p></div>
+            <div><span class="panel">Study</span><p><b>7 participants</b>, 6 tasks in a living-room lab, then the UEQ and an interview.</p></div>
+            <div><span class="panel">Finding</span><p>Basic control worked. Editing a schedule dropped to <b>57% completion</b>, and <b>0%</b> for experienced users.</p></div>
+            <div><span class="panel">Verdict</span><p><b>Functional but under-polished</b>: people got there, at a high cognitive cost.</p></div>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h2 class="h3">What I did</h2><span class="panel">5 contributions</span></div>
+            <ul class="credits">
+              <li><h3>Recruitment screener</h3><p>Designed the pre-test survey that sorted participants by smart-home experience, the basis of the group comparison.</p><a href="#study">Study <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>Facilitation &amp; transcription</h3><p>Facilitated three user tests, guiding participants through six tasks and the interview, and transcribed the sessions.</p><a href="#study">Study <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>UEQ analysis</h3><p>Processed and interpreted the UEQ: scale means, market baseline, the pragmatic vs hedonic split, and the result slides.</p><a href="#ueq">UEQ <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>Data matrix &amp; coding</h3><p>Built the first task comparison matrix (completion, time, confidence) and did in-vivo coding of three sessions for the thematic analysis.</p><a href="#findings">Findings <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>Limitations &amp; context</h3><p>Wrote the study limitations and ran a competitor scan of Midea, Honeywell and Duux apps as an industry reference.</p><a href="#reflection">Reflection <svg class="icon"><use href="#i-down"/></svg></a></li>
+            </ul>
+            <p class="stack plain-panel"><span>Task-based usability testing</span><span>Think-aloud</span><span>UEQ</span><span>Semi-structured interviews</span><span>Thematic analysis</span><span>In-vivo coding</span><span>Friction mapping</span><span>Excel</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BRIEF ================= -->
+      <section class="section" id="brief" aria-labelledby="brief-title">
+        <div class="wrap">
+          <h2 id="brief-title">Comfort depends on understanding the system.</h2>
+          <div class="two">
+            <p class="lede">The Pinguino is often bought on impulse on a hot summer day. Its app promises more than cooling: schedules, rooms and energy-aware modes. That only works if people can use it without a learning curve.</p>
+            <div class="prose">
+              <p>De'Longhi asked for an assessment of the Comfort app's usability and UI, with particular interest in the weekly scheduling and room functions. We scoped the study to climate-control tasks and scheduling.</p>
+              <p>Before testing anyone, we set the product up ourselves. Pairing took us three days, including a hidden step: hold the mode button for 20 seconds. In the app, the “Tap to switch on” button on the schedule screen didn't say whether it controlled the device or the schedule.</p>
+            </div>
+          </div>
+          <div class="pair dl-pre">
+            <figure><div class="shot phone"><img src="assets/delonghi/app-home.webp" width="296" height="640" loading="lazy" alt="De'Longhi Comfort app home: Your appliances, Pinguino, Add new"></div><figcaption><strong>The Comfort app.</strong> A clean home screen, and the entry to every advanced feature.</figcaption></figure>
+            <ul class="takeaways">
+              <li><span class="panel">Our own first try</span></li>
+              <li>The experience starts before the app: setup was the hardest part.</li>
+              <li>Advanced features like scheduling looked like the biggest usability risk.</li>
+              <li>Comfort depends on how well people understand the system.</li>
+              <li>System feedback was often unclear, in the app and on the device.</li>
+            </ul>
+          </div>
+          <div class="question">
+            <span class="panel">Research question</span>
+            <p>How do usability factors of the De'Longhi Comfort app influence the user's ability to perform climate-control tasks on the Pinguino Care4Me PAC EX130?</p>
+          </div>
+          <ol class="subq">
+            <li><span class="panel">SQ1</span><p>How intuitive is the app for people with no smart-home experience, compared with people who have it?</p></li>
+            <li><span class="panel">SQ2</span><p>How usable is weekly scheduling, and what do people run into when creating, changing and managing schedules?</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= STUDY ================= -->
+      <section class="section band" id="study" aria-labelledby="study-title">
+        <div class="wrap">
+          <h2 id="study-title">Six tasks, building up to changing a schedule.</h2>
+          <div class="two">
+            <p class="lede">A summative, mixed-method usability test in the living-room lab at TU Delft IDE. Each session took about an hour, with one facilitator and one note-taker.</p>
+            <div class="prose">
+              <p>Participants used a provided iPhone with the app already paired, so the study could focus on scheduling. After each task they rated difficulty and confidence. At the end they filled in the UEQ on paper and answered ten interview questions.</p>
+              <p>A screener split participants into people who own and use smart-home products (3) and people who don't (4). All were TU Delft students.</p>
+            </div>
+          </div>
+
+          <figure class="block wide"><div class="shot"><img src="assets/delonghi/setup.webp" width="546" height="407" loading="lazy" alt="Living room lab with participant, Pinguino, iPhone, facilitator and note-taker marked"></div><figcaption><strong>The set-up.</strong> Participant, Pinguino, test iPhone, facilitator and note-taker in the IDE living-room lab. 1 pilot and 7 tests, screen and audio recorded.</figcaption></figure>
+
+          <div class="block">
+            <div class="block-head"><h3>The six tasks</h3><span class="panel">Same order for everyone</span></div>
+            <ol class="task-list">
+              <li><span class="n">1</span><div><strong>Turn on the Pinguino</strong><p>Cool the room to 22 °C, low fan.</p></div></li>
+              <li><span class="n">2</span><div><strong>First schedule</strong><p>Be cool at 24 °C when you get home at 18:00.</p></div></li>
+              <li><span class="n">3</span><div><strong>Night-time schedule</strong><p>Quiet fan 22:30–00:00 on weekdays.</p></div></li>
+              <li><span class="n">4</span><div><strong>Repeating schedule</strong><p>20 °C before 18:00, Monday to Friday.</p></div></li>
+              <li class="hot"><span class="n">5</span><div><strong>Change one day</strong><p>Tomorrow only, start at 19:00 instead.</p></div></li>
+              <li class="hot"><span class="n">6</span><div><strong>Pause for a holiday</strong><p>Wednesday to Sunday off, keep the rest.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TASK RESULTS ================= -->
+      <section class="section" id="tasks" aria-labelledby="tasks-title">
+        <div class="wrap">
+          <h2 id="tasks-title">Making a schedule was fine. Changing one wasn't.</h2>
+          <div class="two">
+            <p class="lede">Tasks 1–4 were completed almost perfectly. Tasks 5 and 6, editing and pausing a schedule, had the lowest completion, the lowest confidence and the most “harder than expected”.</p>
+            <div class="prose">
+              <p>Completion used a weighted score: 1.00 done independently, 0.75 with a prompt, 0.50 done incorrectly, 0 not done. With seven people, all numbers are read descriptively.</p>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>Per task</h3><span class="panel">n = 7</span></div>
+            <div class="tchart" role="table" aria-label="Task results">
+              <div class="tr head" role="row"><span role="columnheader"></span><span role="columnheader" class="panel">Completion</span><span role="columnheader" class="panel">Harder than expected</span><span role="columnheader" class="panel">Mean time</span></div>
+              <div class="tr" role="row" style="--c:96;--h:43;--t:81.7"><strong role="cell">1 · Turn on</strong><span role="cell" class="bar c"><i></i><b>96%</b></span><span role="cell" class="bar h"><i></i><b>43%</b></span><span role="cell" class="bar t"><i></i><b>82 s</b></span></div>
+              <div class="tr" role="row" style="--c:100;--h:71;--t:122"><strong role="cell">2 · First schedule</strong><span role="cell" class="bar c"><i></i><b>100%</b></span><span role="cell" class="bar h"><i></i><b>71%</b></span><span role="cell" class="bar t"><i></i><b>122 s</b></span></div>
+              <div class="tr" role="row" style="--c:100;--h:14;--t:91.6"><strong role="cell">3 · Night-time</strong><span role="cell" class="bar c"><i></i><b>100%</b></span><span role="cell" class="bar h"><i></i><b>14%</b></span><span role="cell" class="bar t"><i></i><b>92 s</b></span></div>
+              <div class="tr" role="row" style="--c:100;--h:29;--t:102.3"><strong role="cell">4 · Repeating</strong><span role="cell" class="bar c"><i></i><b>100%</b></span><span role="cell" class="bar h"><i></i><b>29%</b></span><span role="cell" class="bar t"><i></i><b>102 s</b></span></div>
+              <div class="tr hot" role="row" style="--c:57;--h:86;--t:136.1"><strong role="cell">5 · Change one day</strong><span role="cell" class="bar c"><i></i><b>57%</b></span><span role="cell" class="bar h"><i></i><b>86%</b></span><span role="cell" class="bar t"><i></i><b>136 s</b></span></div>
+              <div class="tr hot" role="row" style="--c:86;--h:71;--t:120.1"><strong role="cell">6 · Pause for holiday</strong><span role="cell" class="bar c"><i></i><b>86%</b></span><span role="cell" class="bar h"><i></i><b>71%</b></span><span role="cell" class="bar t"><i></i><b>120 s</b></span></div>
+            </div>
+            <p class="note">Confidence followed the same line: 5.6–6.3 out of 7 for tasks 1–4, then 4.9 for task 6 and 3.6 for task 5.</p>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>Experience worked against people</h3><span class="panel">Experienced (3) vs inexperienced (4)</span></div>
+            <div class="vs">
+              <div class="readout"><span class="panel">Task 5 completion · experienced</span><span class="v bad">0%</span><p>Confidence <strong>1.7</strong> / 7. Their habits from other calendar and smart-home apps didn't carry over.</p></div>
+              <div class="readout"><span class="panel">Task 5 completion · inexperienced</span><span class="v good">100%</span><p>Confidence <strong>5.0</strong> / 7. Without those habits, they explored the app until it worked.</p></div>
+            </div>
+            <p class="note">Experienced participants also rated tasks 1, 2, 5 and 6 as harder than expected more often (67%). The interface looks conventional, so they brought conventional expectations, and the app didn't honour them.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FRICTION ================= -->
+      <section class="section band" id="friction" aria-labelledby="friction-title">
+        <div class="wrap">
+          <h2 id="friction-title">Where exactly people got stuck.</h2>
+          <div class="two">
+            <p class="lede">We mapped the expected flow of every task, then placed each friction point from the transcripts on it, with the participants affected and what they said.</p>
+            <div class="prose"><p>Most friction clustered on the scheduling screens. One of them turned out to be a bug: editing a schedule bar added a new bar instead of changing the old one.</p></div>
+          </div>
+
+          <ol class="fr-list">
+            <li><div class="fr-shot"><img src="assets/delonghi/t1-off.webp" width="260" height="476" loading="lazy" alt="Home card showing a large Off label"></div><div class="fr-body"><span class="panel">Task 1 · P2</span><h4>A big “Off” that isn't the button</h4><p>The large “Off” label looked like the toggle. The real power button was a smaller, separate element.</p><blockquote>The power button is smaller than the first button I was looking at.</blockquote></div></li>
+            <li><div class="fr-shot"><img src="assets/delonghi/t1-loading.webp" width="258" height="476" loading="lazy" alt="Home card showing Switching on with a loading bar"></div><div class="fr-body"><span class="panel">Task 1 · P1, P7</span><h4>A loading bar with no meaning</h4><p>After changing the temperature, a bar loaded and disappeared. Nobody knew if the action had registered.</p><blockquote>I've just slid it and now there's a loading bar. I do not know what that means.</blockquote></div></li>
+            <li><div class="fr-shot"><img src="assets/delonghi/t2-tap.webp" width="256" height="476" loading="lazy" alt="Scheduling screen with a Tap to switch on button at the bottom"></div><div class="fr-body"><span class="panel">Task 2 · P1, P2, P3, P6</span><h4>“Tap to switch on” switched it off</h4><p>People pressed it expecting to start scheduling. It turned the air conditioner off instead.</p><blockquote>I thought the scheduler is maybe popping up, but the whole thing was shutting down.</blockquote></div></li>
+            <li><div class="fr-shot"><img src="assets/delonghi/t3-deleted.webp" width="256" height="476" loading="lazy" alt="Scheduling screen where the earlier schedule has disappeared"></div><div class="fr-body"><span class="panel">Task 3 · P1</span><h4>A schedule silently replaced</h4><p>Saving the night-time schedule removed the one from task 2. No warning, no conflict dialogue.</p><blockquote>It just disappeared. Maybe it would ask me to remove it.</blockquote></div></li>
+            <li><div class="fr-shot"><img src="assets/delonghi/t4-endtime.webp" width="256" height="476" loading="lazy" alt="New schedule form with an end time earlier than the start time"></div><div class="fr-body"><span class="panel">Task 4 · P3</span><h4>End time doesn't follow start time</h4><p>Every new schedule needed the end time set by hand, an extra step people didn't expect.</p><blockquote>Why doesn't it have any automatically end time?</blockquote></div></li>
+            <li class="bug"><div class="fr-shot"><img src="assets/delonghi/t5-edit.webp" width="258" height="476" loading="lazy" alt="Edit schedule form with the start time highlighted"></div><div class="fr-body"><span class="panel">Task 5 · P1, P3, P5, P7</span><h4>The edit that never saved</h4><p>Editing a start time and saving left the calendar unchanged. The only way was to delete and recreate. We traced it to a bug.</p><blockquote>I thought I've changed the start time, but it has not changed.</blockquote></div></li>
+            <li><div class="fr-shot"><img src="assets/delonghi/t6-bulk.webp" width="258" height="476" loading="lazy" alt="Edit schedule form used when trying to remove several days"></div><div class="fr-body"><span class="panel">Task 6 · P1, P3, P6, P7</span><h4>No way to pause several days</h4><p>People tried to deselect Wednesday to Sunday. Nothing changed. Single-day delete was found by accident.</p><blockquote>It's a little bit complicated than adding a schedule.</blockquote></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= UEQ ================= -->
+      <section class="section" id="ueq" aria-labelledby="ueq-title">
+        <div class="wrap">
+          <h2 id="ueq-title">Usable enough. Not engaging at all.</h2>
+          <div class="two">
+            <p class="lede">The UEQ split the experience in two. Task-related qualities came close to the market baseline. How the app felt was flat or negative.</p>
+            <div class="prose">
+              <p>Six scales from −3 to +3. Pragmatic quality averages perspicuity, efficiency and dependability; hedonic quality averages stimulation and novelty. The market baseline sits around +0.8.</p>
+            </div>
+          </div>
+
+          <div class="pq-hq">
+            <div class="readout"><span class="panel">Pragmatic quality</span><span class="v good">+0.65</span><p><strong>Does it get the job done?</strong> Close to, but below, the baseline. The core flow works, without fatal obstacles.</p></div>
+            <div class="gap" aria-hidden="true"><span class="panel">Gap</span><strong>1.10</strong></div>
+            <div class="readout"><span class="panel">Hedonic quality</span><span class="v bad">−0.45</span><p><strong>Is it pleasant to use?</strong> Stimulation near zero, novelty clearly negative.</p></div>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>Six UEQ scales</h3><span class="panel">Mean · n = 7 · dashed line = market baseline +0.8</span></div>
+            <ul class="scales" aria-label="UEQ scale means">
+              <li style="--v:.79"><span class="name">Attractiveness</span><span class="grp panel">Overall</span><span class="bar"><i></i></span><span class="val">+0.79</span></li>
+              <li class="weak" style="--v:.43"><span class="name">Perspicuity</span><span class="grp panel">Pragmatic</span><span class="bar"><i></i></span><span class="val">+0.43</span></li>
+              <li style="--v:.75"><span class="name">Efficiency</span><span class="grp panel">Pragmatic</span><span class="bar"><i></i></span><span class="val">+0.75</span></li>
+              <li style="--v:.79"><span class="name">Dependability</span><span class="grp panel">Pragmatic</span><span class="bar"><i></i></span><span class="val">+0.79</span></li>
+              <li class="weak" style="--v:.14"><span class="name">Stimulation</span><span class="grp panel">Hedonic</span><span class="bar"><i></i></span><span class="val">+0.14</span></li>
+              <li class="neg" style="--v:-1.04"><span class="name">Novelty</span><span class="grp panel">Hedonic</span><span class="bar"><i></i></span><span class="val">−1.04</span></li>
+            </ul>
+            <p class="axis-note plain-panel"><span>−3</span><span>0</span><span>+3</span></p>
+            <p class="note">Attractiveness, efficiency and dependability all sat just under the +0.8 baseline. Perspicuity stayed in the neutral zone. Novelty was the only scale in the negative zone: people saw the app as conventional, even a little outdated next to other smart-home apps.</p>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>In participants' own ratings</h3><span class="panel">Item-level highlights</span></div>
+            <div class="items">
+              <div>
+                <h4>Strongest positives</h4>
+                <ul class="item-bars pos">
+                  <li style="--v:1.43"><span>valuable</span><i></i><b>+1.43</b></li>
+                  <li style="--v:1.43"><span>organized</span><i></i><b>+1.43</b></li>
+                  <li style="--v:1.29"><span>supportive</span><i></i><b>+1.29</b></li>
+                  <li style="--v:1.29"><span>easy to learn</span><i></i><b>+1.29</b></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Strongest negatives</h4>
+                <ul class="item-bars neg">
+                  <li style="--v:1.71"><span>usual, not leading edge</span><i></i><b>−1.71</b></li>
+                  <li style="--v:1.29"><span>conventional, not inventive</span><i></i><b>−1.29</b></li>
+                  <li style="--v:.71"><span>conservative, not innovative</span><i></i><b>−0.71</b></li>
+                  <li style="--v:.57"><span>boring, not exciting</span><i></i><b>−0.57</b></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FINDINGS ================= -->
+      <section class="section band" id="findings" aria-labelledby="findings-title">
+        <div class="wrap">
+          <h2 id="findings-title">It looked familiar, so people expected it to behave that way.</h2>
+          <div class="two">
+            <p class="lede">Inductive in-vivo coding of the transcripts gave five themes. Together they explain why the app was usable but cost so much effort.</p>
+            <div class="prose"><p>Visual clarity was mostly tied to the home page. Expectation mismatch was mostly tied to scheduling.</p></div>
+          </div>
+
+          <ul class="themes-q">
+            <li class="good"><span class="panel">Theme 1</span><h4>Visual clarity and understanding</h4><p>Clear schedule bars, icons and indicators helped people understand and feel confident.</p><blockquote>It shows on the calendar that it's quite clear that it only repeats on weekdays.<cite>P7</cite></blockquote></li>
+            <li><span class="panel">Theme 2</span><h4>Discoverability challenges</h4><p>An overloaded interface and hidden functions made key features hard to find.</p><blockquote>Me not being able to figure out the scheduling immediately is annoying… it should be a very basic use case.<cite>P2</cite></blockquote></li>
+            <li><span class="panel">Theme 3</span><h4>Expectation–system mismatch</h4><p>People expected it to work like other calendar apps, and met limited editing and fixed controls.</p><blockquote>I see tap to switch on, so I try. Oh, it's turning off.<cite>P6</cite></blockquote></li>
+            <li><span class="panel">Theme 4</span><h4>System feedback uncertainty</h4><p>Unclear or missing status left people unsure whether their action had applied.</p><blockquote>The bar loaded and disappeared, instead of giving me some feedback.<cite>P4</cite></blockquote></li>
+            <li><span class="panel">Theme 5</span><h4>Perceived value</h4><p>Willingness to keep using it depended on usefulness, convenience and personal routine.</p><blockquote>It's just not that useful, but it's just because my own schedule issues.<cite>P3</cite></blockquote></li>
+          </ul>
+
+          <div class="block">
+            <div class="block-head"><h3>How the factors add up</h3><span class="panel">Answer to the research question</span></div>
+            <ol class="chain">
+              <li><span class="panel">1</span><strong>Expectation mismatch</strong><p>A familiar-looking interface that doesn't behave like one.</p></li>
+              <li><span class="panel">2</span><strong>Low discoverability</strong><p>People explore instead of recognising. Time and learning effort go up.</p></li>
+              <li><span class="panel">3</span><strong>Feedback uncertainty</strong><p>Unclear confirmation leads to trial and error, and lower trust.</p></li>
+              <li class="res"><span class="panel">=</span><strong>Higher cognitive cost</strong><p>Tasks still get done, but first-time use isn't intuitive.</p></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= RECOMMENDATIONS ================= -->
+      <section class="section" id="recs" aria-labelledby="recs-title">
+        <div class="wrap">
+          <h2 id="recs-title">From trial and error to recognition.</h2>
+          <div class="two">
+            <p class="lede">The app is operational but lacks interaction polish. Closing that gap is where UX investment pays off most.</p>
+            <div class="prose"><p>Our recommendations to De'Longhi, in order of urgency.</p></div>
+          </div>
+          <ol class="recs">
+            <li><span class="n">01</span><div><h4>Fix the scheduling bugs</h4><p>Editing must change the existing block, not add a new one. Move “Tap to switch on/off” so it no longer covers late-night schedule blocks, and make blocks visibly tappable.</p></div></li>
+            <li><span class="n">02</span><div><h4>Revise the information architecture</h4><p>Relabel the home card's on/off status and loading bar, redesign or remove “Tap to switch on”, clarify Active/Standby and label the “+” button.</p></div></li>
+            <li><span class="n">03</span><div><h4>Confirm every action</h4><p>Immediate, consistent feedback that a change has registered, plus short explanations of how the Pinguino behaves, such as how long cooling takes.</p></div></li>
+            <li><span class="n">04</span><div><h4>Follow calendar conventions</h4><p>Separate timer from schedule, add a way to pause a schedule, and allow bulk delete, in line with the scheduling apps people already know.</p></div></li>
+            <li><span class="n">05</span><div><h4>Guide first use</h4><p>An onboarding that introduces the Pinguino, the app's purpose and its key features, so advanced functions don't depend on exploration.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= REFLECTION ================= -->
+      <section class="section band" id="reflection" aria-labelledby="reflection-title">
+        <div class="wrap">
+          <h2 id="reflection-title">Be honest about what your method can show.</h2>
+          <div class="two">
+            <p class="lede">The hardest part wasn't running the tests. It was shaping the research question, and being clear about what our data could and couldn't say.</p>
+            <div class="prose">
+              <p>We started with the experienced-vs-inexperienced comparison as the main question. Our tutor pushed us to widen the lens, so it became a sub-question under a broader question about usability factors. That change shaped everything after it, from tasks to recommendations.</p>
+              <p>Facilitating the pilot, I was so focused on guiding that I missed hesitations and small recoveries I only saw in the recording. It changed how I thought about observation, and showed the value of a note-taker who focuses on non-verbal behaviour.</p>
+            </div>
+          </div>
+          <div class="block">
+            <div class="block-head"><h3>Reading the results in context</h3><span class="panel">Limitations</span></div>
+            <ul class="themes">
+              <li><strong>Seven students</strong><p>Below the UEQ's recommended n ≥ 20, and younger and more tech-literate than De'Longhi's 35–50 target group. The results show a trend, read descriptively.</p></li>
+              <li><strong>Setup left out</strong><p>We pre-paired the device because pairing took us three days. That kept the focus on scheduling, but likely underestimates the real usability burden.</p></li>
+              <li><strong>Lab, one phone, fixed order</strong><p>A living-room lab, a provided iPhone for everyone and no counterbalancing may have shifted how later tasks felt.</p></li>
+            </ul>
+          </div>
+          <p class="takeaway">Good research isn't about following the perfect method. It's about being open at every step about what the method can and cannot reveal.</p>
+        </div>
+      </section>
+
+      <nav class="wrap next" aria-label="Next project">
+        <div><p class="panel">Next record</p><a class="big" href="whispering-garden.html">Whispering Garden<svg class="icon"><use href="#i-out"/></svg></a></div>
+        <a class="home" href="index.html">Back to all records</a>
+      </nav>
+    </main>
+  </div>
+
+  <script src="case.js?v=3"></script>
+  <script>
+    requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.remove('is-entering')));
+    (() => {
+      const g = document.getElementById('week-grid'); if (!g) return;
+      const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      const plan = [[[17, 23]], [[17, 23]], [[17, 23]], [[17, 23]], [[17, 23]], [], []];
+      days.forEach((d, i) => {
+        const row = document.createElement('div'); row.className = 'row' + (i > 1 ? ' off' : '');
+        row.innerHTML = '<span class="panel">' + d + '</span><div class="track"></div>';
+        plan[i].forEach(([a, b]) => {
+          const blk = document.createElement('i');
+          blk.style.left = (a / 24 * 100) + '%'; blk.style.width = ((b - a) / 24 * 100) + '%';
+          blk.style.transitionDelay = (0.25 + i * 0.12) + 's';
+          row.querySelector('.track').append(blk);
+        });
+        g.append(row);
+      });
+    })();
+  </script>
+</body>
+</html>
