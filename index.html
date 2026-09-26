@@ -2,50 +2,99 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ziyi (Nemo) Zhou | Record collection</title>
+<title>Ziyi Zhou | AI Product &amp; UX Designer</title>
+<meta name="description" content="Ziyi Zhou, AI product and UX designer. MSc Interaction Design at TU Delft. Selected work in healthcare, personal data and AI.">
 <link rel="stylesheet" href="vinyl-demo.css">
 <link rel="stylesheet" href="vinyl-retro.css">
+<link rel="stylesheet" href="home.css?v=1">
 </head>
-<body>
-<header><a href="index.html">Ziyi <span>(Nemo)</span> Zhou</a><p>AI Product Experience Designer</p><a href="portfolio-index.html">Project index &#8599;</a></header>
+<body class="hd">
+<header><a href="index.html">Ziyi Zhou</a><p>AI Product &amp; UX Designer</p><a href="portfolio-index.html">Project index &#8599;</a></header>
 <main>
 <section class="studio">
-<h1>A few things I've<br>put my <em>mind</em> into.</h1>
-<p class="intro">Research, product thinking, and interaction.<br>Selected work from my creative workspace.</p>
+<h1>I design AI products<br>from the <em>user's side</em>.</h1>
+<p class="intro">AI Product &amp; UX Designer · MSc Interaction Design, TU Delft.<br>Research first, then the product: what the AI should do, and what stays in people's hands.</p>
 <div class="deck" id="deck" aria-label="Turntable: drop a project here">
-<div class="retro-name">NEMO <span>Selected work / Record player</span></div>
+<div class="retro-name">ZIYI ZHOU <span>Selected work / Record player</span></div>
 <div class="platter"><div class="disc playing-disc"><span class="label" aria-hidden="true"></span></div><i class="spindle"></i></div>
-<div class="arm-pivot"><div class="arm"><i></i></div></div>
-<div class="deck-bottom"><span class="maker">NEMO <small>DESIGN COLLECTION</small></span><span class="light"></span><span>33 / 45</span></div>
+<div class="gloss" aria-hidden="true"></div>
+<svg class="tonearm" viewBox="0 0 120 420" aria-hidden="true">
+  <defs>
+    <linearGradient id="ta-metal" x1="0" x2="1"><stop offset="0" stop-color="#6d726e"/><stop offset=".45" stop-color="#f2f3ee"/><stop offset=".6" stop-color="#c9ccc6"/><stop offset="1" stop-color="#5d625e"/></linearGradient>
+    <radialGradient id="ta-base" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#f4f4ef"/><stop offset=".45" stop-color="#a7aca6"/><stop offset="1" stop-color="#3f4440"/></radialGradient>
+    <linearGradient id="ta-weight" x1="0" x2="1"><stop offset="0" stop-color="#2a2d2b"/><stop offset=".5" stop-color="#6c716d"/><stop offset="1" stop-color="#1d201e"/></linearGradient>
+    <filter id="ta-shadow" x="-40%" y="-10%" width="180%" height="130%"><feDropShadow dx="6" dy="9" stdDeviation="5" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <g filter="url(#ta-shadow)">
+    <circle cx="60" cy="60" r="44" fill="#1a1c1b"/>
+    <circle cx="60" cy="60" r="40" fill="url(#ta-base)"/>
+    <circle cx="60" cy="60" r="28" fill="none" stroke="#2c302d" stroke-opacity=".35"/>
+    <g class="arm-rot">
+      <rect x="47" y="2" width="26" height="30" rx="4" fill="url(#ta-weight)"/>
+      <rect x="47" y="10" width="26" height="2" fill="#000" opacity=".35"/>
+      <path d="M56 40 L64 40 L63 300 Q62 332 44 352 L38 348 Q55 328 56 300 Z" fill="url(#ta-metal)"/>
+      <g transform="rotate(38 42 356)">
+        <rect x="28" y="346" width="28" height="44" rx="3" fill="#1b1d1c" stroke="#4a4f4b"/>
+        <rect x="33" y="380" width="18" height="14" rx="2" fill="#0f1010"/>
+        <rect x="33" y="392" width="18" height="3" fill="#b8453a"/>
+        <path d="M56 352 l16 -6" stroke="url(#ta-metal)" stroke-width="3.5" stroke-linecap="round"/>
+      </g>
+      <circle cx="60" cy="60" r="12" fill="#2a2e2b" stroke="#9aa09a" stroke-width="2"/>
+      <circle cx="60" cy="60" r="4" fill="#d9dcd4"/>
+    </g>
+  </g>
+</svg>
 <div class="retro-controls"><div class="transport"><button id="retro-prev" title="Select previous project">Prev</button><button id="retro-play" title="Open selected project">Play</button><button id="retro-stop" title="Stop opening project">Stop</button><button id="retro-next" title="Select next project">Next</button></div><div class="retro-display" aria-live="polite"><span id="retro-track">CASE 01 / 03</span><strong id="retro-title">WHISPERING GARDEN</strong><small id="retro-state">READY</small></div></div>
 </div>
 <div class="playback"><p id="status" role="status">Three projects. Different ways of thinking.</p><button id="cancel" hidden>Cancel</button></div>
-<p class="signature">Working with complexity.<br>Designing for people.</p>
 </section>
 <section class="collection" aria-label="Selected projects">
 <article class="album garden">
-<button class="sleeve" data-href="whispering-garden.html" data-name="Whispering Garden" aria-label="Play Whispering Garden">
-<span class="disc peek"><span class="label">WG<small>01 / SIDE A</small></span></span>
-<span class="jacket"><img src="assets/whispering-garden/garden-cover-photocomposite.webp" alt="Whispering Garden listening objects in a hospital garden"><span class="cover-type">Whispering<br>Garden</span><span class="cover-foot">A moment of agency.</span></span>
+<button class="sleeve" data-href="whispering-garden.html" data-name="Whispering Garden" data-art="assets/whispering-garden/garden-cover-photocomposite.webp" aria-label="Play Whispering Garden">
+<span class="disc peek"><span class="label" style="--art:url(assets/whispering-garden/garden-cover-photocomposite.webp)"><small>01 · Side A</small></span></span>
+<span class="jacket"><img src="assets/whispering-garden/garden-cover-photocomposite.webp" alt="Whispering Garden listening objects in a hospital garden"><span class="cover-type">Whispering<br>Garden</span><span class="cover-no">01</span><span class="cover-foot">A moment of agency.</span></span>
 </button>
 <div class="album-caption"><div><h2>Whispering Garden</h2><p>Research / Physical interaction</p></div><a href="whispering-garden.html" aria-label="View Whispering Garden case study">View case &#8599;</a></div>
 </article>
-<article class="album sync">
-<button class="sleeve" data-href="sync-sweat.html" data-name="sync&sweat" aria-label="Play sync and sweat">
-<span class="disc peek"><span class="label">S&amp;S<small>02 / SIDE A</small></span></span>
-<span class="jacket"><span class="cover-type">sync<span>&amp;sweat</span></span><img src="assets/sync-sweat/app-flow.png" alt="Sync and Sweat mobile product screens"><span class="cover-foot">Your data. Your rhythm.</span></span>
-</button>
-<div class="album-caption"><div><h2>sync&amp;sweat</h2><p>Data research / Connected products</p></div><a href="sync-sweat.html" aria-label="View Sync and Sweat case study">View case &#8599;</a></div>
-</article>
 <article class="album food">
-<button class="sleeve" data-href="food-miner.html" data-name="Food Miner" aria-label="Play Food Miner">
-<span class="disc peek"><span class="label">FM<small>03 / SIDE A</small></span></span>
-<span class="jacket"><span class="cover-type">Food Miner<span>for Uber Eats</span></span><img src="assets/uber-eats/food-miner-project-cover.png" alt="Food Miner Uber Eats concept with mobile interface"><span class="cover-foot">AI screens. You choose.</span></span>
+<button class="sleeve" data-href="food-miner.html" data-name="Food Miner" data-art="assets/home/vinyl/label-food.webp" aria-label="Play Food Miner">
+<span class="disc peek"><span class="label" style="--art:url(assets/home/vinyl/label-food.webp)"><small>02 · Side A</small></span></span>
+<span class="jacket">
+  <span class="cover-type">Food<br>Miner</span>
+  <span class="cover-sub">for Uber Eats</span>
+  <span class="cover-no">02</span>
+  <img class="cover-phone" src="assets/uber-eats/screens/catch.webp" alt="Food Miner catch screen: the cat's arm reaches for a cuisine card">
+  <span class="cover-foot">AI screens.<br>You choose.</span>
+</span>
 </button>
 <div class="album-caption"><div><h2>Food Miner</h2><p>AI product design / Top 3 Hackathon</p></div><a href="food-miner.html" aria-label="View Food Miner case study">View case &#8599;</a></div>
 </article>
+<article class="album sync">
+<button class="sleeve" data-href="sync-sweat.html" data-name="sync&sweat" data-art="assets/home/vinyl/label-sync.webp" aria-label="Play sync and sweat">
+<span class="disc peek"><span class="label" style="--art:url(assets/home/vinyl/label-sync.webp)"><small>03 · Side A</small></span></span>
+<span class="jacket">
+  <span class="pulse" aria-hidden="true"></span>
+  <span class="cover-type">sync<br><i>&amp;</i>sweat</span>
+  <span class="cover-no">03</span>
+  <img class="cover-phone" src="assets/sync-sweat/screens/zone-tracking.webp" alt="Follow the Beat live session screen: 147 BPM in zone 3">
+  <span class="cover-foot">Your data.<br>Your rhythm.</span>
+</span>
+</button>
+<div class="album-caption"><div><h2>sync&amp;sweat</h2><p>Data research / Connected products</p></div><a href="sync-sweat.html" aria-label="View Sync and Sweat case study">View case &#8599;</a></div>
+</article>
 </section>
 </main>
-<footer><span>Ziyi (Nemo) Zhou</span><span>Selected work / 2026</span><a href="portfolio-index.html">Portfolio index &#8599;</a></footer>
+<footer><span>Ziyi Zhou</span><span>Selected work / 2026</span><a href="portfolio-index.html">Portfolio index &#8599;</a></footer>
 <script src="vinyl-demo.js"></script>
+<script>
+  // put the selected project's artwork on the turntable label
+  (() => {
+    const title = document.getElementById('retro-title'), label = document.querySelector('#deck .label');
+    const sync = () => {
+      const s = [...document.querySelectorAll('.sleeve')].find((b) => b.dataset.name.toUpperCase() === title.textContent.trim());
+      if (s) label.style.setProperty('--art', 'url(' + s.dataset.art + ')');
+    };
+    new MutationObserver(sync).observe(title, { childList: true, characterData: true, subtree: true }); sync();
+  })();
+</script>
 </body></html>

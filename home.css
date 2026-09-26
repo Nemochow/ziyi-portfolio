@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Homepage refresh: Montserrat type, translucent vinyl, walnut deck,
+   metal tonearm, reworked Food Miner and sync&sweat sleeves.
+   Loaded after vinyl-demo.css + vinyl-retro.css and overrides them.
+   ========================================================================== */
+@font-face { font-family: Montserrat; src: url("assets/fonts/home/Montserrat.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+.hd { --accent: #b9caaa; --muted: #a9aaa2; }
+.hd, .hd button { font-family: Montserrat, "Helvetica Neue", Arial, sans-serif; }
+
+/* ---------- type ---------- */
+.hd header { padding: 30px 0; }
+.hd header > a:first-child { font: 700 21px/1 Montserrat, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; }
+.hd header p { font: 500 12.5px/1 Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.hd header > a:last-child, .hd footer, .hd footer a { font: 500 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.hd .studio h1 { font: 600 clamp(30px, 2.9vw, 42px)/1.14 Montserrat, sans-serif; letter-spacing: 0.005em; text-transform: uppercase; margin-bottom: 26px; }
+.hd .studio h1 em { color: var(--accent); }
+.hd .intro { font: 400 13.5px/1.85 Montserrat, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); max-width: 40em; }
+.hd .intro::before { content: ""; display: block; width: 56px; height: 1px; margin-bottom: 20px; background: #6a6d66; }
+.hd .playback { font: 500 11.5px/1.4 Montserrat, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+.hd .album-caption h2 { font: 600 19px/1.2 Montserrat, sans-serif; letter-spacing: 0.02em; text-transform: uppercase; }
+.hd .album-caption p { font: 500 11.5px/1.4 Montserrat, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.hd .album-caption a { font: 600 12px/1 Montserrat, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+.hd .album.is-selected .album-caption h2 { color: var(--accent); }
+
+/* ---------- deck: original wood plinth, brushed platter, smoked vinyl ---------- */
+.hd .deck::before { background: linear-gradient(#070707, #1a1a19); }
+.hd .retro-name { font: 700 10.5px/14px Montserrat, sans-serif; letter-spacing: 0.14em; background: linear-gradient(#c9ccc6, #8b908a); }
+.hd .retro-name span { font: 600 9px/14px Montserrat, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
+.hd .deck .platter { width: 70%; top: 4%; left: 5%; border: 0; background:
+    repeating-radial-gradient(circle, #ffffff0d 0 1px, transparent 1px 3px),
+    conic-gradient(from 20deg, #7b807b, #e6e8e2 12%, #8d928d 25%, #cfd2cb 38%, #7a7f7a 50%, #e9ebe5 62%, #8a8f8a 75%, #d3d6cf 88%, #7b807b);
+  box-shadow: 0 10px 18px #000a, 0 2px 0 #00000080, inset 0 0 0 1px #ffffff55; }
+.hd .deck .playing-disc { inset: 2.2%; border: 0; box-shadow: 0 2px 6px #000c; background: url("assets/home/vinyl/smoke.webp") center / cover; }
+.hd .deck .playing-disc::before { display: none; }
+.hd .gloss { position: absolute; left: 5%; top: 4%; width: 70%; aspect-ratio: 1; border-radius: 50%; pointer-events: none; z-index: 3;
+  background: url("assets/home/vinyl/spec.webp") center / 95.6% no-repeat; mix-blend-mode: screen; opacity: 0.8; }
+.hd .deck .label { width: 34%; font-size: 0; color: transparent; background: #1c1f1d var(--art, none) center / cover; box-shadow: 0 0 0 3px #0d0f0e, 0 0 0 4px #ffffff14, inset 0 0 0 999px #0000001a; }
+.hd .deck .spindle { z-index: 4; }
+.hd .deck .arm-pivot, .hd .deck .arm { display: none; }
+
+.hd .tonearm { position: absolute; z-index: 5; right: 2.5%; top: 2%; width: 21%; height: auto; overflow: visible; pointer-events: none; }
+.hd .tonearm .arm-rot { transform-box: view-box; transform-origin: 60px 60px; transform: rotate(-2deg); transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.hd .deck.playing .tonearm .arm-rot { transform: rotate(19deg); }
+
+.hd .transport button { font: 700 9px/1 Montserrat, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: #1b1e1b;
+  background: radial-gradient(circle at 35% 30%, #fbfbf7, #b9bdb6 45%, #7c817b 100%); border: 1px solid #d9dcd4; box-shadow: 0 4px 6px #0008, inset 0 -2px 3px #0004; }
+.hd .retro-display { font-family: "D-DIN", monospace; background: #0b1512; border: 3px solid #1f140b; color: #9fd8b0; text-shadow: 0 0 6px #9fd8b066; }
+
+/* ---------- translucent vinyl on every sleeve ---------- */
+.hd .peek { background: url("assets/home/vinyl/sage.webp") center / cover; border: 0; box-shadow: 8px 14px 28px #0009; }
+.hd .peek::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: url("assets/home/vinyl/spec.webp") center / cover; mix-blend-mode: screen; opacity: 0.75; pointer-events: none; }
+.hd .food .peek { background-image: url("assets/home/vinyl/mint.webp"); }
+.hd .sync .peek { background-image: url("assets/home/vinyl/ruby.webp"); }
+.hd .peek .label { position: relative; width: 34%; font-size: 0; color: transparent; background: #222 var(--art) center / cover; box-shadow: 0 0 0 2px #00000033, inset 0 0 0 999px #00000026; }
+.hd .peek .label::after { content: ""; position: absolute; left: 50%; top: 50%; width: 7%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); background: #0b0b0b; box-shadow: 0 0 0 2px #ffffff30; }
+.hd .peek .label small { position: absolute; bottom: 16%; left: 0; right: 0; font: 700 8px/1 Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px #000; }
+.hd .drag-ghost .label small { display: none; }
+
+/* ---------- sleeves ---------- */
+.hd .jacket { box-shadow: 4px 14px 30px #000a; border: 0; }
+.hd .jacket::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 3; background: linear-gradient(115deg, #ffffff14, transparent 38%, transparent 70%, #00000026); box-shadow: inset 0 0 0 1px #ffffff14; }
+.hd .cover-type { z-index: 2; font: 700 38px/0.98 Montserrat, sans-serif; letter-spacing: 0.005em; text-transform: uppercase; }
+.hd .cover-no { position: absolute; z-index: 2; top: 26px; right: 24px; font: 700 12px/1 Montserrat, sans-serif; letter-spacing: 0.14em; }
+.hd .cover-foot { z-index: 2; font: 600 10.5px/1.45 Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; }
+
+.hd .garden .cover-no { color: #fff; }
+.hd .garden .cover-foot { background: none; padding: 0; left: 26px; bottom: 22px; color: #fff; text-shadow: 0 1px 6px #000a; }
+
+/* Food Miner: Uber green field, black type, the catch screen sliding in */
+.hd .food .jacket { background: #06c167; color: #0b0b0b; }
+.hd .food .cover-type { font-size: 52px; line-height: 0.9; color: #0b0b0b; }
+.hd .food .cover-sub { position: absolute; z-index: 2; left: 28px; top: 146px; font: 700 12px/1 Montserrat, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; }
+.hd .food .cover-no { color: #0b0b0b; }
+.hd .food .cover-phone { position: absolute; z-index: 1; right: -6%; bottom: -34%; width: 50%; height: auto; object-fit: contain; transform: rotate(-9deg); filter: drop-shadow(-14px 18px 22px #0006); }
+.hd .food .cover-foot { color: #0b0b0b; }
+.hd .food .jacket::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 36%; background: linear-gradient(transparent, #00000014); z-index: 0; }
+
+/* sync&sweat: black field, heart-rate rings, live session screen */
+.hd .sync .jacket { background: #0c0c0d; color: #f2efe9; }
+.hd .sync .pulse { position: absolute; z-index: 0; right: -22%; top: 18%; width: 92%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, #c8102e 0 17%, #6d0c19 17.5% 30%, #3a0a10 30.5% 44%, #1d0709 44.5% 58%, transparent 58.5%); opacity: 0.95; }
+.hd .sync .cover-type { font-size: 48px; line-height: 0.92; color: #f2efe9; text-transform: uppercase; }
+.hd .sync .cover-type i { font-style: normal; color: #e0303f; }
+.hd .sync .cover-no { color: #f2efe9; }
+.hd .sync .cover-phone { position: absolute; z-index: 1; right: 8%; bottom: -30%; top: auto; width: 44%; height: auto; object-fit: contain; mix-blend-mode: normal; transform: rotate(7deg); filter: drop-shadow(-12px 16px 22px #000c); }
+.hd .sync .cover-foot { color: #f2efe9; }
+
+@media (max-width: 1050px) {
+  .hd .food .cover-type { font-size: 40px; }
+  .hd .food .cover-sub { top: 118px; left: 20px; }
+  .hd .sync .cover-type { font-size: 38px; }
+}
+@media (max-width: 700px) {
+  .hd header > a:first-child { font-size: 19px; }
+  .hd .studio h1 { font-size: 26px; }
+  .hd .intro { font-size: 12px; }
+  .hd .cover-type { font-size: 28px; }
+  .hd .food .cover-type { font-size: 34px; }
+  .hd .food .cover-sub { top: 96px; left: 20px; font-size: 10px; }
+  .hd .sync .cover-type { font-size: 32px; }
+  .hd .cover-no { display: none; }
+  .hd .cover-foot { left: 20px; bottom: 16px; font-size: 9px; }
+}
