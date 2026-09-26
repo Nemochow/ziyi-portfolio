@@ -120,3 +120,69 @@ body.food .shift .to { background: #1b261f; }
 @media (max-width: 1180px) { .fm-opp__panel li { grid-template-columns: 1fr; gap: 4px; } }
 @media (max-width: 960px) { .fm-opp { grid-template-columns: 1fr; } .fm-opp__photo { min-height: 260px; } }
 @media (max-width: 640px) { .live-stage .live-phone { width: 170px; border-width: 6px; border-radius: 32px; } }
+
+/* ---------- journey: moods and thoughts ---------- */
+.journey .m.warn { fill: #e6c26b; }
+.journey .m.bad { fill: #e89a82; }
+.journey .bub path { fill: #1f2420; stroke: #3b4238; }
+.journey .bub text { font: 500 14.5px var(--read); fill: var(--text); }
+.journey .bub.warn path { stroke: #6b5a2c; }
+.journey .bub.bad path { stroke: #6e4234; }
+.journey .axis.sm { font-size: 11.5px; }
+.journey .mood { --fc: #9fd8b0; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.45)); }
+.journey .mood.ok { --fc: #cfe3b8; }
+.journey .mood.warn { --fc: #e6c26b; }
+.journey .mood.bad { --fc: #e89a82; }
+.journey .mood.lost { --fc: #8d9189; }
+.journey svg { min-width: 980px; }
+
+/* ---------- cover: bigger live phone with the five picks floating round it ---------- */
+.live-stage { height: clamp(560px, 52vw, 720px); }
+.live-stage::before { display: none; }
+.live-stage .blob { position: absolute; left: 50%; top: 50%; width: 92%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 193, 103, 0.34), rgba(6, 193, 103, 0.08) 45%, transparent 68%); }
+.live-stage .live-phone { width: clamp(236px, 20.5vw, 300px); }
+.live-stage .pick { position: absolute; left: auto; right: auto; top: auto; bottom: auto; transform: none; z-index: 3; width: clamp(64px, 6.4vw, 96px); height: auto; filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.55)); animation: bob 5.5s ease-in-out infinite; }
+.live-stage .p1 { left: 1%; top: 12%; --r: -12deg; animation-delay: -0.4s; }
+.live-stage .p2 { right: -1%; top: 6%; --r: 10deg; animation-delay: -1.6s; }
+.live-stage .p3 { left: -2%; top: 64%; --r: 8deg; animation-delay: -2.8s; }
+.live-stage .p4 { right: -2%; top: 60%; --r: -8deg; animation-delay: -3.5s; }
+.live-stage .p5 { right: 4%; bottom: 1%; --r: 14deg; animation-delay: -4.4s; }
+.live-stage .tag { position: absolute; z-index: 4; padding: 7px 12px; border-radius: 999px; background: #06c167; color: #0b0b0b; font-weight: 600; letter-spacing: 0.1em; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); }
+.live-stage .t1 { left: 2%; top: 42%; transform: rotate(-6deg); }
+.live-stage .t2 { right: 0; top: 36%; transform: rotate(5deg); background: var(--text); }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(var(--r)); } 50% { transform: translateY(-14px) rotate(calc(var(--r) * -0.6)); } }
+.is-entering .live-stage .pick, .is-entering .live-stage .tag { opacity: 0; }
+.live-stage .pick, .live-stage .tag { transition: opacity 0.9s 0.3s; }
+
+/* ---------- where it sits ---------- */
+.sits { display: grid; grid-template-columns: minmax(0, 300px) auto minmax(0, 300px); justify-content: center; align-items: center; gap: clamp(20px, 5vw, 72px); margin-top: 32px; }
+.sits img { display: block; width: 100%; height: auto; border-radius: 30px; box-shadow: 0 0 0 1px var(--rule-strong), 0 28px 44px -24px rgba(0, 0, 0, 0.85); }
+.sits figcaption { margin-top: 18px; }
+.sits .bridge { display: grid; justify-items: center; gap: 12px; color: var(--sage); text-align: center; }
+.sits .bridge .icon { width: 34px; height: 34px; }
+.sits .mark { position: relative; }
+.sits .hl { position: absolute; left: -10px; right: -10px; top: 2%; height: 25%; border: 2px dashed var(--sage); border-radius: 18px; }
+.sits .hl .panel { position: absolute; left: 14px; bottom: -14px; padding: 4px 10px; border-radius: 999px; background: var(--sage); color: var(--room); font-weight: 600; }
+
+/* ---------- reflection ---------- */
+.reflect .wrap { padding-block: clamp(20px, 3vw, 40px); }
+.reflect h2 { margin-top: 18px; max-width: 14em; font-size: clamp(40px, 5vw, 72px); line-height: 1; }
+.reflect-line { margin-top: 36px; max-width: 30em; font: 400 clamp(22px, 2.2vw, 32px)/1.35 var(--display); color: var(--body); letter-spacing: -0.01em; }
+
+@media (max-width: 960px) {
+  .sits { grid-template-columns: 1fr 1fr; }
+  .sits .bridge { display: none; }
+}
+@media (max-width: 640px) {
+  .live-stage { height: 520px; }
+  .live-stage .live-phone { width: 210px; }
+  .live-stage .pick { width: 58px; }
+  .sits { gap: 16px; }
+  .sits img { border-radius: 18px; }
+  .sits .hl { left: -5px; right: -5px; }
+}
+@media (prefers-reduced-motion: reduce) { .live-stage .pick { animation: none; transform: rotate(var(--r)); } }
+
+.reflect-notes { margin-top: clamp(48px, 6vw, 72px); }
+.reflect-notes p { color: var(--body); }

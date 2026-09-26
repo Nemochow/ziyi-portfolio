@@ -9,7 +9,7 @@
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="sync-case.css?v=1">
-  <link rel="stylesheet" href="food-case.css?v=2">
+  <link rel="stylesheet" href="food-case.css?v=4">
 </head>
 <body class="is-entering food">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -32,6 +32,7 @@
         <a href="#mechanism"><span>03</span>Mechanism</a>
         <a href="#product"><span>04</span>Prototype</a>
         <a href="#validation"><span>05</span>Validation</a>
+        <a href="#reflection"><span>06</span>Reflection</a>
       </nav>
       <a class="source" href="assets/uber-eats/prototype/index.html" target="_blank" rel="noreferrer">Live prototype <svg class="icon"><use href="#i-out"/></svg></a>
     </aside>
@@ -51,6 +52,14 @@
             </dl>
           </div>
           <div class="stage live-stage" aria-label="Food Miner running at the top of the Uber Eats home screen">
+            <span class="blob" aria-hidden="true"></span>
+            <img class="pick p1" src="assets/uber-eats/sushi.png" width="166" height="126" alt="" aria-hidden="true">
+            <img class="pick p2" src="assets/uber-eats/ramen.png" width="132" height="86" alt="" aria-hidden="true">
+            <img class="pick p3" src="assets/uber-eats/bibimbap.png" width="145" height="106" alt="" aria-hidden="true">
+            <img class="pick p4" src="assets/uber-eats/salad.png" width="133" height="118" alt="" aria-hidden="true">
+            <img class="pick p5" src="assets/uber-eats/hot-dog.png" width="118" height="131" alt="" aria-hidden="true">
+            <span class="tag t1 panel" aria-hidden="true">5 picks</span>
+            <span class="tag t2 panel" aria-hidden="true">1 catch</span>
             <div class="live-phone">
               <img src="assets/uber-eats/screens/entry.webp" width="720" height="1560" alt="Uber Eats home with the Food Miner entry at the top: Are U hungry?">
               <iframe src="assets/uber-eats/prototype/index.html" title="Animated Food Miner entry screen" tabindex="-1"></iframe>
@@ -86,10 +95,11 @@
         <div class="wrap">
           <h2 id="problem-title">Hunger wasn't the problem. Choosing was.</h2>
           <div class="two">
-            <p class="lede">People open Uber Eats already wanting to eat. Somewhere between the first scroll and checkout, that intent turns into doubt.</p>
+            <p class="lede">People opened Uber Eats ready to order, then lost momentum inside an abundance of plausible options. The effort moved from finding food to managing uncertainty.</p>
             <div class="prose">
-              <p>I mapped the full decision path in Uber Eats, from opening the app to placing an order. The friction didn't sit at checkout. It sat earlier, in Explore and Compare: scrolling past the same restaurants, weighing price against taste against delivery time, then going back to options already seen.</p>
-              <p>More options didn't make people more confident. They added small decisions before the one that mattered. For Uber Eats, that hesitation means long sessions that end without an order.</p>
+              <p>I mapped the journey from opening the app to completing an order. The greatest friction appeared before checkout: repeated scrolling in Explore and repeated comparison between restaurants, dishes, prices, and delivery conditions.</p>
+              <p>More information did not create more confidence. It increased the number of decisions a hungry person had to make before reaching the decision that actually mattered.</p>
+              <p>For Uber Eats, the same hesitation risks longer sessions without an order: more re-checking, more drop-off, and fewer high-intent visits reaching checkout.</p>
             </div>
           </div>
           <div class="question">
@@ -99,24 +109,42 @@
 
           <p class="swipe panel" aria-hidden="true">Swipe to see the full journey <svg class="icon"><use href="#i-arrow"/></svg></p>
           <figure class="journey" aria-labelledby="journey-cap">
-            <svg viewBox="0 0 1160 470" role="img" aria-label="Decision journey in Uber Eats: Open, Explore, Compare, Revisit, then order or leave. Confidence drops through Explore, Compare and Revisit, where most of the friction sits.">
-              <rect class="hot" x="262" y="18" width="638" height="440" rx="10"/>
-              <text class="hot-t" x="282" y="446">Where people loop: most of the effort, least of the value</text>
+            <svg viewBox="0 0 1160 600" role="img" aria-label="Decision journey in Uber Eats. Open: ready and happy. Explore: curious. Compare: overloaded. Revisit: unsure. Then people either order happily or leave hungry. Confidence drops through Explore, Compare and Revisit, where most of the friction sits.">
+              <defs>
+                <symbol id="f-happy" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><circle cx="-9" cy="-6" r="3.2" style="fill:#111211"/><circle cx="9" cy="-6" r="3.2" style="fill:#111211"/><path d="M-12 5 Q0 18 12 5" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></symbol>
+                <symbol id="f-curious" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><circle cx="-7" cy="-7" r="3.2" style="fill:#111211"/><circle cx="11" cy="-7" r="3.2" style="fill:#111211"/><path d="M-13 -15 L-4 -17 M5 -19 L15 -14" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><circle cx="3" cy="10" r="4.2" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></symbol>
+                <symbol id="f-dizzy" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><path d="M-13 -10 l7 7 M-6 -10 l-7 7 M6 -10 l7 7 M13 -10 l-7 7" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><path d="M-12 11 q3 -4 6 0 t6 0 t6 0 t6 0" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></symbol>
+                <symbol id="f-unsure" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><circle cx="-9" cy="-5" r="3.2" style="fill:#111211"/><circle cx="9" cy="-5" r="3.2" style="fill:#111211"/><path d="M-14 -13 L-4 -11 M4 -11 L14 -15" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><path d="M-10 12 L10 8" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><path d="M19 -18 q4 6 0 9 q-4 -3 0 -9z" style="fill:#8cc9e6"/></symbol>
+                <symbol id="f-yum" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><path d="M-13 -5 q4 -6 8 0 M5 -5 q4 -6 8 0" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><path d="M-13 4 Q0 20 13 4 Z" style="fill:#111211"/></symbol>
+                <symbol id="f-sad" viewBox="-30 -30 60 60"><circle r="26" style="fill:var(--fc,#9fd8b0)"/><circle cx="-9" cy="-5" r="3.2" style="fill:#111211"/><circle cx="9" cy="-5" r="3.2" style="fill:#111211"/><path d="M-11 13 Q0 3 11 13" style="fill:none;stroke:#111211;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></symbol>
+              </defs>
+              <rect class="hot" x="262" y="18" width="650" height="570" rx="12"/>
+              <text class="hot-t" x="282" y="572">Where people loop: most of the effort, least of the value</text>
 
-              <g class="col"><text class="k" x="40" y="48">01</text><text class="t" x="40" y="76">Open</text><text class="m" x="40" y="104">Ready</text><text class="d" x="40" y="136">High intent,</text><text class="d" x="40" y="156">no dish in mind yet</text></g>
-              <g class="col"><text class="k" x="282" y="48">02</text><text class="t" x="282" y="76">Explore</text><text class="m" x="282" y="104">Curious</text><text class="d" x="282" y="136">Restaurants, dishes,</text><text class="d" x="282" y="156">banners and offers</text></g>
-              <g class="col"><text class="k" x="494" y="48">03</text><text class="t" x="494" y="76">Compare</text><text class="m" x="494" y="104">Overloaded</text><text class="d" x="494" y="136">Price, taste, time,</text><text class="d" x="494" y="156">fees and ratings</text></g>
-              <g class="col"><text class="k" x="706" y="48">04</text><text class="t" x="706" y="76">Revisit</text><text class="m" x="706" y="104">Unsure</text><text class="d" x="706" y="136">Back to options</text><text class="d" x="706" y="156">already seen</text></g>
-              <g class="col"><text class="k" x="928" y="48">05</text><text class="t" x="928" y="76">Act</text><text class="m" x="928" y="104">Order or leave</text><text class="d" x="928" y="136">Commit, or close</text><text class="d" x="928" y="156">the app hungry</text></g>
+              <g class="col"><text class="k" x="40" y="48">01</text><text class="t" x="40" y="78">Open</text><text class="m" x="40" y="106">Ready</text><text class="d" x="40" y="136">High intent,</text><text class="d" x="40" y="156">no dish in mind yet</text></g>
+              <g class="col"><text class="k" x="282" y="48">02</text><text class="t" x="282" y="78">Explore</text><text class="m" x="282" y="106">Curious</text><text class="d" x="282" y="136">Restaurants, dishes,</text><text class="d" x="282" y="156">banners and offers</text></g>
+              <g class="col"><text class="k" x="494" y="48">03</text><text class="t" x="494" y="78">Compare</text><text class="m warn" x="494" y="106">Overloaded</text><text class="d" x="494" y="136">Price, taste, time,</text><text class="d" x="494" y="156">fees and ratings</text></g>
+              <g class="col"><text class="k" x="706" y="48">04</text><text class="t" x="706" y="78">Revisit</text><text class="m bad" x="706" y="106">Unsure</text><text class="d" x="706" y="136">Back to options</text><text class="d" x="706" y="156">already seen</text></g>
+              <g class="col"><text class="k" x="938" y="48">05</text><text class="t" x="938" y="78">Act</text><text class="m" x="938" y="106">Order or leave</text><text class="d" x="938" y="136">Commit, or close</text><text class="d" x="938" y="156">the app hungry</text></g>
 
-              <text class="axis" x="40" y="222">Confidence</text>
-              <path class="grid" d="M40 240H1120M40 400H1120"/>
-              <path class="curve" d="M100 256C190 256 250 280 330 300S480 350 560 360 700 380 780 380 880 372 940 360"/>
-              <path class="curve up" d="M940 360C990 350 1020 300 1080 262"/>
-              <path class="curve down" d="M940 360C990 368 1030 384 1080 396"/>
-              <circle class="pt" cx="100" cy="256" r="5"/><circle class="pt" cx="330" cy="300" r="5"/><circle class="pt" cx="560" cy="360" r="5"/><circle class="pt" cx="780" cy="380" r="5"/>
-              <circle class="pt end" cx="1080" cy="262" r="5"/><circle class="pt lost" cx="1080" cy="396" r="5"/>
-              <text class="lab" x="1092" y="266">Order</text><text class="lab lost" x="1092" y="400">Leave</text>
+              <g class="bub"><path d="M40 186h196a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H96l-12 12-4-12H50a10 10 0 0 1-10-10v-30a10 10 0 0 1 10-10z"/><text x="56" y="216">“I'm starving. Let's order!”</text></g>
+              <g class="bub"><path d="M282 186h186a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H340l-12 12-4-12H292a10 10 0 0 1-10-10v-30a10 10 0 0 1 10-10z"/><text x="298" y="216">“Ooh, so many options…”</text></g>
+              <g class="bub warn"><path d="M494 186h186a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H552l-12 12-4-12H504a10 10 0 0 1-10-10v-30a10 10 0 0 1 10-10z"/><text x="510" y="216">“Which one is worth it?”</text></g>
+              <g class="bub bad"><path d="M706 186h186a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H764l-12 12-4-12H716a10 10 0 0 1-10-10v-30a10 10 0 0 1 10-10z"/><text x="722" y="216">“Wait, I saw this one…”</text></g>
+              <g class="bub"><path d="M938 186h182a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H996l-12 12-4-12H948a10 10 0 0 1-10-10v-30a10 10 0 0 1 10-10z"/><text x="954" y="216">“Fine. Order… or not.”</text></g>
+
+              <text class="axis" x="40" y="292">Confidence</text>
+              <path class="grid" d="M40 306H1130M40 540H1130"/>
+              <path class="curve" d="M130 336C220 336 280 368 360 390S520 452 590 468 740 500 810 500 910 486 960 472"/>
+              <path class="curve up" d="M960 472C1000 458 1022 402 1052 360"/>
+              <path class="curve down" d="M960 472C1000 482 1025 500 1052 510"/>
+              <use href="#f-happy" class="mood good" x="100" y="306" width="60" height="60"/>
+              <use href="#f-curious" class="mood ok" x="330" y="360" width="60" height="60"/>
+              <use href="#f-dizzy" class="mood warn" x="560" y="438" width="60" height="60"/>
+              <use href="#f-unsure" class="mood bad" x="780" y="470" width="60" height="60"/>
+              <use href="#f-yum" class="mood good" x="1024" y="332" width="56" height="56"/>
+              <use href="#f-sad" class="mood lost" x="1024" y="482" width="56" height="56"/>
+              <text class="lab" x="1086" y="366">Order</text><text class="lab lost" x="1086" y="516">Leave</text>
             </svg>
             <figcaption id="journey-cap">Decision journey in Uber Eats. Confidence starts high and drops as exploring turns into repeated comparison.</figcaption>
           </figure>
@@ -152,7 +180,7 @@
         <div class="wrap">
           <h2 id="opportunity-title">Let AI do the filtering. Leave the choice to people.</h2>
           <div class="two">
-            <p class="lede">The opportunity wasn't to let AI order for you. It was to take away the tiring part of choosing and keep the part that is yours.</p>
+            <p class="lede">The opportunity was not to let AI order on someone's behalf. It was to compress the least rewarding work and protect the moment of agency.</p>
             <div class="prose">
               <p>I split the decision into three jobs: exploring what's available, comparing the good candidates, and picking one. The first two are broad and repetitive, which suits a machine. The third depends on appetite and mood in that moment, which only the person knows.</p>
             </div>
@@ -209,18 +237,20 @@
         <div class="wrap">
           <h2 id="mechanism-title">Five picks, one catch, one reward.</h2>
           <div class="two">
-            <p class="lede">Food Miner turns a recommendation into a short loop: the system computes, the person chooses, and a reward confirms the choice.</p>
+            <p class="lede">Food Miner turns recommendation into a short, playful decision loop: the system computes a compact pool, the user catches one option, and a reward confirms the action.</p>
             <div class="prose">
               <p>Choosing is an action, not a scroll. A cat's arm swings over the pool and you tap to catch the card you want. The system has already done the filtering, so the catch is a real choice between good options.</p>
             </div>
           </div>
 
-          <ol class="steps three" aria-label="Product loop">
-            <li class="step"><span class="dot">1</span><h3>AI computes</h3><p>Order history, preferences and restaurant data are scored into a pool of five picks for this person.</p></li>
+          <ol class="steps" aria-label="Food Miner loop">
+            <li class="step"><span class="dot">1</span><h3>Compute</h3><p>Read history, preferences, restaurant context, price, and delivery fit.</p></li>
             <li class="join" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></li>
-            <li class="step"><span class="dot">2</span><h3>You choose</h3><p>One tap catches one card. The system never makes the final pick for you.</p></li>
+            <li class="step"><span class="dot">2</span><h3>Surface five</h3><p>Balance familiar choices with a controlled amount of discovery.</p></li>
             <li class="join" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></li>
-            <li class="step"><span class="dot">3</span><h3>Reward</h3><p>A deal unlocks for tonight and carries the choice straight to the order.</p></li>
+            <li class="step"><span class="dot">3</span><h3>Hook one</h3><p>Turn the final selection into a quick, user-led action.</p></li>
+            <li class="join" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></li>
+            <li class="step"><span class="dot">4</span><h3>Reward</h3><p>Unlock a deal and carry the chosen dish into the order flow.</p></li>
           </ol>
           <p class="loopback plain-panel"><svg class="icon"><use href="#i-loop"/></svg>Each catch and order feeds back into the next pool.</p>
 
@@ -251,17 +281,22 @@
       <!-- ================= PROTOTYPE ================= -->
       <section class="section band" id="product" aria-labelledby="product-title">
         <div class="wrap">
-          <h2 id="product-title">Built into the Uber Eats home screen, not added beside it.</h2>
+          <h2 id="product-title">Embedded in the flow, not added beside it.</h2>
           <div class="two">
-            <p class="lede">People already start from the home screen, so that's where Food Miner lives: a new first step, not a new place to learn.</p>
-            <p class="loop" aria-label="Flow">Home entry <svg class="icon"><use href="#i-arrow"/></svg> AI screening <svg class="icon"><use href="#i-arrow"/></svg> Catch <svg class="icon"><use href="#i-arrow"/></svg> Deal <svg class="icon"><use href="#i-arrow"/></svg> Order</p>
+            <p class="lede">The MVP starts where the existing habit already starts: the Uber Eats home screen. Food Miner becomes a new decision shortcut, not a separate destination to learn.</p>
+            <div class="prose">
+              <p>I designed the product structure, interaction sequence, and high-fidelity prototype from problem definition through the Hackathon demo.</p>
+              <p>The visual language borrows Uber Eats' directness, then adds a playful catcher and a vivid green interaction field to make the AI moment obvious without breaking the surrounding product.</p>
+            </div>
           </div>
+          <p class="loop" aria-label="Flow">Home entry <svg class="icon"><use href="#i-arrow"/></svg> AI screening <svg class="icon"><use href="#i-arrow"/></svg> Catch <svg class="icon"><use href="#i-arrow"/></svg> Deal <svg class="icon"><use href="#i-arrow"/></svg> Order</p>
 
           <div class="block">
             <div class="block-head"><h3>Where it sits</h3><span class="panel">Information architecture</span></div>
-            <div class="pair phones">
+            <div class="sits">
               <figure><img src="assets/uber-eats/uber-eats-before.png" width="609" height="1318" loading="lazy" alt="Current Uber Eats home: categories, filters, featured and sponsored restaurants"><figcaption><strong>Today.</strong> Categories, filters, featured and sponsored rows all ask for attention before any decision starts.</figcaption></figure>
-              <figure><img src="assets/uber-eats/food-miner-after.png" width="609" height="1318" loading="lazy" alt="Uber Eats home with the Food Miner entry at the top"><figcaption><strong>With Food Miner.</strong> One clear entry at the top: “Are U hungry? Play now.” The rest of the home screen stays as it is.</figcaption></figure>
+              <div class="bridge" aria-hidden="true"><span class="panel">One new entry</span><svg class="icon"><use href="#i-arrow"/></svg><span class="panel">Nothing removed</span></div>
+              <figure class="after"><div class="mark"><img src="assets/uber-eats/food-miner-after.png" width="609" height="1318" loading="lazy" alt="Uber Eats home with the Food Miner entry at the top"><span class="hl"><span class="panel">Food Miner</span></span></div><figcaption><strong>With Food Miner.</strong> One clear entry at the top: “Are U hungry? Play now.” The rest of the home screen stays as it is.</figcaption></figure>
             </div>
           </div>
 
@@ -349,6 +384,20 @@
           </div>
 
           <p class="footnote plain-panel">Hackathon demo with mock data · results are directional, not a live experiment</p>
+        </div>
+      </section>
+
+      <!-- ================= REFLECTION ================= -->
+      <section class="section band reflect" id="reflection" aria-labelledby="reflection-title">
+        <div class="wrap">
+          <span class="panel">Reflection</span>
+          <h2 id="reflection-title">Good AI removes effort, not agency.</h2>
+          <p class="reflect-line">The best AI shortcut does not make the decision invisible. It makes the meaningful part of the decision easier to own.</p>
+          <ul class="themes reflect-notes">
+            <li><strong>Limits do the work</strong><p>Five picks and one catch a day are what make Food Miner faster than browsing. Every extra option or extra round would quietly bring the scrolling back, so the constraints are part of the product, not a missing feature.</p></li>
+            <li><strong>Play has to carry the decision</strong><p>The game only earns its place because the catch is the choice. If the playful layer had just decorated the flow, it would have added one more step between being hungry and checking out.</p></li>
+            <li><strong>Show where the AI stops</strong><p>The system filters and the person decides, but that line should be visible. Next time I would give every pick a short reason, so trust doesn't depend on guessing what the AI did behind the scenes.</p></li>
+          </ul>
         </div>
       </section>
 
