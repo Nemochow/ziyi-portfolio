@@ -32,8 +32,9 @@
         <a href="#friction"><span>04</span>Friction points</a>
         <a href="#ueq"><span>05</span>UEQ</a>
         <a href="#findings"><span>06</span>Findings</a>
-        <a href="#recs"><span>07</span>Recommendations</a>
-        <a href="#reflection"><span>08</span>Reflection</a>
+        <a href="#scan"><span>07</span>Market scan</a>
+        <a href="#recs"><span>08</span>Recommendations</a>
+        <a href="#reflection"><span>09</span>Reflection</a>
       </nav>
       <p class="source plain-panel">Client: De'Longhi</p>
     </aside>
@@ -53,7 +54,7 @@
             </dl>
           </div>
           <figure class="dl-stage" aria-label="The Pinguino Care4Me and a weekly schedule">
-            <img class="pinguino" src="assets/delonghi/pinguino.webp" width="191" height="362" alt="De'Longhi Pinguino Care4Me portable air conditioner">
+            <img class="pinguino" src="assets/delonghi/pinguino.webp" width="286" height="497" alt="De'Longhi Pinguino Care4Me portable air conditioner">
             <div class="week-card">
               <div class="week-top"><span class="panel">Weekly schedule</span><span class="temp">22<small>°C</small></span></div>
               <div class="week-grid" id="week-grid" aria-hidden="true"></div>
@@ -80,7 +81,7 @@
               <li><h3>Facilitation &amp; transcription</h3><p>Facilitated three user tests, guiding participants through six tasks and the interview, and transcribed the sessions.</p><a href="#study">Study <svg class="icon"><use href="#i-down"/></svg></a></li>
               <li><h3>UEQ analysis</h3><p>Processed and interpreted the UEQ: scale means, market baseline, the pragmatic vs hedonic split, and the result slides.</p><a href="#ueq">UEQ <svg class="icon"><use href="#i-down"/></svg></a></li>
               <li><h3>Data matrix &amp; coding</h3><p>Built the first task comparison matrix (completion, time, confidence) and did in-vivo coding of three sessions for the thematic analysis.</p><a href="#findings">Findings <svg class="icon"><use href="#i-down"/></svg></a></li>
-              <li><h3>Limitations &amp; context</h3><p>Wrote the study limitations and ran a competitor scan of Midea, Honeywell and Duux apps as an industry reference.</p><a href="#reflection">Reflection <svg class="icon"><use href="#i-down"/></svg></a></li>
+              <li><h3>Limitations &amp; context</h3><p>Wrote the study limitations and ran a competitor scan of Midea, Honeywell and Duux apps as an industry reference.</p><a href="#scan">Market scan <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>Task-based usability testing</span><span>Think-aloud</span><span>UEQ</span><span>Semi-structured interviews</span><span>Thematic analysis</span><span>In-vivo coding</span><span>Friction mapping</span><span>Excel</span></p>
           </div>
@@ -98,6 +99,8 @@
               <p>Before testing anyone, we set the product up ourselves. Pairing took us three days, including a hidden step: hold the mode button for 20 seconds. In the app, the “Tap to switch on” button on the schedule screen didn't say whether it controlled the device or the schedule.</p>
             </div>
           </div>
+          <figure class="dl-scene"><img src="assets/delonghi/bedroom.webp" width="1672" height="941" loading="lazy" alt="The Pinguino Care4Me standing in a bedroom at night, display set to 22 degrees"><figcaption><strong>Where it lives.</strong> Often a bedroom, where the schedule has to work at night: exactly the routine behind Task 3. Product image: De'Longhi.</figcaption></figure>
+
           <div class="pair dl-pre">
             <figure><div class="shot phone"><img src="assets/delonghi/app-home.webp" width="296" height="640" loading="lazy" alt="De'Longhi Comfort app home: Your appliances, Pinguino, Add new"></div><figcaption><strong>The Comfort app.</strong> A clean home screen, and the entry to every advanced feature.</figcaption></figure>
             <ul class="takeaways">
@@ -290,8 +293,56 @@
         </div>
       </section>
 
+      <!-- ================= MARKET SCAN ================= -->
+      <section class="section" id="scan" aria-labelledby="scan-title">
+        <div class="wrap">
+          <h2 id="scan-title">Where the rest of the market already is.</h2>
+          <div class="two">
+            <p class="lede">Experienced participants expected the app to work like others they knew. So I looked at how competing climate apps handle the exact moments where our tests broke down.</p>
+            <div class="prose">
+              <p>A desk scan of three direct competitors, Midea, Honeywell and Duux, plus tado° as a reference for scheduling patterns. It's based on public manuals, help centres and product pages, not on testing, so it shows what each app offers, not how usable it is.</p>
+              <p>Where a source didn't describe a feature, the matrix says so rather than guessing.</p>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>Five moments, five apps</h3><span class="panel mx-key"><span><i class="k y"></i>Supported</span><span><i class="k p"></i>Partly</span><span><i class="k n"></i>Missing / broken</span><span><i class="k u"></i>Not documented</span></span></div>
+            <div class="mx" role="table" aria-label="Competitor comparison of scheduling and setup">
+              <div class="mx-r head" role="row"><span role="columnheader"></span><span role="columnheader" class="me"><b>De'Longhi Comfort</b><small class="panel">What we observed</small></span><span role="columnheader"><b>Midea MSmartHome</b><small class="panel">Competitor</small></span><span role="columnheader"><b>Honeywell Air Comfort</b><small class="panel">Competitor</small></span><span role="columnheader"><b>Duux Smart</b><small class="panel">Competitor</small></span><span role="columnheader"><b>tado°</b><small class="panel">Pattern reference</small></span></div>
+              <div class="mx-r" role="row"><span role="rowheader"><strong>Setup &amp; pairing</strong><small class="panel">Before task 1</small></span><span role="cell" class="c n"><i aria-label="Missing or broken"></i>Hold Mode for 20 s. If it fails, a generic Wi-Fi error. It took us three days.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Step-by-step pairing guide in the app; Bluetooth on some models.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not in public material.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Bluetooth auto-detect, no account needed, a detailed error if pairing fails.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not compared.</span></div>
+              <div class="mx-r" role="row"><span role="rowheader"><strong>Build a week</strong><small class="panel">Tasks 2–4</small></span><span role="cell" class="c y"><i aria-label="Supported"></i>Weekly calendar of bars; repeat days picked when you create one.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Schedules by time of day and day of week; Sleep Curve sets each hour of the night.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Customised daily schedules.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Drag-and-drop hourly, daily and weekly schedules.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Every day, weekdays + weekend, or each day on its own; copy a day to others.</span></div>
+              <div class="mx-r" role="row"><span role="rowheader"><strong>Edit one block</strong><small class="panel">Task 5</small></span><span role="cell" class="c n"><i aria-label="Missing or broken"></i>Saved edits didn’t apply (a bug). Delete and recreate instead.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not detailed in the manual.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not in public material.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Blocks are edited by dragging them.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Tap a block on the day bar to edit or delete it.</span></div>
+              <div class="mx-r" role="row"><span role="rowheader"><strong>Overlaps &amp; midnight</strong><small class="panel">Task 3</small></span><span role="cell" class="c n"><i aria-label="Missing or broken"></i>A new schedule silently replaced the earlier one.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not detailed in the manual.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not in public material.</span><span role="cell" class="c p"><i aria-label="Partly"></i>Can’t cross midnight; the FAQ says to split it into two schedules.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Overlapping blocks are adjusted automatically.</span></div>
+              <div class="mx-r" role="row"><span role="rowheader"><strong>Pause</strong><small class="panel">Task 6</small></span><span role="cell" class="c n"><i aria-label="Missing or broken"></i>No pause. Days removed one at a time, found by accident.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Each schedule can be switched on or off.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not in public material.</span><span role="cell" class="c u"><i aria-label="Not documented"></i>Not in public material.</span><span role="cell" class="c y"><i aria-label="Supported"></i>Home / Away modes, and geofencing per time block.</span></div>
+            </div>
+          </div>
+
+          <div class="block scan-setup">
+            <div class="scan-shots">
+              <figure><div class="shot phone"><img src="assets/delonghi/app-pairing.webp" width="517" height="1120" loading="lazy" alt="Comfort pairing screen: hold the Mode button for 20 seconds until the Wi-Fi and app icons blink"></div></figure>
+              <figure><div class="shot phone"><img src="assets/delonghi/app-error.webp" width="517" height="1120" loading="lazy" alt="Comfort error screen: Wi-Fi connection problem, check your password and hotspot and try again"></div></figure>
+            </div>
+            <div>
+              <span class="panel">Setup, side by side</span>
+              <h3>The step that cost us three days.</h3>
+              <p>Comfort's pairing hides behind a 20-second button hold, and a failure returns the same Wi-Fi message whatever went wrong. Duux pairs over Bluetooth without an account and explains why pairing failed. Midea walks people through pairing inside the app. We left setup out of the tests, so this is where the scan filled a gap in our own data.</p>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>What the scan added</h3><span class="panel">Feeds the recommendations</span></div>
+            <ol class="scan-take">
+              <li><span class="panel">01</span><h4>Pause and conflicts are expected</h4><p>Midea lets a schedule be switched off; tado° resolves overlaps itself. Comfort does neither, and those were our two lowest-scoring tasks.</p><a href="#recs">Rec 04 · Calendar conventions</a></li>
+              <li><span class="panel">02</span><h4>Setup is where rivals invest</h4><p>Clear pairing guidance and specific error messages are standard elsewhere. A first-use flow would bring Comfort to the same level.</p><a href="#recs">Rec 05 · Guide first use</a></li>
+              <li class="op"><span class="panel">03</span><h4>Night-time is still unsolved</h4><p>Even Duux can't run a schedule across midnight. For a product that often lives in a bedroom, handling the night well is a chance to lead, and novelty was Comfort's weakest UEQ scale.</p><a href="#ueq">UEQ · Novelty −1.04</a></li>
+            </ol>
+            <p class="note sources">Sources: <a href="https://www.midea.com/content/dam/midea-aem/us/msmarthome/updated-rac-user-manual/MSmartHome-AC-and-Dehum-Instructions.pdf" target="_blank" rel="noopener">Midea MSmartHome manual</a> · <a href="https://www.honeywellstore.com/store/news/honeywell-smart-wifi-portable-air-conditioners.htm" target="_blank" rel="noopener">Honeywell smart portable AC</a> · <a href="https://duux.com/pages/duux-smart-app" target="_blank" rel="noopener">Duux Smart App</a> · <a href="https://duux.com/en/customer-service/smart/ik-wil-een-schema-op-de-app-maken-zodat-mijn-beam-beam-mini-blizzard-edge-of-north-vanzelf-aan-en-uit-gaat-van-2300-tot-900-uur-maar-ik-krijg-de-volgende-melding-the-power-on-time-need/" target="_blank" rel="noopener">Duux overnight FAQ</a> · <a href="https://support.tado.com/en/articles/3387209-how-do-i-set-up-my-tado-room-smart-schedule" target="_blank" rel="noopener">tado° Smart Schedule</a> · <a href="https://support.tado.com/en/articles/3477785-what-does-home-and-away-mean" target="_blank" rel="noopener">tado° Home / Away</a></p>
+          </div>
+        </div>
+      </section>
+
       <!-- ================= RECOMMENDATIONS ================= -->
-      <section class="section" id="recs" aria-labelledby="recs-title">
+      <section class="section band" id="recs" aria-labelledby="recs-title">
         <div class="wrap">
           <h2 id="recs-title">From trial and error to recognition.</h2>
           <div class="two">
@@ -309,7 +360,7 @@
       </section>
 
       <!-- ================= REFLECTION ================= -->
-      <section class="section band" id="reflection" aria-labelledby="reflection-title">
+      <section class="section" id="reflection" aria-labelledby="reflection-title">
         <div class="wrap">
           <h2 id="reflection-title">Be honest about what your method can show.</h2>
           <div class="two">
