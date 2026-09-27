@@ -8,8 +8,8 @@
   <title>De'Longhi Comfort | Ziyi Zhou</title>
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="sync-case.css?v=1">
-  <link rel="stylesheet" href="delonghi-case.css?v=2">
+  <link rel="stylesheet" href="sync-case.css?v=3">
+  <link rel="stylesheet" href="delonghi-case.css?v=3">
 </head>
 <body class="is-entering dl">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -23,7 +23,7 @@
   <div class="shell">
     <aside class="rail" aria-label="Case study navigation">
       <a class="back" href="index.html"><svg class="icon"><use href="#i-back"/></svg>All records</a>
-      <div class="who"><strong>Ziyi Zhou</strong><span>AI Product &amp; UX Designer</span></div>
+      <div class="who"><strong>Ziyi Zhou</strong><span>Product Manager &amp; UX Designer</span></div>
       <nav class="chapters chapter-nav" aria-label="Chapters">
         <a href="#cover" class="is-current"><span>00</span>Overview</a>
         <a href="#brief"><span>01</span>Brief</a>
@@ -82,6 +82,19 @@
               <li><h3>From findings to redesign</h3><p>Mapped qualitative feedback and numbers onto specific interaction points, and wrote the redesign recommendations for the scheduling and remote-control flows, delivered to De'Longhi's design centre in Italy.</p><a href="#recs">Recommendations <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>Task-based usability testing</span><span>Think-aloud</span><span>UEQ</span><span>Semi-structured interviews</span><span>Thematic analysis</span><span>In-vivo coding</span><span>Friction mapping</span><span>Severity grading</span><span>Excel</span></p>
+          </div>
+
+          <div class="block pdm">
+            <div class="block-head"><h2 class="h3">Product decisions &amp; metrics</h2><span class="panel">Baseline from our study</span></div>
+            <div class="pdm-grid">
+              <ol class="pdm-dec"><li><span class="panel">Decision 01</span><strong>Scope the study to scheduling, not setup.</strong><p>It was the feature De’Longhi cared about most, and pre-pairing kept every session focused on it. <em>Trade-off:</em> it likely underestimates the setup burden.</p></li><li><span class="panel">Decision 02</span><strong>Compare people with and without smart-home experience.</strong><p>The Pinguino is often bought on impulse, so both groups need value right away. <em>Trade-off:</em> a small sample per group, read descriptively.</p></li><li><span class="panel">Decision 03</span><strong>Order the recommendations by severity.</strong><p>The edit bug blocks a core task, so it comes before polish. <em>Trade-off:</em> novelty, the weakest UEQ scale, has to wait.</p></li></ol>
+              <div class="pdm-met">
+                <div class="ns"><span class="panel">North star</span><strong>Schedule-editing completion</strong><p>57% today, and 0% for experienced users.</p></div>
+                <div><span class="panel">Supporting</span><ul><li>Time on edit and pause tasks (136 s and 120 s today)</li><li>UEQ perspicuity (+0.43) against the +0.8 baseline</li></ul></div>
+                <div><span class="panel">Guardrail</span><ul><li>First-time pairing success, outside our test (it took us three days)</li></ul></div>
+                <p class="pdm-note">Today’s numbers are the baseline for a retest after the fixes.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -433,7 +446,7 @@
       </section>
 
       <nav class="wrap next" aria-label="Next project">
-        <div><p class="panel">Next record</p><a class="big" href="whispering-garden.html">Whispering Garden<svg class="icon"><use href="#i-out"/></svg></a></div>
+        <div><p class="panel">Next record</p><a class="big" href="food-miner.html">Food Miner<svg class="icon"><use href="#i-out"/></svg></a></div>
         <a class="home" href="index.html">Back to all records</a>
       </nav>
     </main>

@@ -316,3 +316,30 @@ figcaption strong { color: var(--text); font-weight: 600; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- product decisions & metrics (all case studies) ---------- */
+.pdm-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px; margin-top: 20px; }
+.pdm-dec { display: grid; gap: 3px; }
+.pdm-dec li { padding: 20px 22px; background: var(--well); }
+.pdm-dec strong { display: block; margin: 8px 0 6px; font: 500 19px/1.3 var(--display); color: var(--text); }
+.pdm-dec p { font-size: 15px; line-height: 1.6; }
+.pdm-dec em { font-style: normal; color: var(--sage); }
+.pdm-met { display: flex; flex-direction: column; gap: 16px; padding: 22px 24px; border-radius: 12px; background: var(--raised); box-shadow: inset 0 0 0 1px var(--rule); }
+.pdm-met > div { padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+.pdm-met .ns strong { display: block; margin: 8px 0 6px; font: 500 22px/1.25 var(--display); color: var(--sage); }
+.pdm-met .ns p { font-size: 15px; }
+.pdm-met ul { margin-top: 8px; }
+.pdm-met li { position: relative; padding: 4px 0 4px 16px; font-size: 15px; line-height: 1.5; color: var(--text); }
+.pdm-met li::before { content: ""; position: absolute; left: 0; top: 13px; width: 8px; height: 1px; background: var(--sage); }
+.pdm-note { margin-top: auto; font-size: 13px; line-height: 1.55; color: var(--mute); }
+@media (max-width: 960px) { .pdm-grid { grid-template-columns: 1fr; } }
+
+/* ---------- cover titles echo each record sleeve on the homepage ---------- */
+@font-face { font-family: "Bricolage"; src: url("assets/fonts/home/Bricolage-800.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("assets/fonts/home/Fraunces-500i.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/home/BarlowCond-800i.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/home/InstrumentSerif-i.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+body.food .cover h1 { font: 800 clamp(64px, 8.4vw, 128px)/0.84 Bricolage, sans-serif; letter-spacing: -0.04em; text-transform: lowercase; }
+body.garden .cover h1 { font: italic 500 clamp(58px, 7.6vw, 116px)/0.92 Fraunces, Georgia, serif; letter-spacing: -0.02em; }
+body.sync .cover h1 { font: italic 800 clamp(72px, 9.6vw, 146px)/0.82 "Barlow Condensed", sans-serif; letter-spacing: -0.01em; text-transform: uppercase; }
+body.dl .cover h1 { font: italic 400 clamp(68px, 9vw, 138px)/0.86 "Instrument Serif", Georgia, serif; letter-spacing: -0.02em; }

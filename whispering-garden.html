@@ -8,7 +8,7 @@
   <title>Whispering Garden | Ziyi Zhou</title>
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="sync-case.css?v=1">
+  <link rel="stylesheet" href="sync-case.css?v=3">
   <link rel="stylesheet" href="garden-case.css?v=2">
 </head>
 <body class="is-entering garden">
@@ -23,7 +23,7 @@
   <div class="shell">
     <aside class="rail" aria-label="Case study navigation">
       <a class="back" href="index.html"><svg class="icon"><use href="#i-back"/></svg>All records</a>
-      <div class="who"><strong>Ziyi Zhou</strong><span>AI Product &amp; UX Designer</span></div>
+      <div class="who"><strong>Ziyi Zhou</strong><span>Product Manager &amp; UX Designer</span></div>
       <nav class="chapters chapter-nav" aria-label="Chapters">
         <a href="#cover" class="is-current"><span>00</span>Overview</a>
         <a href="#context"><span>01</span>Context</a>
@@ -78,6 +78,19 @@
               <li><h3>Hardware &amp; prototyping</h3><p>Led hardware selection, integration and physical prototyping, up to a working loop of proximity sensing, pixel feedback and voice playback.</p><a href="#prototype">Prototype <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>ESP32 × 2</span><span>Arduino</span><span>HC-SR04</span><span>WS2812B 8×8 LED matrix</span><span>DFPlayer Mini</span><span>Physical prototyping</span><span>In-depth interviews</span></p>
+          </div>
+
+          <div class="block pdm">
+            <div class="block-head"><h2 class="h3">Product decisions &amp; metrics</h2><span class="panel">Tested with 5 participants</span></div>
+            <div class="pdm-grid">
+              <ol class="pdm-dec"><li><span class="panel">Decision 01</span><strong>The interface lives on the IV pole, not a phone.</strong><p>Patients already keep a hand on the pole, and a screen would pull their eyes down instead of out into the garden. <em>Trade-off:</em> cues must stay glanceable, so little information fits.</p></li><li><span class="panel">Decision 02</span><strong>Voice and Choice first, Warmth later.</strong><p>Temperature was far harder to build reliably, and a working end-to-end loop mattered more for testing. <em>Trade-off:</em> the physical layer of loneliness is still open.</p></li><li><span class="panel">Decision 03</span><strong>Four themes, not an open feed.</strong><p>A small, real choice gave back a sense of agency without adding decisions. <em>Trade-off:</em> less variety per visit.</p></li></ol>
+              <div class="pdm-met">
+                <div class="ns"><span class="panel">North star</span><strong>Full listens per infusion</strong><p>Share of patients who hear a complete message during treatment. 5 / 5 in testing.</p></div>
+                <div><span class="panel">Supporting</span><ul><li>Messages left per session (3 / 5 hesitated to record)</li><li>Self-reported agency and loneliness, before vs after</li></ul></div>
+                <div><span class="panel">Guardrail</span><ul><li>Tubing adjustments while interacting (2 / 5 in testing)</li><li>Extra work for nurses</li></ul></div>
+                <p class="pdm-note">From a five-person test in a planted setting: directional, not proof of effect.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -326,7 +339,7 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);</code></pre>
       </section>
 
       <nav class="wrap next" aria-label="Next project">
-        <div><p class="panel">Next record</p><a class="big" href="food-miner.html">Food Miner<svg class="icon"><use href="#i-out"/></svg></a></div>
+        <div><p class="panel">Next record</p><a class="big" href="sync-sweat.html">sync&amp;sweat<svg class="icon"><use href="#i-out"/></svg></a></div>
         <a class="home" href="index.html">Back to all records</a>
       </nav>
     </main>

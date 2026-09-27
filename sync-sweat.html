@@ -8,9 +8,9 @@
   <title>sync&amp;sweat | Ziyi Zhou</title>
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="sync-case.css?v=1">
+  <link rel="stylesheet" href="sync-case.css?v=3">
 </head>
-<body class="is-entering">
+<body class="is-entering sync">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M3.5 10h13M11.5 5l5 5-5 5"/></symbol>
     <symbol id="i-back" viewBox="0 0 20 20"><path d="M16.5 10h-13M8.5 5l-5 5 5 5"/></symbol>
@@ -22,7 +22,7 @@
   <div class="shell">
     <aside class="rail" aria-label="Case study navigation">
       <a class="back" href="index.html"><svg class="icon"><use href="#i-back"/></svg>All records</a>
-      <div class="who"><strong>Ziyi Zhou</strong><span>AI Product &amp; UX Designer</span></div>
+      <div class="who"><strong>Ziyi Zhou</strong><span>Product Manager &amp; UX Designer</span></div>
       <nav class="chapters chapter-nav" aria-label="Chapters">
         <a href="#cover" class="is-current"><span>00</span>Overview</a>
         <a href="#problem"><span>01</span>Problem</a>
@@ -76,6 +76,19 @@
               <li><h3>Validation &amp; iteration</h3><p>Ran participatory data interviews with each person's own charts, and turned what the data missed into the next model inputs.</p><a href="#validation">Validation <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>Python</span><span>Streamlit</span><span>Plotly</span><span>Pandas</span><span>SciPy</span><span>VADER</span><span>HTML/JS</span><span>Spotify Web API</span><span>GitHub</span></p>
+          </div>
+
+          <div class="block pdm">
+            <div class="block-head"><h2 class="h3">Product decisions &amp; metrics</h2><span class="panel">Prototype with 3 participants</span></div>
+            <div class="pdm-grid">
+              <ol class="pdm-dec"><li><span class="panel">Decision 01</span><strong>Match the session, don’t steer heart rate.</strong><p>Tempo barely tracked heart rate (r = +0.05), so promising control would have overclaimed. <em>Trade-off:</em> a less striking pitch, but one the data supports.</p></li><li><span class="panel">Decision 02</span><strong>Build playlists from people’s own libraries.</strong><p>Familiar tracks are the ones people keep playing, and their history solves the cold start. <em>Trade-off:</em> less discovery of new music.</p></li><li><span class="panel">Decision 03</span><strong>Ask the activity type every session.</strong><p>Training alone or with friends changes what music is for, and the data can’t tell the difference. <em>Trade-off:</em> one extra tap before each workout.</p></li></ol>
+              <div class="pdm-met">
+                <div class="ns"><span class="panel">North star</span><strong>Sessions rated as a match</strong><p>Share of workouts where the check-in says the beat matched the effort.</p></div>
+                <div><span class="panel">Supporting</span><ul><li>Skips per workout</li><li>Weekly sessions started with the app</li></ul></div>
+                <div><span class="panel">Guardrail</span><ul><li>Consent withdrawals and upload drop-off</li><li>Share of tracks running on an estimated tempo</li></ul></div>
+                <p class="pdm-note">Proposed for a longer field test. The study itself covered 3 people and 13 sessions.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

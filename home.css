@@ -112,3 +112,37 @@
 .hd .dlg .cover-product { position: absolute; z-index: 1; right: 8%; bottom: -4%; width: 36%; height: auto; filter: drop-shadow(-14px 20px 22px rgba(15, 26, 34, 0.35)); }
 @media (max-width: 1050px) { .hd .dlg .cover-type { font-size: 34px; } .hd .dlg .cover-sub { top: 104px; left: 20px; } }
 @media (max-width: 700px) { .hd .dlg .cover-type { font-size: 30px; } .hd .dlg .cover-sub { top: 90px; left: 20px; font-size: 10px; } }
+
+/* ---------- personal statement: Jost (Futura-like), sentence case ---------- */
+@font-face { font-family: Jost; src: url("assets/fonts/home/Jost.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+.hd .studio h1 { max-width: 15.5em; font: 400 clamp(28px, 2.55vw, 38px)/1.28 Jost, Futura, "Century Gothic", sans-serif; letter-spacing: -0.005em; text-transform: none; color: #eeeae3; margin-bottom: 26px; }
+.hd .studio h1 em { font-style: normal; font-weight: 500; color: var(--accent); }
+.hd .where { margin: 0; }
+.hd .where::before { content: ""; display: block; width: 56px; height: 1px; margin-bottom: 18px; background: #6a6d66; }
+.hd .where a { font: 500 14px/1.4 Montserrat, sans-serif; letter-spacing: 0.03em; text-transform: none; color: var(--muted); border-bottom: 1px solid #4a4d47; padding-bottom: 3px; transition: color .2s, border-color .2s; }
+.hd .where a:hover { color: var(--accent); border-color: var(--accent); }
+.hd footer a { text-transform: none; letter-spacing: 0.04em; }
+@media (max-width: 700px) { .hd .studio h1 { font-size: 25px; } }
+
+/* ---------- homepage type: Jost everywhere except the LCD readout ---------- */
+.hd header > a:first-child, .hd header p, .hd header > a:last-child, .hd footer, .hd footer a,
+.hd .playback, .hd .album-caption h2, .hd .album-caption p, .hd .album-caption a,
+.hd .retro-name, .hd .retro-name span, .hd .transport button, .hd .cover-foot, .hd .cover-sub, .hd .cover-no, .hd .peek .label small, .hd .where a { font-family: Jost, Futura, "Century Gothic", sans-serif; }
+.hd header > a:first-child { font-weight: 600; letter-spacing: 0.06em; }
+.hd header p, .hd .album-caption p { font-weight: 400; }
+.hd .album-caption h2 { font-weight: 500; font-size: 20px; letter-spacing: 0.04em; }
+.hd .cover-type { font-family: Jost, Futura, sans-serif; font-weight: 600; }
+
+/* ---------- option B: each record gets its own cover type ---------- */
+@font-face { font-family: "Bricolage"; src: url("assets/fonts/home/Bricolage-800.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("assets/fonts/home/Fraunces-500i.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/home/BarlowCond-800i.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("assets/fonts/home/InstrumentSerif-i.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+.mix .food .cover-type { font: 800 62px/0.86 Bricolage, sans-serif; letter-spacing: -0.035em; text-transform: lowercase; }
+.mix .food .cover-sub { top: 150px; }
+.mix .garden .cover-type { font: italic 500 50px/0.98 Fraunces, Georgia, serif; letter-spacing: -0.01em; text-transform: none; }
+.mix .sync .cover-type { font: italic 800 66px/0.84 "Barlow Condensed", sans-serif; letter-spacing: -0.01em; text-transform: uppercase; }
+.mix .dlg .cover-type { font: italic 400 60px/0.92 "Instrument Serif", Georgia, serif; letter-spacing: -0.01em; text-transform: none; }
+.mix .dlg .cover-sub { top: 146px; }
+@media (max-width: 1050px) { .mix .food .cover-type { font-size: 48px; } .mix .garden .cover-type { font-size: 38px; } .mix .sync .cover-type { font-size: 50px; } .mix .dlg .cover-type { font-size: 46px; } .mix .food .cover-sub, .mix .dlg .cover-sub { top: 118px; } }
+@media (max-width: 700px) { .mix .food .cover-type { font-size: 40px; } .mix .garden .cover-type { font-size: 32px; } .mix .sync .cover-type { font-size: 42px; } .mix .dlg .cover-type { font-size: 38px; } .mix .food .cover-sub, .mix .dlg .cover-sub { top: 96px; } }

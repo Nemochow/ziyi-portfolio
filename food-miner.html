@@ -8,7 +8,7 @@
   <title>Food Miner | Ziyi Zhou</title>
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="sync-case.css?v=1">
+  <link rel="stylesheet" href="sync-case.css?v=3">
   <link rel="stylesheet" href="food-case.css?v=4">
 </head>
 <body class="is-entering food">
@@ -24,7 +24,7 @@
   <div class="shell">
     <aside class="rail" aria-label="Case study navigation">
       <a class="back" href="index.html"><svg class="icon"><use href="#i-back"/></svg>All records</a>
-      <div class="who"><strong>Ziyi Zhou</strong><span>AI Product &amp; UX Designer</span></div>
+      <div class="who"><strong>Ziyi Zhou</strong><span>Product Manager &amp; UX Designer</span></div>
       <nav class="chapters chapter-nav" aria-label="Chapters">
         <a href="#cover" class="is-current"><span>00</span>Overview</a>
         <a href="#problem"><span>01</span>Problem</a>
@@ -86,6 +86,19 @@
               <li><h3>MVP prototype &amp; validation</h3><p>Owned the information architecture, interaction flow and high-fidelity prototype, framed the value hypotheses, and tested them in the Hackathon demo.</p><a href="#product">Prototype <svg class="icon"><use href="#i-down"/></svg></a></li>
             </ul>
             <p class="stack plain-panel"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Lottie</span><span>Python</span><span>FastAPI</span><span>Pydantic</span><span>SQLite</span><span>AWS Amplify</span><span>ECS Fargate</span></p>
+          </div>
+
+          <div class="block pdm">
+            <div class="block-head"><h2 class="h3">Product decisions &amp; metrics</h2><span class="panel">Defined for a real test</span></div>
+            <div class="pdm-grid">
+              <ol class="pdm-dec"><li><span class="panel">Decision 01</span><strong>AI filters, people choose.</strong><p>Appetite and mood live in the moment, so the AI never orders on anyone’s behalf. <em>Trade-off:</em> one tap more than a fully automatic pick, in exchange for trust.</p></li><li><span class="panel">Decision 02</span><strong>Five picks, one catch a day.</strong><p>The limits are what make it faster than browsing, and stop it turning into a slot machine. <em>Trade-off:</em> less time spent in the feature, on purpose.</p></li><li><span class="panel">Decision 03</span><strong>One entry on the home screen, nothing removed.</strong><p>It starts where the habit already starts, so there is nothing new to learn. <em>Trade-off:</em> it competes with existing banners for attention.</p></li></ol>
+              <div class="pdm-met">
+                <div class="ns"><span class="panel">North star</span><strong>Entry → checkout conversion</strong><p>Share of Food Miner sessions that end in an order.</p></div>
+                <div><span class="panel">Supporting</span><ul><li>Time from app open to first committed choice</li><li>Return rate for the next day’s catch</li></ul></div>
+                <div><span class="panel">Guardrail</span><ul><li>Perceived control after choosing</li><li>Deal cost per extra order</li></ul></div>
+                <p class="pdm-note">The Hackathon demo ran on mock data, so none of these are measured yet.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -402,7 +415,7 @@
       </section>
 
       <nav class="wrap next" aria-label="Next project">
-        <div><p class="panel">Next record</p><a class="big" href="sync-sweat.html">sync&amp;sweat<svg class="icon"><use href="#i-out"/></svg></a></div>
+        <div><p class="panel">Next record</p><a class="big" href="whispering-garden.html">Whispering Garden<svg class="icon"><use href="#i-out"/></svg></a></div>
         <a class="home" href="index.html">Back to all records</a>
       </nav>
     </main>
