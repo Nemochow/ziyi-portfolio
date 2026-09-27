@@ -1,0 +1,26 @@
+/* Vinyl cursor: a small record that spins, and starts "playing" over anything clickable.
+   Only for real mice; touch screens and reduced-motion keep their defaults. */
+@media (hover: hover) and (pointer: fine) {
+  html.vc-on, html.vc-on * { cursor: none !important; }
+  html.vc-on input, html.vc-on textarea, html.vc-on [contenteditable] { cursor: text !important; }
+  .vc { position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none; width: 0; height: 0; opacity: 0; transition: opacity .2s; }
+  .vc.is-in { opacity: 1; }
+  .vc-disc { position: absolute; left: -12px; top: -12px; width: 24px; height: 24px; border-radius: 50%;
+    background:
+      radial-gradient(circle, #0b0b0b 0 7%, var(--vc-label, #b9caaa) 7.5% 30%, transparent 31%),
+      repeating-radial-gradient(circle, #1c1c1c 0 1px, #2c2c2c 1px 2px),
+      #1c1c1c;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 3px 8px rgba(0, 0, 0, 0.45);
+    transition: transform .28s cubic-bezier(.3, 1.4, .5, 1), left .28s, top .28s, width .28s, height .28s; }
+  .vc-disc::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from 30deg, transparent 0 18%, rgba(255, 255, 255, 0.22) 24%, transparent 30% 68%, rgba(255, 255, 255, 0.14) 74%, transparent 80%);
+    animation: vc-spin 1.8s linear infinite; }
+  .vc-play { position: absolute; left: 50%; top: 50%; width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 8px; border-color: transparent transparent transparent #111; transform: translate(-35%, -50%) scale(0); transition: transform .2s; }
+  .vc.is-link .vc-disc { left: -22px; top: -22px; width: 44px; height: 44px; }
+  .vc.is-link .vc-disc::after { animation-duration: .7s; }
+  .vc.is-link .vc-play { transform: translate(-35%, -50%) scale(1); }
+  .vc.is-down .vc-disc { transform: scale(.82); }
+  .vc.is-text .vc-disc { opacity: .35; }
+  @keyframes vc-spin { to { transform: rotate(360deg); } }
+}
+@media (prefers-reduced-motion: reduce) { .vc-disc::after { animation: none !important; } }

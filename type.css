@@ -1,0 +1,31 @@
+/* Type: Sora for headings, Montserrat for reading text.
+   Loaded last on every page; the per-project cover titles keep their own faces. */
+@font-face { font-family: Sora; src: url("assets/fonts/home/Sora-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: Sora; src: url("assets/fonts/home/Sora-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: Montserrat; src: url("assets/fonts/home/Montserrat.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+/* ---------- case studies ---------- */
+:root { --head: Sora, "Helvetica Neue", Arial, sans-serif; --display: Montserrat, "Helvetica Neue", Arial, sans-serif; --read: Montserrat, "Helvetica Neue", Arial, sans-serif; }
+body:not(.hd) h2, body:not(.hd) .h2 { font-family: var(--head); font-weight: 500; font-size: clamp(28px, 3.1vw, 46px); line-height: 1.15; letter-spacing: -0.025em; }
+body:not(.hd) h3, body:not(.hd) .h3, body:not(.hd) h2.h3 { font-family: var(--head); font-weight: 600; font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; }
+body:not(.hd) h4 { font-family: var(--head) !important; font-weight: 600 !important; font-size: 18px !important; line-height: 1.3 !important; letter-spacing: -0.01em !important; }
+body:not(.hd) .lede { font-family: var(--read); font-weight: 400; }
+body:not(.hd) .takeaway { font-family: var(--head); font-weight: 500; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18; }
+body:not(.hd) .rail .who strong { font-family: var(--head); font-weight: 600; font-size: 17px; }
+body:not(.hd) .next .big { font-family: var(--head); font-weight: 600; }
+body:not(.hd) strong, body:not(.hd) b { font-weight: 700; }
+body:not(.hd) blockquote { font-family: var(--read) !important; font-style: italic; }
+
+
+/* ---------- homepage ---------- */
+.hd header > a:first-child, .hd .album-caption h2 { font-family: Sora, sans-serif !important; font-weight: 600 !important; }
+.hd header > a:first-child { font-size: 19px; font-weight: 600 !important; letter-spacing: 0.01em; }
+.hd .album-caption h2 { font-size: 19px; letter-spacing: 0.01em; }
+.hd .studio h1 { font: 500 clamp(27px, 2.35vw, 35px)/1.25 Sora, sans-serif; letter-spacing: -0.02em; max-width: 16em; }
+.hd .studio h1 em { font-weight: 500; }
+.hd header p, .hd header > a:last-child, .hd footer, .hd footer a, .hd .playback, .hd .album-caption p, .hd .album-caption a,
+.hd .retro-name, .hd .retro-name span, .hd .transport button, .hd .cover-foot, .hd .cover-sub, .hd .cover-no, .hd .where a { font-family: Montserrat, sans-serif !important; }
+
+
+:root :is(h2,h3,h4,.takeaway,.big), .hd .studio h1, .hd .album-caption h2 { word-spacing: 0.08em; }
+body:not(.hd) h3, body:not(.hd) h4 { letter-spacing: 0 !important; }
