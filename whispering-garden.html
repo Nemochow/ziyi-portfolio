@@ -9,7 +9,7 @@
   <link rel="preload" href="assets/fonts/home/Jost.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/home/Manrope.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="sync-case.css?v=3">
-  <link rel="stylesheet" href="garden-case.css?v=2">
+  <link rel="stylesheet" href="garden-case.css?v=11">
 </head>
 <body class="is-entering garden">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -50,12 +50,17 @@
               <div><dt class="panel">Team</dt><dd>With Mingxuan Xu, Tiancheng Xi and Yuxin Li</dd></div>
             </dl>
           </div>
-          <figure class="g-stage" aria-label="Hospital atrium garden with the listening device, and the pixel display cycling through the four voice themes">
-            <img class="g-photo" src="assets/whispering-garden/garden-cover-photocomposite.webp" width="1086" height="1448" alt="Whispering Garden listening objects in the planted atrium of Erasmus MC">
+          <figure class="g-stage v5" aria-label="Hospital atrium garden with the listening device. The pixel display cycles through the four voice themes and the handset plays a message for each.">
+            <img class="g-photo" id="g-photo" src="assets/whispering-garden/garden-cover-photocomposite.webp" width="1086" height="1448" alt="Whispering Garden listening objects in the planted atrium of Erasmus MC">
             <div class="g-device">
-              <div class="pixel-matrix big" id="cover-matrix" aria-hidden="true"></div>
-              <div class="g-device__label"><span class="panel" id="cover-theme">Comfort</span><span class="panel dim">Voice theme</span></div>
+              <div class="g-box"><div class="pixel-matrix big" id="cover-matrix" aria-hidden="true"></div></div>
+              <div class="g-device__label"><span class="g-theme" id="cover-theme">Comfort</span><span class="g-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="g-dots" id="cover-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><button class="g-mute" id="g-mute" type="button" aria-pressed="false" aria-label="Mute voices"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="spk" d="M3 8h3l4-3.5v11L6 12H3z"/><path class="on" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5.5a6.5 6.5 0 0 1 0 9"/><path class="off" d="M13 8l4 4M17 8l-4 4"/></svg></button></div>
             </div>
+            <div class="g-handset" id="g-handset" aria-hidden="true">
+              <span class="g-rings"><i></i><i></i><i></i></span>
+              <img src="assets/whispering-garden/handset-white.webp" width="629" height="660" alt="">
+            </div>
+            <audio id="g-voice" preload="auto"></audio>
           </figure>
         </div>
       </section>
@@ -131,13 +136,13 @@
 
           <div class="block">
             <div class="block-head"><h3>Emotional journey</h3><span class="panel">Interview synthesis</span></div>
-            <ol class="g-journey" aria-label="Emotional journey during an infusion">
-              <li style="--lvl:.45"><span class="panel">01</span><h4>Pre-infusion</h4><p class="feel">Anticipation and uncertainty</p><blockquote>“I was nervous before the needle went in.”</blockquote><i class="bar" aria-hidden="true"></i></li>
-              <li style="--lvl:.35"><span class="panel">02</span><h4>Settling in</h4><p class="feel">Body and equipment take focus</p><blockquote>“I felt a bit more in control when I adjusted my sitting position.”</blockquote><i class="bar" aria-hidden="true"></i></li>
-              <li class="peak" style="--lvl:1"><span class="panel">03</span><h4>The long wait</h4><p class="feel">Loneliness and low agency peak</p><blockquote>“Nobody explained what was next and the remaining time, so I felt a bit lost and anxious.”</blockquote><i class="bar" aria-hidden="true"></i></li>
-              <li style="--lvl:.6"><span class="panel">04</span><h4>The end</h4><p class="feel">Relief mixed with uncertainty</p><blockquote>“I feel like a burden asking the doctor if I'm done.”</blockquote><i class="bar" aria-hidden="true"></i></li>
+            <ol class="g-journey v4" aria-label="Emotional journey during an infusion">
+              <li><span class="panel">01</span><h4>Pre-infusion</h4><p class="feel">Anticipation and uncertainty</p><blockquote>“I was nervous before the needle went in.”</blockquote><div class="g-meter" aria-label="Loneliness 4 of 8"><span class="panel">Loneliness</span><span class="g-cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></div></li>
+              <li><span class="panel">02</span><h4>Settling in</h4><p class="feel">Body and equipment take focus</p><blockquote>“I felt a bit more in control when I adjusted my sitting position.”</blockquote><div class="g-meter" aria-label="Loneliness 3 of 8"><span class="panel">Loneliness</span><span class="g-cells"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></div></li>
+              <li class="peak"><span class="panel">03</span><h4>The long wait</h4><p class="feel">Loneliness and low agency peak</p><blockquote>“Nobody explained what was next and the remaining time, so I felt a bit lost and anxious.”</blockquote><div class="g-meter" aria-label="Loneliness 8 of 8"><span class="panel">Loneliness</span><span class="g-cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div></li>
+              <li><span class="panel">04</span><h4>The end</h4><p class="feel">Relief mixed with uncertainty</p><blockquote>“I feel like a burden asking the doctor if I’m done.”</blockquote><div class="g-meter" aria-label="Loneliness 5 of 8"><span class="panel">Loneliness</span><span class="g-cells"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div></li>
             </ol>
-            <p class="g-legend plain-panel"><i aria-hidden="true"></i>Bar height: how strongly loneliness and low agency came up at each stage</p>
+            <p class="g-legend v4 plain-panel"><span class="g-cells"><i class="on"></i><i></i></span>Filled cells: how strongly loneliness and low agency came up at each stage, from five interviews</p>
           </div>
 
           <ul class="inputs" aria-label="Four dimensions of the waiting experience">
@@ -150,11 +155,11 @@
           <div class="block">
             <div class="block-head"><h3>Three layers of loneliness</h3><span class="panel">Research synthesis → design dimensions</span></div>
             <ul class="layers">
-              <li><span class="panel">Physical</span><p>Cold, constrained, unable to move freely</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong class="muted-dim">Warmth</strong></li>
+              <li><span class="panel">Physical</span><p>Cold, constrained, unable to move freely</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="g-out"><strong class="muted-dim">Warmth</strong><em class="g-tag">Not built</em></span></li>
               <li><span class="panel">Social</span><p>Little companionship or immediate response</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>Voice</strong></li>
               <li><span class="panel">Existential</span><p>Few meaningful choices during the wait</p><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg><strong>Choice</strong></li>
             </ul>
-            <p class="note">Warmth was explored in early concepts. The working prototype focused on Voice and Choice; temperature was not implemented.</p>
+            <p class="note g-warm"><strong>Why no Warmth?</strong> We explored heat in early concepts, but safe, controllable warmth right next to a patient on an IV line was too hard to build within the project. We put our effort into Voice and Choice, the two needs we could build and test with real people.</p>
           </div>
         </div>
       </section>
@@ -315,26 +320,32 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);</code></pre>
       <!-- ================= REFLECTION ================= -->
       <section class="section band" id="reflection" aria-labelledby="reflection-title">
         <div class="wrap">
-          <header class="g-head"><span class="panel">06 / Reflection</span><h2 id="reflection-title">A working device is only the beginning.</h2></header>
+          <header class="g-head"><span class="panel">06 / Reflection</span><h2 id="reflection-title">A small choice changed how the wait felt.</h2></header>
+          <div class="two">
+            <p class="lede">We set out to make waiting time something a person could actively explore. With a working device in a real atrium, every participant chose a theme, found the garden point and listened to a full message.</p>
+            <div class="prose">
+              <p>Leading the hardware taught me where experience and engineering meet. Every cue had to stay glanceable, every wire had to fit inside a small wooden box, and light, pixels and voice had to respond as one.</p>
+            </div>
+          </div>
 
           <div class="block">
-            <div class="block-head"><h3>What I would change</h3><span class="panel">Next time</span></div>
+            <div class="block-head"><h3>What worked</h3><span class="panel">From the five sessions</span></div>
+            <ul class="reflect-grid">
+              <li><span class="panel">Choice</span><strong>Choosing created agency</strong><p>Picking a voice theme gave people something to decide during a wait that normally decides for them. It generated more agency than passive content, and 5 / 5 found the listening point.</p></li>
+              <li><span class="panel">Senses</span><strong>Two cues, one message</strong><p>Haptic and visual feedback complemented each other during discovery: participants described one as explicit, the other as intuitive.</p></li>
+              <li><span class="panel">Voice</span><strong>Messages held attention</strong><p>5 / 5 listened to a full message, and the Humor theme sparked the most curiosity.</p></li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <div class="block-head"><h3>Where I'd take it next</h3><span class="panel">Next iteration</span></div>
             <ul class="themes two-col">
-              <li><strong>Question the architecture first</strong><p>Validate the need for strict light–audio synchronization before committing to a two-controller architecture.</p></li>
-              <li><strong>Seated, hands-free, in the real setting</strong><p>Prototype a seated, hands-free listening point and evaluate it in a real infusion setting over a longer period.</p></li>
+              <li><strong>Make speaking up easier</strong><p>3 / 5 hesitated to record. A seated, hands-free listening point with lighter ways to reply, like a quick reaction, could lower that barrier.</p></li>
+              <li><strong>Test where it matters</strong><p>Evaluate it in a real infusion setting over a longer period, and question the two-controller architecture before scaling it up.</p></li>
             </ul>
           </div>
 
-          <div class="block">
-            <div class="block-head"><h3>Perspectives from the team</h3><span class="panel">Different lenses on the next iteration</span></div>
-            <ul class="team">
-              <li><span class="panel">Mingxuan Xu</span><p>Sensory cues should work toward one experience, not compete for attention. The garden itself can become part of the interaction.</p></li>
-              <li><span class="panel">Tiancheng Xi</span><p>A precise interface is not necessarily a better experience. Ambient cues should return attention to the physical surroundings.</p></li>
-              <li><span class="panel">Yuxin Li</span><p>The concept became practical quickly; more playfulness and surprise could make it emotionally engaging without adding effort for patients.</p></li>
-            </ul>
-          </div>
-
-          <p class="takeaway">Engineering made it work. Experience design still has to answer why someone would choose to engage.</p>
+          <p class="takeaway">Waiting doesn't have to be empty. A small, real choice can make it feel like your own time again.</p>
         </div>
       </section>
 
@@ -348,28 +359,54 @@ Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);</code></pre>
   <script src="case.js?v=3"></script>
   <script>
     requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.remove('is-entering')));
-    // cover: the pixel display cycles through the four voice themes
+    // cover: each face on the pixel display plays its own voice message through the handset
     (() => {
       const m = document.getElementById('cover-matrix'), label = document.getElementById('cover-theme');
       if (!m) return;
+      const V = 'assets/whispering-garden/';
       const themes = [
-        ['Comfort', 'comfort', '00000000/01100110/10000001/00000000/00000000/01000010/00111100/00000000'],
-        ['Humor', 'humor', '00000000/11100111/00100001/00000000/00011000/00100100/00011000/00000000'],
-        ['Advice', 'advice', '00000000/00100100/00100100/00000000/00000000/00100100/00011000/00000000'],
-        ['Daily', 'daily', '00000000/01000010/10100101/00000000/00000000/01000010/00111100/00000000'],
+        ['Comfort', 'comfort', '00000000/01100110/10000001/00000000/00000000/01000010/00111100/00000000', [V + 'voice-comfort.mp3']],
+        ['Humor', 'humor', '00000000/11100111/00100001/00000000/00011000/00100100/00011000/00000000', [V + 'voice-humor-1.mp3', V + 'voice-humor-2.mp3']],
+        ['Advice', 'advice', '00000000/00100100/00100100/00000000/00000000/00100100/00011000/00000000', [V + 'voice-advice.mp3']],
+        ['Daily', 'daily', '00000000/01000010/10100101/00000000/00000000/01000010/00111100/00000000', [V + 'voice-daily.mp3']],
       ];
       for (let i = 0; i < 64; i++) m.append(document.createElement('span'));
       const cells = [...m.children];
-      let n = 0;
-      const show = () => {
-        const [name, cls, bits] = themes[n % 4];
-        m.className = 'pixel-matrix big ' + cls; label.textContent = name;
+      const stage = document.querySelector('.g-stage'), audio = document.getElementById('g-voice'), mute = document.getElementById('g-mute');
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let n = 0, part = 0, timer = null, muted = false, blocked = false;
+      const render = (k) => {
+        const [name, cls, bits] = themes[k];
+        m.className = 'pixel-matrix big ' + cls; label.textContent = name; label.className = 'g-theme ' + cls;
+        themes.forEach((t) => stage.classList.toggle(t[1] + '-on', t[1] === cls));
+        document.querySelectorAll('#cover-dots i').forEach((d, j) => d.classList.toggle('on', j === k));
         const b = bits.replaceAll('/', '');
         cells.forEach((c, i) => c.classList.toggle('is-lit', b[i] === '1'));
-        n++;
       };
+      const next = (delay) => { clearTimeout(timer); timer = setTimeout(() => { n = (n + 1) % 4; part = 0; show(); }, delay); };
+      const speak = () => {
+        stage.classList.remove('is-playing');
+        if (muted || document.hidden) return next(3200);
+        audio.src = themes[n][3][part];
+        audio.play().then(() => { blocked = false; stage.classList.add('is-playing'); })
+          .catch(() => { blocked = true; next(3200); });
+      };
+      const show = () => { render(n); if (!reduce || !muted) speak(); };
+      audio.addEventListener('ended', () => {
+        stage.classList.remove('is-playing');
+        part++;
+        if (part < themes[n][3].length) setTimeout(speak, 350); else next(1400);
+      });
+      // browsers only allow sound after the first interaction with the page: resume right away when it happens
+      const unlock = () => { if (blocked && !muted) { clearTimeout(timer); part = 0; speak(); } };
+      ['pointerdown', 'keydown', 'touchstart'].forEach((e) => addEventListener(e, unlock, { capture: true }));
+      mute.addEventListener('click', (e) => {
+        e.stopPropagation(); muted = !muted; mute.setAttribute('aria-pressed', muted); mute.classList.toggle('is-muted', muted);
+        mute.setAttribute('aria-label', muted ? 'Unmute voices' : 'Mute voices');
+        if (muted) { audio.pause(); stage.classList.remove('is-playing'); next(3200); } else { clearTimeout(timer); part = 0; speak(); }
+      });
+      document.addEventListener('visibilitychange', () => { if (document.hidden) { audio.pause(); stage.classList.remove('is-playing'); } });
       show();
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(() => { if (!document.hidden) show(); }, 1800);
     })();
   </script>
 </body>
