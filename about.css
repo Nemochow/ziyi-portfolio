@@ -1,0 +1,131 @@
+/* ==========================================================================
+   About page: "liner notes" on the back of the sleeve.
+   Same dark field, sage accent, Sora headings and Montserrat body as the homepage.
+   ========================================================================== */
+@font-face { font-family: Montserrat; src: url("assets/fonts/home/Montserrat.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: Sora; src: url("assets/fonts/home/Sora-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: Sora; src: url("assets/fonts/home/Sora-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+:root { --bg: #111211; --ink: #eeeae3; --muted: #a9aaa2; --line: #343632; --accent: #b9caaa;
+  --head: Sora, "Helvetica Neue", Arial, sans-serif; --read: Montserrat, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink); background: var(--bg); color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--read); }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: #111; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+
+header, main, footer { width: min(1400px, calc(100% - 112px)); margin: auto; }
+
+/* ---------- header (matches homepage) ---------- */
+header { display: flex; align-items: center; gap: 38px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+header > a:first-child { font: 600 19px/1 var(--head); letter-spacing: 0.01em; text-transform: uppercase; }
+header p { margin: 0; font: 500 12.5px/1 var(--read); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+header nav { margin-left: auto; display: flex; gap: 32px; }
+header nav a { font: 500 12px/1.4 var(--read); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+header nav a:hover, header nav a[aria-current] { color: var(--ink); }
+header nav a[aria-current] { box-shadow: 0 1px 0 var(--accent); }
+
+.kicker { display: block; font: 600 11px/1 var(--read); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 90px; align-items: center; padding: 84px 0 96px; }
+.hero h1 { font: 500 clamp(30px, 3vw, 44px)/1.18 var(--head); letter-spacing: -0.02em; word-spacing: 0.08em; margin: 0 0 30px; max-width: 15em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.bio { font: 400 16px/1.75 var(--read); color: #d6d3cc; max-width: 36em; margin: 0 0 18px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 26px 0 36px; font: 500 12px/1.4 var(--read); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.meta span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 9px; vertical-align: 1px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; border: 1px solid #4a4d47; border-radius: 999px;
+  font: 600 12px/1 var(--read); letter-spacing: 0.12em; text-transform: uppercase; transition: background .2s, color .2s, border-color .2s; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #111; }
+.btn.primary:hover { background: #cddbc0; color: #111; }
+
+/* portrait as a record sleeve, with a disc sliding out */
+.portrait { position: relative; aspect-ratio: 1.3; width: 100%; max-width: 560px; justify-self: end; }
+.portrait .peek { position: absolute; right: 0; top: 4%; width: 70%; aspect-ratio: 1; border-radius: 50%;
+  background: url("assets/home/vinyl/sage.webp") center / cover; box-shadow: 8px 14px 28px #0009; transition: transform .6s cubic-bezier(.3,1.2,.5,1); }
+.portrait .peek::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: url("assets/home/vinyl/spec.webp") center / cover; mix-blend-mode: screen; opacity: .75; }
+.portrait .peek i { position: absolute; left: 50%; top: 50%; width: 34%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%);
+  background: #1c1f1d; box-shadow: 0 0 0 2px #00000033; display: grid; place-items: center; font: 600 9px/1.5 var(--read); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); text-align: center; font-style: normal; }
+.portrait:hover .peek { transform: translateX(14px) rotate(14deg); }
+.sleeve-photo { position: absolute; inset: 0 auto 0 0; width: 72%; overflow: hidden; background: #232824; box-shadow: 4px 14px 30px #000a; z-index: 1; }
+.sleeve-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sleeve-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, #ffffff14, transparent 38%, transparent 70%, #00000026); box-shadow: inset 0 0 0 1px #ffffff14; pointer-events: none; }
+.sleeve-photo .ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: #6f746c;
+  font: 500 11px/1.8 var(--read); letter-spacing: .14em; text-transform: uppercase;
+  background: repeating-linear-gradient(135deg, #1d211e 0 12px, #202521 12px 24px); }
+.sleeve-photo .cap { position: absolute; left: 22px; bottom: 20px; z-index: 2; font: 600 10.5px/1.45 var(--read); letter-spacing: .14em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 6px #000a; }
+
+/* illustrated portrait on a paper-coloured sleeve */
+.sleeve-photo.illus { background: #fff; }
+.sleeve-photo.illus svg { position: absolute; left: 0; bottom: 0; width: 100%; height: auto; display: block; }
+.sleeve-photo.illus .cap { color: #111; text-shadow: none; top: 20px; bottom: auto; }
+
+/* white vinyl */
+.portrait .peek { background:
+    radial-gradient(circle, transparent 0 16%, #00000010 16.5% 17%, transparent 17.5% 47%, #0000000d 47.5% 48%, transparent 48.5%),
+    repeating-radial-gradient(circle, #f7f7f5 0 1.5px, #e8e8e5 1.5px 3px); }
+.portrait .peek::after { background: conic-gradient(from 30deg, transparent 0 14%, #ffffffcc 20%, transparent 27% 64%, #ffffff99 70%, transparent 77%); mix-blend-mode: normal; opacity: .9; }
+.portrait .peek i { background: #fff; color: #111; box-shadow: 0 0 0 1px #0000001f, inset 0 0 0 5px #f1f1ee; z-index: 1; }
+
+/* ---------- tracklist: experience / education ---------- */
+.tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; padding: 72px 0; border-top: 1px solid var(--line); }
+.side h2 { font: 600 20px/1.2 var(--head); letter-spacing: 0; margin: 0 0 8px; }
+.side h2 small { display: block; font: 600 11px/1 var(--read); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.side h2.sub { margin-top: 48px; }
+.side ol { list-style: none; margin: 18px 0 0; padding: 0; }
+.side li { display: grid; grid-template-columns: 38px 1fr auto; gap: 4px 12px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.side li > b { font: 500 12px/1.9 "D-DIN", var(--read); color: var(--muted); letter-spacing: .06em; font-weight: 500; }
+.side li h3 { margin: 0; font: 600 16px/1.45 var(--read); }
+.side li h3 span { font-weight: 400; color: var(--muted); }
+.side li time { font: 500 12.5px/1.9 var(--read); color: var(--muted); white-space: nowrap; }
+.side li p { grid-column: 2 / 4; margin: 4px 0 0; font: 400 14px/1.65 var(--read); color: #c9c6bf; max-width: 38em; }
+
+/* ---------- how I work: claim + proof ---------- */
+.notes { padding: 72px 0; border-top: 1px solid var(--line); }
+.notes > h2 { font: 500 clamp(24px, 2.2vw, 32px)/1.2 var(--head); letter-spacing: -0.02em; margin: 0 0 40px; max-width: 20em; }
+.notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.note { padding: 28px 28px 30px; border: 1px solid var(--line); border-radius: 4px; background: #151715; }
+.note h3 { font: 600 18px/1.3 var(--head); margin: 0 0 12px; color: var(--accent); }
+.note p { font: 400 14px/1.7 var(--read); color: #c9c6bf; margin: 0 0 18px; }
+.note a { font: 600 11px/1 var(--read); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.note a:hover { color: var(--ink); }
+
+/* ---------- off record + contact ---------- */
+.outro { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; padding: 72px 0 90px; border-top: 1px solid var(--line); }
+.outro p { font: 400 15px/1.75 var(--read); color: #c9c6bf; margin: 0; max-width: 32em; }
+.contact { list-style: none; margin: 0; padding: 0; }
+.contact li { display: flex; justify-content: space-between; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); font: 500 14px/1.4 var(--read); }
+.contact li:first-child { border-top: 1px solid var(--line); }
+.contact li span { font: 600 11px/1.9 var(--read); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.contact a:hover { color: var(--accent); }
+
+/* draft-only: marks text Ziyi still needs to fill in */
+.todo { background: #b9caaa22; outline: 1px dashed #b9caaa88; outline-offset: 2px; border-radius: 2px; }
+
+footer { border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; padding: 28px 0;
+  font: 500 12px/1.4 var(--read); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+@media (max-width: 1050px) {
+  header, main, footer { width: calc(100% - 64px); }
+  .hero { gap: 50px; }
+  .notes-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  header, main, footer { width: calc(100% - 40px); }
+  header { flex-wrap: wrap; gap: 10px 24px; padding: 24px 0; }
+  header p { order: 3; width: 100%; font-size: 11px; }
+  header nav { gap: 20px; }
+  .hero, .tracks, .outro { grid-template-columns: 1fr; }
+  .hero { padding: 44px 0 56px; gap: 44px; }
+  .portrait { justify-self: start; order: -1; }
+  .tracks, .notes, .outro { padding: 52px 0; gap: 52px; }
+  .side li { grid-template-columns: 30px 1fr auto; }
+  footer { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { .portrait .peek { transition: none; } }
+
+/* phone: the disc slides past the screen edge; stop it creating a sideways scroll */
+@media (max-width: 760px) { html, body { overflow-x: clip; } }

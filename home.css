@@ -146,3 +146,9 @@
 .mix .dlg .cover-sub { top: 146px; }
 @media (max-width: 1050px) { .mix .food .cover-type { font-size: 48px; } .mix .garden .cover-type { font-size: 38px; } .mix .sync .cover-type { font-size: 50px; } .mix .dlg .cover-type { font-size: 46px; } .mix .food .cover-sub, .mix .dlg .cover-sub { top: 118px; } }
 @media (max-width: 700px) { .mix .food .cover-type { font-size: 40px; } .mix .garden .cover-type { font-size: 32px; } .mix .sync .cover-type { font-size: 42px; } .mix .dlg .cover-type { font-size: 38px; } .mix .food .cover-sub, .mix .dlg .cover-sub { top: 96px; } }
+
+/* header nav: Work / About */
+.hd header nav { margin-left: auto; display: flex; gap: 32px; }
+.hd header nav a { font: 500 12px/1.4 Montserrat, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.hd header nav a:hover, .hd header nav a[aria-current] { color: #eeeae3; }
+.hd header nav a[aria-current] { box-shadow: 0 1px 0 var(--accent); }
